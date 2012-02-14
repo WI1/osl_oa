@@ -5,9 +5,11 @@ atrium = 1.x
 engine = phptemplate
 base theme = ginkgo
 
-stylesheets[all][] = css/nav.css
-stylesheets[all][] = css/focusgroups.css
-stylesheets[all][] = famfamfam-silk-sprite.css
+stylesheets[screen][] = css/nav.css
+stylesheets[screen][] = css/focusgroups.css
+stylesheets[screen][] = famfamfam-silk-sprite.css
+stylesheets[screen][] = custom.css
+stylesheets[screen][] = update.css
 
 regions[left] = "Left sidebar"
 regions[right] = "Right sidebar"

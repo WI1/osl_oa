@@ -5,7 +5,7 @@ atrium = 1.x
 engine = phptemplate
 base theme = dlr_oa
 
-stylesheets[all][] = balance.css
+stylesheets[screen][] = balance.css
 
 regions[left] = "Left sidebar"
 regions[right] = "Right sidebar"

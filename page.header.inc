@@ -3,14 +3,6 @@
   <head>
     <?php print $head ?>
     <?php print $styles ?>
-    
-    <link rel="stylesheet" href="/sites/default/themes/dlr_oa/css/reset.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-    <link rel="stylesheet" href="/sites/default/themes/dlr_oa/css/960.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-    <link rel="stylesheet" href="/sites/default/themes/dlr_oa/css/text.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-    <link rel="stylesheet" href="/sites/default/themes/dlr_oa/css/layout.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-    <link rel="stylesheet" href="/sites/default/themes/dlr_oa/custom.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-    <link rel="stylesheet" href="/sites/default/themes/dlr_oa/update.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-        
     <?php print $scripts ?>
     <?php print $ie ?>
     <title><?php print $head_title ?></title>
