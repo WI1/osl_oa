@@ -1661,7 +1661,7 @@ body #header .block-widget .block-content, body #header .block .block-title {
 
 #global {
 height: 42px;
-background: #404040;
+background: #404040 !important;
 }
 
 #navigation a.logo {
@@ -1723,15 +1723,16 @@ margin-left: 0.4em;
     border-width: 1px 0 1px 1px;
 }
 
-body #space-tools .block-title {
-	
-	background: #eee;
-	color: #404040;
+body #space-tools .block-title, body #header .block-widget .block-content, body #header .block .block-title{
+	background-color: #eee !important;
+	color: #404040 !important;
 }
 
-element.style {
-   
+.dropdown-blocks .block .block-title {
+	padding: 3px 6px 4px 6px;
 }
+
+
 #page-tools .context-links {
 	border-left: 0;
     	
