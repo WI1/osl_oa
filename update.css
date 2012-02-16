@@ -78,7 +78,7 @@ body.front .node .content p { display: block; }
 		height: auto; padding: 0 20px 0 0; margin: 0 0 0 20px;
 		width: auto; text-transform: none;
 	}
-	ul#nice-menu-1 li a:hover, ul#main-menu  li a:hover { text-decoration: underline; }
+	ul#nice-menu-1 li a:hover, ul#main-menu li a:hover { text-decoration: underline; }
 	ul#nice-menu-1 li a.active, ul#main-menu li a.active  { color: #333; }
 	
 	/* Zweite Ebene */
@@ -159,20 +159,21 @@ body.front .node .content p { display: block; }
 	/* div */
 	#page-tools .tabs { height: 31px; margin: 20px 0; top: auto;  padding: 0 }
 	#page-tools div.tabs { border-left: #bbb 1px solid !important; border-bottom: #bbb 1px solid; } 
+	#page-tools .tabs #block-menu-features { border:0; }
 	
 	/* ul */	
-	#page-tools ul.primary-tabs, #page-tools .tabs ul.primary-links { margin: 0; padding: 0; }
+	#page-tools ul.primary-tabs, #page-tools .tabs #block-menu-features ul, #page-tools .tabs .block #block-menu-features, #page-tools .tabs #block-menu-features.block .block-content { margin: 0; padding: 0; }
 	 div#secondary-tabs { margin: 0; padding: 0;  border-bottom: 0}
 
 	/* li */
-	#page-tools ul.primary-tabs li, #page-tools .tabs ul.primary-links li { 
+	#page-tools ul.primary-tabs li, #page-tools .tabs #block-menu-features.block ul.menu li { 
 		font-weight: bold !important; 
 		float: left; 
 		padding: 0 10px !important; 
 		height: 30px; 
 		line-height: 30px; 
 		margin: 0 !important; 
-		border: #bbb 1px solid !important; border-left: none !important;
+		border: #bbb 1px solid !important; border-left: none !important; border-bottom: none !important;
 		height: 30px !important; 
 		background: url(img/bg/tabverlauf.jpg) repeat-x;
         width: auto;		
@@ -180,7 +181,7 @@ body.front .node .content p { display: block; }
 	ul.tabs li:hover { background: #fff !important; }
 			
 	/* a */
-	#page-tools ul.primary-tabs li a, #secondary-tabs li a, #page-tools ul.primary-links li a { 
+	#page-tools ul.primary-tabs li a, #secondary-tabs li a, #page-tools .tabs #block-menu-features.block ul.menu li a { 
 		border: none !important; 
 		font-weight: bold !important; 
 		background: none !important; 
@@ -191,10 +192,11 @@ body.front .node .content p { display: block; }
 		overflow: hidden;
 		display: block !important;
 		width: auto;
+		line-height: 30px; 
 	}
-	#page-tools .tabs ul.primary-links li a { font-size: 14px; }
-	#page-tools .tabs ul.primary-links li a:hover { font-size: 14px; text-decoration: none; background: none !important; }
-	#page-tools .tabs ul.primary-links li.active a { font-size: 14px; text-decoration: none; border: none !important; }
+	#page-tools .tabs #block-menu-features.block ul.menu li a { font-size: 14px; }
+	#page-tools .tabs #block-menu-features.block ul.menu li a:hover { font-size: 14px; text-decoration: none; }
+	#page-tools .tabs #block-menu-features.block ul.menu li.active-trail a { font-size: 14px; text-decoration: none; border: none !important; }
 	
 	#page-tools ul.primary-tabs li a { font-size: 11px; }
 	#page-tools ul.primary-tabs li a:hover { font-size: 11px; text-decoration: none; background: none !important; }

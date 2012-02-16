@@ -9,8 +9,11 @@
 .pager li.pager-current,
 .more-link a:hover { background-color:<?php print $background ?>; }
 
-#page-tools .tabs ul.primary-links li.active { background-color: <?php print $background ?> !important; }
-#page-tools .tabs ul.primary-links li.active a span { color: #ffffff; text-shadow: none;}
+#page-tools .tabs #block-menu-features.block ul.menu li.active-trail { background: <?php print $background ?> !important; }
+#page-tools .tabs #block-menu-features.block ul.menu li.active-trail a { color: #ffffff !important; text-shadow: none;}
+#page-tools .tabs #block-menu-features.block ul.menu li:hover { background: <?php print $background ?> !important; }
+#page-tools .tabs #block-menu-features.block ul.menu li:hover a { color: #ffffff !important; text-shadow: none;}
+
 
 body #space-tools .block-title { background-color:<?php print designkit_colorshift($background, '#000000', .3) ?>; }
 

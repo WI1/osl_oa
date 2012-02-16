@@ -37,8 +37,8 @@
     <?php if ($help_toggler):?><?php print $help_toggler ?><?php endif; ?>
     <?php if ($title): ?><h1 <?php print drupal_attributes($title_attr) ?>><?php print $title ?></h1><?php endif; ?>
     <?php if ($context_links): ?><div class='context-links'><?php print $context_links ?></div><?php endif; ?>
-    <?php if (isset($primary_links)): ?><div class='tabs clear-block'><?php print theme('links', $primary_links, array('id' => 'features-menu', 'class' => 'links primary-links')) ?></div><?php endif;?>
-    <?php if ($tabs):?><div class='tabs clear-block'><?php print $tabs ?></div><?php endif; ?>
+    <?php if ($page_tools): ?><div class='tabs clear-block'><?php print $page_tools ?></div><?php endif ?>
+    <?php if ($tabs): ?><div class='tabs clear-block'><?php print $tabs ?></div><?php endif; ?>
     <?php if ($tabs2): ?>
       <div id='secondary-tabs'><?php print $tabs2 ?></div>
     <?php endif; ?>
