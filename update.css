@@ -67,31 +67,32 @@ body.front .node .content p { display: block; }
 	/*ul.nice-menu ul, #header-region ul.nice-menu ul { visibility: visible; }*/
 
 	/* allgemein */
-	#block-nice_menus-1 { width: 710px !important; float: left !important; }		
+	#block-nice_menus-1 { width: 710px !important; float: left !important; }	
+    ul#main-menu {width: auto; float: left; }	
 	
 	/* Erste Ebene */
-	ul#nice-menu-1 li { background: none !important; border: none; border-right: #fff 1px solid; line-height: 25px; }
-	ul#nice-menu-1 li a { 
+	ul#nice-menu-1 li, ul#main-menu li { background: none !important; border: none; border-right: #fff 1px solid; line-height: 25px; }
+	ul#nice-menu-1 li a, ul#main-menu li a { 
 		background: none; text-indent: 0; color: #fff;
 		font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal;
 		height: auto; padding: 0 20px 0 0; margin: 0 0 0 20px;
 		width: auto; text-transform: none;
 	}
-	ul#nice-menu-1 li a:hover { text-decoration: underline; }
-	ul#nice-menu-1 li a.active { color: #333; }
+	ul#nice-menu-1 li a:hover, ul#main-menu  li a:hover { text-decoration: underline; }
+	ul#nice-menu-1 li a.active, ul#main-menu li a.active  { color: #333; }
 	
 	/* Zweite Ebene */
-	ul#nice-menu-1 li ul { padding: 0 !important; margin: 5px 0 0 20px !important; border: none !important; }
-	ul#nice-menu-1 li ul li { background: #eee !important; line-height: 18px; border: none; padding: 0 !important; margin: 0 !important; border: none !important; text-align: left; font-size: 13px !important; }
-	ul#nice-menu-1 li ul li a { color: #404040 !important; padding: 5px 8px 5px 8px !important; margin: 0 !important; text-decoration: none !important; min-width: 140px; width: auto !important; }
-	ul#nice-menu-1 li ul li a:hover { background: #404040 !important; color: #fff !important; }
+	ul#nice-menu-1 li ul, ul#main-menu li ul { padding: 0 !important; margin: 5px 0 0 20px !important; border: none !important; }
+	ul#nice-menu-1 li ul li, ul#main-menu li ul li  { background: #eee !important; line-height: 18px; border: none; padding: 0 !important; margin: 0 !important; border: none !important; text-align: left; font-size: 13px !important; }
+	ul#nice-menu-1 li ul li a, ul#main-menu  li ul li a { color: #404040 !important; padding: 5px 8px 5px 8px !important; margin: 0 !important; text-decoration: none !important; min-width: 140px; width: auto !important; }
+	ul#nice-menu-1 li ul li a:hover, ul#main-menu  li ul li a:hover { background: #404040 !important; color: #fff !important; }
 	
 	/* Dritte Ebene */
-	ul#nice-menu-1 li ul li ul { position: absolute !important; width: auto !important; padding: 0 !important; margin: 5px 0 0 -30px !important; border: none !important; }
-	ul#nice-menu-1 li ul li ul li { line-height: 18px; width: 280px !important; border: none; padding: 0 !important; margin: 0 !important; border: none !important; text-align: left; }
-	ul#nice-menu-1 li ul li ul li a { display: block; padding: 5px 8px 5px 8px !important; margin: 0 !important; text-decoration: none !important; width: 100% !important; }
-	ul#nice-menu-1 li ul li ul li a:hover { background: none !important; }
-	ul#nice-menu-1 li ul li ul li:hover { background: #404040 !important; }
+	ul#nice-menu-1 li ul li ul, ul#main-menu  li ul li ul { position: absolute !important; width: auto !important; padding: 0 !important; margin: 5px 0 0 -30px !important; border: none !important; }
+	ul#nice-menu-1 li ul li ul li, ul#main-menu  li ul li ul li { line-height: 18px; width: 280px !important; border: none; padding: 0 !important; margin: 0 !important; border: none !important; text-align: left; }
+	ul#nice-menu-1 li ul li ul li a, ul#main-menu  li ul li ul li a  { display: block; padding: 5px 8px 5px 8px !important; margin: 0 !important; text-decoration: none !important; width: 100% !important; }
+	ul#nice-menu-1 li ul li ul li a:hover, ul#main-menu  li ul li ul li a:hover { background: none !important; }
+	ul#nice-menu-1 li ul li ul li:hover, ul#main-menu li ul li ul li:hover  { background: #404040 !important; }
 	
 	/* Erster Hauptmenuepunkt */
 	#menu-home { margin-left: 0px !important; }
@@ -160,11 +161,11 @@ body.front .node .content p { display: block; }
 	#page-tools div.tabs { border-left: #bbb 1px solid !important; border-bottom: #bbb 1px solid; } 
 	
 	/* ul */	
-	#page-tools ul.primary-tabs { margin: 0; padding: 0; }
+	#page-tools ul.primary-tabs, #page-tools .tabs ul.primary-links { margin: 0; padding: 0; }
 	 div#secondary-tabs { margin: 0; padding: 0;  border-bottom: 0}
 
 	/* li */
-	#page-tools ul.primary-tabs li, #secondary-tabs li { 
+	#page-tools ul.primary-tabs li, #page-tools .tabs ul.primary-links li { 
 		font-weight: bold !important; 
 		float: left; 
 		padding: 0 10px !important; 
@@ -173,12 +174,13 @@ body.front .node .content p { display: block; }
 		margin: 0 !important; 
 		border: #bbb 1px solid !important; border-left: none !important;
 		height: 30px !important; 
-		background: url(img/bg/tabverlauf.jpg) repeat-x; 
+		background: url(img/bg/tabverlauf.jpg) repeat-x;
+        width: auto;		
 	}
 	ul.tabs li:hover { background: #fff !important; }
-	
+			
 	/* a */
-	#page-tools ul.primary-tabs li a, #secondary-tabs li a { 
+	#page-tools ul.primary-tabs li a, #secondary-tabs li a, #page-tools ul.primary-links li a { 
 		border: none !important; 
 		font-weight: bold !important; 
 		background: none !important; 
@@ -188,15 +190,20 @@ body.front .node .content p { display: block; }
 		color: #404040 !important; 
 		overflow: hidden;
 		display: block !important;
+		width: auto;
 	}
+	#page-tools .tabs ul.primary-links li a { font-size: 14px; }
+	#page-tools .tabs ul.primary-links li a:hover { font-size: 14px; text-decoration: none; background: none !important; }
+	#page-tools .tabs ul.primary-links li.active a { font-size: 14px; text-decoration: none; border: none !important; }
 	
-	#page-tools ul.primary-tabs li a:hover { font-size: 14px; text-decoration: none; background: none !important; }
-	#page-tools ul.primary-tabs li.active a { font-size: 14px; text-decoration: none; border: none !important; }
+	#page-tools ul.primary-tabs li a { font-size: 11px; }
+	#page-tools ul.primary-tabs li a:hover { font-size: 11px; text-decoration: none; background: none !important; }
+	#page-tools ul.primary-tabs li.active a { font-size: 11px; text-decoration: none; border: none !important; }
 	
 	/* active */	
-	#page-tools ul.primary-tabs li.active, #secondary-tabs li.active { background: #fff !important; }
-	#page-tools ul.primary-tabs li.active a, #secondary-tabs li.active a { border: none !important; padding: 0 !important; margin: 0 !important; }
-	#page-tools ul.primary-tabs li.active a:hover, #secondary-tabs li.active a:hover { color: #404040 !important;  }
+	#page-tools ul.primary-tabs li.active, #secondary-tabs li.active, #page-tools .tabs ul.primary-links li.active { background: #fff !important; }
+	#page-tools ul.primary-tabs li.active a, #secondary-tabs li.active a,#page-tools .tabs ul.primary-links li.active a { border: none !important; padding: 0 !important; margin: 0 !important; }
+	#page-tools ul.primary-tabs li.active a:hover, #secondary-tabs li.active a:hover, #page-tools .tabs ul.primary-links li.active a:hover { color: #404040 !important;  }
 	
 	/* Tabs HG fuer Fokusseiten */
 	.fg1 #page-tools ul.primary-tabs li.active, .fg1 #page-tools ul.primary-tabs li.active:hover, .fg1 #main-squeeze #page-tools ul.primary-tabs li.active a  { background: #E32D6E !important; color: #fff !important; }

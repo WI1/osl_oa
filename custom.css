@@ -1775,3 +1775,27 @@ input.teaser-button, input.form-submit {
 #content .page-region {
 	padding-top: 0;
 }
+
+#features-menu li a span.icon {
+	display: none;
+}
+
+#features-menu li a span.label {
+	position: relative;
+	top: 0;
+	left: 0;
+	line-height: 29px;
+	font-size: inherit;
+	width: auto;
+}
+
+#features-menu li.active  {
+	border-radius: 0;
+}
+
+#features-menu li.active a span.label, #features-menu li.active a:hover span.label {
+	font-size: inherit;
+	line-height: 29px;
+	padding: 0;
+	font-weight: bold;
+}
