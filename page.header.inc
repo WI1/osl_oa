@@ -34,8 +34,8 @@
   <?php endif; ?>
   
   <div id='page-tools'><div class='limiter clear-block container_12'>
-    <?php if ($help_toggler):?><?php print $help_toggler ?><?php endif; ?>
     <?php if ($title): ?><h1 <?php print drupal_attributes($title_attr) ?>><?php print $title ?></h1><?php endif; ?>
+    <?php if (isset($node) && !empty($node->og_description) && $node->og_description !== 'na'): ?><p class="long"><?php print $node->og_description; ?></p><?php endif; ?>
     <?php if ($context_links): ?><div class='context-links'><?php print $context_links ?></div><?php endif; ?>
     <?php if ($page_tools): ?><div class='tabs clear-block'><?php print $page_tools ?></div><?php endif ?>
     <?php if ($tabs): ?><div class='tabs clear-block'><?php print $tabs ?></div><?php endif; ?>

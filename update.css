@@ -28,7 +28,7 @@ body {
 	h1 a:hover,h2 a:hover,h3 a:hover,h4 a:hover,h5 a:hover,h6 a:hover { color: #EEE !important; }
 	
 	/* Page Title */
-	#page-tools .page-title { height: auto !important; font-size: 18px; text-transform: uppercase; font-weight: bold;}
+	#page-tools .page-title, #page .node-title { height: auto !important; font-size: 18px; text-transform: uppercase; font-weight: bold;}
 
 
 /* Abstaende */
@@ -50,8 +50,9 @@ body.front .node .content p { display: block; }
 	
 	
 /* Fokusgruppen Logomenue */
-#block-nice_menus-2 { position: absolute; width: 300px; top: 0px; margin: 0 0 0 750px; clear: both; }
-#balance-bar .nice-menu { clear: both; }
+#block-menu-menu-projekte .block-title { display: none; }
+/*#block-nice_menus-2 { position: absolute; width: 300px; top: 0px; margin: 0 0 0 750px; clear: both; }*/
+#header .nice-menu { clear: both; }
 
 /* Search */
 #search { float: left; display: block; margin: 0; box-shadow: 2px 1px 1px #DDDDDD; }
@@ -68,7 +69,7 @@ body.front .node .content p { display: block; }
 
 	/* allgemein */
 	#block-nice_menus-1 { width: 710px !important; float: left !important; }	
-    ul#main-menu {width: auto; float: left; }	
+    ul#main-menu {width: auto; float: left; margin-bottom: 0; }	
 	
 	/* Erste Ebene */
 	ul#nice-menu-1 li, ul#main-menu li { background: none !important; border: none; border-right: #fff 1px solid; line-height: 25px; }
@@ -100,10 +101,10 @@ body.front .node .content p { display: block; }
 
 /* Fokusgruppen Navigation */
 
-	#balance-bar .nice-menu li ul { border-color: #404040; }
-	#balance-bar .nice-menu li ul li { padding: 0 !important; }
-	#balance-bar .nice-menu li ul li a { padding: 3px 1px !important; color: #404040; margin: 0 !important; height: auto !important;  }
-	#balance-bar .nice-menu li ul li a:hover { text-decoration: none; margin: 0 !important; color: #000; }
+	#block-nice_menus-2 .nice-menu li ul { border-color: #404040; }
+	#block-nice_menus-2 .nice-menu li ul li { padding: 0 !important; }
+	#block-nice_menus-2 .nice-menu li ul li a { padding: 3px 1px !important; color: #404040; margin: 0 !important; height: auto !important;  }
+	#block-nice_menus-2 .nice-menu li ul li a:hover { text-decoration: none; margin: 0 !important; color: #000; }
 
 
 /* Paginierung */
@@ -157,9 +158,10 @@ body.front .node .content p { display: block; }
 /* Tabs */
 	
 	/* div */
-	#page-tools .tabs { height: 31px; margin: 20px 0; top: auto;  padding: 0 }
+	#page-tools .tabs { height: 31px; margin: 10px 0; top: auto;  padding: 0 }
 	#page-tools div.tabs { border-left: #bbb 1px solid !important; border-bottom: #bbb 1px solid; } 
 	#page-tools .tabs #block-menu-features { border:0; }
+	#page-tools .tabs #block-menu-features .block-title { display: none; }
 	
 	/* ul */	
 	#page-tools ul.primary-tabs, #page-tools .tabs #block-menu-features ul, #page-tools .tabs .block #block-menu-features, #page-tools .tabs #block-menu-features.block .block-content { margin: 0; padding: 0; }
@@ -194,19 +196,24 @@ body.front .node .content p { display: block; }
 		width: auto;
 		line-height: 30px; 
 	}
+	
 	#page-tools .tabs #block-menu-features.block ul.menu li a { font-size: 14px; }
 	#page-tools .tabs #block-menu-features.block ul.menu li a:hover { font-size: 14px; text-decoration: none; }
 	#page-tools .tabs #block-menu-features.block ul.menu li.active-trail a { font-size: 14px; text-decoration: none; border: none !important; }
 	
-	#page-tools ul.primary-tabs li a { font-size: 11px; }
+	#page-tools ul.primary-tabs li a, #secondary-tabs li a { font-size: 11px; }
 	#page-tools ul.primary-tabs li a:hover { font-size: 11px; text-decoration: none; background: none !important; }
 	#page-tools ul.primary-tabs li.active a { font-size: 11px; text-decoration: none; border: none !important; }
 	
+    #secondary-tabs { border-bottom: 1px solid #bbb !important; }
+    #secondary-tabs li { margin: 0 12px; }
+	#secondary-tabs li a { font-weight: normal !important; line-height: 12px; border-radius: 0; background: 0;}
+    #secondary-tabs li a:hover { font-weight: bold; }
+
 	/* active */	
-	#page-tools ul.primary-tabs li.active, #secondary-tabs li.active, #page-tools .tabs ul.primary-links li.active { background: #fff !important; }
-	#page-tools ul.primary-tabs li.active a, #secondary-tabs li.active a,#page-tools .tabs ul.primary-links li.active a { border: none !important; padding: 0 !important; margin: 0 !important; }
-	#page-tools ul.primary-tabs li.active a:hover, #secondary-tabs li.active a:hover, #page-tools .tabs ul.primary-links li.active a:hover { color: #404040 !important;  }
-	
+	#page-tools ul.primary-tabs li.active, #page-tools .tabs ul.primary-links li.active { border-bottom: 1px solid #fff !important; background: #fff !important; }
+	#page-tools ul.primary-tabs li.active a, #secondary-tabs li.active a,#page-tools .tabs ul.primary-links li.active a { font-weight: bold !important; border: none !important; padding: 0 !important; margin: 0 !important; }
+	#page-tools ul.primary-tabs li.active a:hover, #page-tools .tabs ul.primary-links li.active a:hover { color: #404040 !important;  }
 	/* Tabs HG fuer Fokusseiten */
 	.fg1 #page-tools ul.primary-tabs li.active, .fg1 #page-tools ul.primary-tabs li.active:hover, .fg1 #main-squeeze #page-tools ul.primary-tabs li.active a  { background: #E32D6E !important; color: #fff !important; }
 	.fg2 #page-tools ul.primary-tabs li.active, .fg2 #page-tools ul.primary-tabs li.active:hover, .fg2 #main-squeeze #page-tools ul.primary-tabs li.active a { background: #BF0C27 !important; color: #fff !important; }
@@ -315,3 +322,12 @@ fieldset { margin: 20px 0 !important; }
 #forum tr td.forum {
 padding-left:25px !important;
 }
+
+/* OA Folders features */
+.atrium-folders-navigator .left { width: 28%; }
+.atrium-folders-navigator a { color: #fff !important; }
+.atrium-folders-navigator ul.links  { width: 100% !important; margin: 0 0 10px 0; }
+
+.dropzone.dropzone-upload #attachments { width: 100%; position:relative; left: -100%; }
+.dropzone.dropzone-upload #attachments .left { width: 70% }
+.dropzone.dropzone-upload #attachments .right {width: 28% }

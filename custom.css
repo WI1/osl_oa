@@ -1665,7 +1665,7 @@ background: #404040 !important;
 }
 
 #global .breadcrumb {
-	font-size: 18px !important;
+	font-size: 16px !important;
 }
 
 #navigation a.logo {
@@ -1687,10 +1687,25 @@ font-weight: bold;
 margin-left: 0.4em;
 }
 
+
+/* Page tools */
 #page-tools {
 	background: transparent;
 	border: 0;
 	height: auto !important;
+}
+
+#page-tools h1.page-title, #page-tools h1.page-title-hidden {
+	margin-top: 16px;
+	margin-bottom: 0;
+	text-indent: 0;
+}
+
+#page-tools .context-links {
+	border-left: 0;
+    	
+	position: relative;
+    z-index: 10;
 }
 
 #features-menu li {
@@ -1714,35 +1729,23 @@ margin-left: 0.4em;
 	padding-right: 12px;
 	padding-top: 1px;
 
-   background: #eee;
-
-    -moz-border-bottom-colors: none;
-    -moz-border-image: none;
-    -moz-border-left-colors: none;
-    -moz-border-right-colors: none;
-    -moz-border-top-colors: none;
-    border-color: #EEEEEE -moz-use-text-color #EEEEEE #EEEEEE;
-    border-radius: 5px 0 0 5px;
-    border-style: solid none solid solid;
-    border-width: 1px 0 1px 1px;
+   background: transparent;
+   border: 0;
 }
 
 body #space-tools .block-title, body #header .block-widget .block-content, body #header .block .block-title{
-	background-color: #eee !important;
-	color: #404040 !important;
+	background-color: transparent!important;
+	color: #fff !important;
+	font-size: 16px;
+	font-weight: normal!important;
 }
 
 .dropdown-blocks .block .block-title {
-	padding: 3px 6px 4px 6px;
+	padding: 4px 6px 4px 6px;
 }
 
 
-#page-tools .context-links {
-	border-left: 0;
-    	
-	position: relative;
-    z-index: 10;
-}
+
 
 input.teaser-button, input.form-submit {
 	background: none;
@@ -1807,3 +1810,4 @@ input.teaser-button, input.form-submit {
 table th {
     text-shadow: none;
 }
+
