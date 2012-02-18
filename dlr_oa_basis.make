@@ -40,6 +40,11 @@ projects[wi1init][subdir] = "features"
 
 
 ; a.2 specific
+projects[dlr_domains][download][type] = "git"
+projects[dlr_domains][download][url] = "git://github.com/WI1/dlr_domains.git"
+projects[dlr_domains][type] = "module"
+projects[dlr_domains][subdir] = "features"
+
 projects[dlr_groups][download][type] = "git"
 projects[dlr_groups][download][url] = "git://github.com/WI1/dlr_groups.git"
 projects[dlr_groups][type] = "module"
