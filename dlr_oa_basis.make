@@ -28,20 +28,20 @@ projects[atrium_folders][download][url] = "git://github.com/nuvoleweb/atrium_fol
 projects[atrium_folders][type] = "theme"
 projects[atrium_folders][subdir] = "features"
 
-  projects[dragndrop_upload][subdir] ="contrib"
+projects[dragndrop_upload][subdir] ="contrib"
 
 
 ; a. custom
 ; a.1 general
 projects[wi1init][download][type] = "git"
 projects[wi1init][download][url] = "git://github.com/WI1/wi1init.git"
-projects[wi1init][type] = "theme"
+projects[wi1init][type] = "module"
 projects[wi1init][subdir] = "features"
 
 
 ; a.2 specific
 projects[dlr_groups][download][type] = "git"
 projects[dlr_groups][download][url] = "git://github.com/WI1/dlr_groups.git"
-projects[dlr_groups][type] = "theme"
+projects[dlr_groups][type] = "module"
 projects[dlr_groups][subdir] = "features"
 
