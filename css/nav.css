@@ -9,7 +9,7 @@ Navigation
 /**********************************/
 #block-nice_menus-2 .nice-menu {
   display: block;
-  height: 26px;
+  height: 30px;
   float: left;
   margin-right: 30px !important;
 }
@@ -27,7 +27,8 @@ Navigation
 
 #block-nice_menus-2 .nice-menu li a {
 	display: block;
-	height: 20px;
+	height: 30px;
+	width: 30px;
 	text-indent: -9000px;
 	padding: 0;
     z-index: 20;
