@@ -112,7 +112,7 @@ projects[dlr_groups][subdir] = "features"
   projects[nodehierarchy][version] = "2.1"
 
   projects[realname][subdir] = "sites/all/modules/contrib/realname"
-  projects[realname][version] = "1.4"
+  projects[realname][version] = "1.x-dev"
 
   projects[realname_userreference][subdir] = "sites/all/modules/contrib/realname_userreference"
   projects[realname_userreference][version] = "1.2"
