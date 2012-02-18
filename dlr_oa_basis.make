@@ -43,9 +43,6 @@ projects[wi1init][subdir] = "features"
   projects[adminrole][subdir] = "sites/all/modules/contrib/adminrole"
   projects[adminrole][version] = "1.3"
 
-  projects[deploy][subdir] = "sites/all/modules/contrib/deploy"
-  projects[deploy][version] = "1.0-alpha2"
-
   projects[services][subdir] = "sites/all/modules/contrib/services"
   projects[services][version] = "2.x-dev"
 
