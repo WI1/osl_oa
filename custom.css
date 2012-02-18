@@ -1695,6 +1695,12 @@ margin-left: 0.4em;
 	height: auto !important;
 }
 
+
+#page-tools .page-title, #page-tools .tabs {
+  position: relative;
+  left: 0;
+}
+
 #page-tools h1.page-title, #page-tools h1.page-title-hidden {
 	margin-top: 16px;
 	margin-bottom: 0;
