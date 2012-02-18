@@ -40,6 +40,11 @@ projects[wi1init][subdir] = "features"
 
 
 ; a.2 specific
+projects[dlr_atrium_overrides][download][type] = "git"
+projects[dlr_atrium_overrides][download][url] = "git://github.com/WI1/dlr_atrium_overrides.git"
+projects[dlr_atrium_overrides][type] = "module"
+projects[dlr_atrium_overrides][subdir] = "features"
+
 projects[dlr_domains][download][type] = "git"
 projects[dlr_domains][download][url] = "git://github.com/WI1/dlr_domains.git"
 projects[dlr_domains][type] = "module"
