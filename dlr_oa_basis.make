@@ -19,7 +19,6 @@ projects[openatrium][type] = "profile"
 projects[dlr_oa][download][type] = "git"
 projects[dlr_oa][download][url] = "git@redmine.wi1projects.com:dlr.git"
 projects[dlr_oa][type] = "theme"
-projects[dlr_oa][subdir] = "/sites/all/themes"
 
 
 ; Features
@@ -27,7 +26,7 @@ projects[dlr_oa][subdir] = "/sites/all/themes"
 projects[atrium_folders][download][type] = "git"
 projects[atrium_folders][download][url] = "git://github.com/nuvoleweb/atrium_folders.git"
 projects[atrium_folders][type] = "theme"
-projects[atrium_folders][subdir] = "/sites/all/features"
+projects[atrium_folders][subdir] = "features"
 
   projects[dragndrop_upload][subdir] ="contrib"
 
@@ -37,12 +36,12 @@ projects[atrium_folders][subdir] = "/sites/all/features"
 projects[wi1init][download][type] = "git"
 projects[wi1init][download][url] = "git@redmine.wi1projects.com:init.git"
 projects[wi1init][type] = "theme"
-projects[wi1init][subdir] = "/sites/all/features"
+projects[wi1init][subdir] = "features"
 
 
 ; a.2 specific
 projects[dlr_groups][download][type] = "git"
 projects[dlr_groups][download][url] = "git@redmine.wi1projects.com:dlr/dlr-groups.git"
 projects[dlr_groups][type] = "theme"
-projects[dlr_groups][subdir] = "/sites/all/features"
+projects[dlr_groups][subdir] = "features"
 
