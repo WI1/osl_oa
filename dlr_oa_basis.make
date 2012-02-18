@@ -17,7 +17,7 @@ projects[openatrium][type] = "profile"
 
 ; Themes
 projects[dlr_oa][download][type] = "git"
-projects[dlr_oa][download][url] = "git://redmine.wi1projects.com/dlr.git"
+projects[dlr_oa][download][url] = "git://github.com/WI1/dlr_oa.git"
 projects[dlr_oa][type] = "theme"
 
 
@@ -34,14 +34,14 @@ projects[atrium_folders][subdir] = "features"
 ; a. custom
 ; a.1 general
 projects[wi1init][download][type] = "git"
-projects[wi1init][download][url] = "git://redmine.wi1projects.com/init.git"
+projects[wi1init][download][url] = "git://github.com/WI1/wi1init.git"
 projects[wi1init][type] = "theme"
 projects[wi1init][subdir] = "features"
 
 
 ; a.2 specific
 projects[dlr_groups][download][type] = "git"
-projects[dlr_groups][download][url] = "git@redmine.wi1projects.com:dlr/dlr-groups.git"
+projects[dlr_groups][download][url] = "git://github.com/WI1/dlr_groups.git"
 projects[dlr_groups][type] = "theme"
 projects[dlr_groups][subdir] = "features"
 
