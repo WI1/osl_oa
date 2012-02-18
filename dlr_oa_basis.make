@@ -28,7 +28,7 @@ projects[atrium_folders][download][url] = "git://github.com/nuvoleweb/atrium_fol
 projects[atrium_folders][type] = "theme"
 projects[atrium_folders][subdir] = "features"
 
-projects[dragndrop_upload][subdir] ="contrib"
+projects[dragndrop_uploads][subdir] = "contrib"
 
 
 ; a. custom

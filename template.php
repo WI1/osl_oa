@@ -150,6 +150,7 @@ function dlr_oa_preprocess_search_block_form(&$vars, $hook) {
  * @param array object
  * @return string
  */
+ /*
 function dlr_oa_username($object) {
 	// copy of theme_username from here on
 	if ($object->uid && $object->name) {
@@ -193,7 +194,7 @@ function dlr_oa_username($object) {
 
 	return $output;
 }
-
+*/
 /**
  * Prints menu item children of a given node id
  *
