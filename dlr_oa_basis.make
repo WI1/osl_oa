@@ -15,7 +15,9 @@ projects[pressflow][type] = "core"
 projects[openatrium][type] = "profile"
   
   ; Patches
-  ; Patch for Boxes Module
+  ; Patch for Boxes Module to fit Pressflow
+  projects[boxes][subdir] = "patched"
+  projects[boxes][version] = "1.0"
   projects[boxes][patch][] = "http://drupal.org/files/issues/boxes-pressflow-headers.patch"
   
   
