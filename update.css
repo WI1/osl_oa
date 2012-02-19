@@ -34,7 +34,6 @@ body {
 /* Abstaende */
 p { margin-bottom: 1em; }
 dl, hr, pre, address, fieldset, ol, ul, table { margin-bottom: 2.5em; }
-fieldset { margin: 20px 0 !important; }
 
 /* Fliesstext */
 body.front .node .content p { display: block; }
@@ -224,16 +223,25 @@ body.front .node .content p { display: block; }
 	.fg7 #page-tools ul.primary-tabs li.active, .fg7 #page-tools ul.primary-tabs li.active:hover, .fg7 #main-squeeze #page-tools ul.primary-tabs li.active a { background: #0E72B5 !important; color: #fff !important; }
 	.fg8 #page-tools ul.primary-tabs li.active, .fg8 #page-tools ul.primary-tabs li.active:hover, .fg8 #main-squeeze #page-tools ul.primary-tabs li.active a { background: #921F75 !important; color: #fff !important; }
 
-
-/* Vertical Tabs */
+    
+/* Node Forms */	
+	/* Vertical Tabs */
 	
 	.vertical-tabs { display: block; float: none !important; }
 	.vertical-tabs ul.vertical-tabs-list { float: none !important; position: relative !important; margin: 10px 0 0 190px !important; left: inherit !important; top: inherit !important; width: 500px !important; }
-	#content .vertical-tabs li { list-style-image: none !important; border: none !important; height: auto !important; }
-	#content .vertical-tabs li.selected { background: #404040; }
-	#content .vertical-tabs li a { color: #404040; display: block; width: 100%; height: 100%; }
-	#content .vertical-tabs-panes { margin-top: 20px !important; }
+    #content .vertical-tabs li#selected { background: #404040; color: #fff !important; }
+    #content .vertical-tabs li { background: #eee; color: #404040 !important; border: 0 !important; list-style-image: none !important; border: none !important; height: auto !important; }
+    #content .vertical-tabs li a { border: 0 !important; border-radius: 0; color: #404040; display: block; width: 100%; height: 100%; }
+    #content .vertical-tabs-panes { margin-top: 20px !important; }
 	#content .vertical-tabs li.selected strong, #content .vertical-tabs li.selected small { color: #fff !important; }
+    
+	#node-form .form-item { border: 0; padding-left: 0;}
+ 	
+	#node-form .fieldset { margin: 10px 0 0 0; }
+	#node-form .fieldset, #node-form fieldset.collapsed, #node-form fieldset.collapsed .fieldset-content, #node-form fieldset.collapsed .fieldset-title, #node-form .fieldset-content,  #node-form legend .fieldset-title,  #node-form legend .fieldset-title a  { border: 0; border-radius: 0;}
+    #node-form legend .fieldset-title a { background: #404040; color: #fff !important; }
+    #node-form fieldset.collapsed .fieldset-title a { background: #eee; color: #404040 !important; border: 0 !important; list-style-image: none !important; border: none !important; height: auto !important; }
+	#node-form legend .fieldset-title .icon { display: none; }
 
 
 /* Gefaellt mir */
@@ -316,8 +324,6 @@ label.over-apply { position: relative !important; padding: 5px 0 4px 0; color: #
 #block-menu-secondary-links a { color: #404040 !important; }
 #block-footer_sitemap-0 { background: #404040; padding: 10px 0; height: 200px; }
 #block-footer_sitemap-0 li { width: auto !important; max-width: 160px; margin-right: 30px !important; }
-
-fieldset { margin: 20px 0 !important; }
 
 #forum tr td.forum {
 padding-left:25px !important;

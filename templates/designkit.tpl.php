@@ -7,7 +7,9 @@
 .dropdown-blocks .block-toggle .item-list li a:hover,
 .dropdown-blocks .block-toggle .item-list li a:focus,
 .pager li.pager-current,
-.more-link a:hover { background-color:<?php print $background ?>; }
+.more-link a:hover,
+#node-form fieldset.collapsed .fieldset-title a:hover, 
+#node-form legend .fieldset-title a:hover { background-color:<?php print $background ?>; }
 
 #page-tools .tabs #block-menu-features.block ul.menu li.active-trail { background: <?php print $background ?> !important; }
 #page-tools .tabs #block-menu-features.block ul.menu li.active-trail a { color: #ffffff !important; text-shadow: none;}
