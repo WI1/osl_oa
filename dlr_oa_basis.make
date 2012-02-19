@@ -13,8 +13,12 @@ projects[pressflow][type] = "core"
 
 ; Profiles
 projects[openatrium][type] = "profile"
-
-
+  
+  ; Patches
+  ; Patch for Boxes Module
+  projects[boxes][patch[] = "http://drupal.org/files/issues/boxes-pressflow-headers.patch"
+  
+  
 ; Themes
 projects[dlr_oa][download][type] = "git"
 projects[dlr_oa][download][url] = "git://github.com/WI1/dlr_oa.git"
