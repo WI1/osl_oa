@@ -16,7 +16,7 @@ projects[openatrium][type] = "profile"
   
   ; Patches
   ; Patch for Boxes Module
-  projects[boxes][patch[] = "http://drupal.org/files/issues/boxes-pressflow-headers.patch"
+  projects[boxes][patch][] = "http://drupal.org/files/issues/boxes-pressflow-headers.patch"
   
   
 ; Themes
