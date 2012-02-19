@@ -40,43 +40,43 @@ projects[wi1init][type] = "module"
 projects[wi1init][subdir] = "features"
 
   ; wi1init dependencies
-  projects[adminrole][subdir] = "sites/all/modules/contrib/adminrole"
+  projects[adminrole][subdir] = "contrib"
   projects[adminrole][version] = "1.3"
 
-  projects[services][subdir] = "sites/all/modules/contrib/services"
+  projects[services][subdir] = "contrib"
   projects[services][version] = "2.x-dev"
 
-  projects[content_access][subdir] = "sites/all/modules/contrib/content_access"
+  projects[content_access][subdir] = "contrib"
   projects[content_access][version] = "1.2"
 
-  projects[features_extra][subdir] = "sites/all/modules/contrib/features_extra"
+  projects[features_extra][subdir] = "contrib"
   projects[features_extra][version] = "1.x-dev"
 
-  projects[features_override][subdir] = "sites/all/modules/contrib/features_override"
+  projects[features_override][subdir] = "contrib"
   projects[features_override][version] = "1.0-beta2"
 
-  projects[features_plumber][subdir] = "sites/all/modules/contrib/features_plumber"
+  projects[features_plumber][subdir] = "contrib"
   projects[features_plumber][version] = "1.0-alpha1"
 
-  projects[ftools][subdir] = "sites/all/modules/contrib/ftools"
+  projects[ftools][subdir] = "contrib"
   projects[ftools][version] = "1.3"
 
-  projects[filefield][subdir] = "sites/all/modules/contrib/filefield"
+  projects[filefield][subdir] = "contrib"
   projects[filefield][version] = "3.10"
 
-  projects[imagefield][subdir] = "sites/all/modules/contrib/imagefield"
+  projects[imagefield][subdir] = "contrib"
   projects[imagefield][version] = "3.10"
 
-  projects[link][subdir] = "sites/all/modules/contrib/link"
+  projects[link][subdir] = "contrib"
   projects[link][version] = "2.9"
 
-  projects[uuid][subdir] = "sites/all/modules/contrib/uuid"
+  projects[uuid][subdir] = "contrib"
   projects[uuid][version] = "1.0-beta2"
 
-  projects[uuid_features][subdir] = "sites/all/modules/contrib/uuid_features"
+  projects[uuid_features][subdir] = "contrib"
   projects[uuid_features][version] = "1.0-alpha1"
 
-  projects[vertical_tabs][subdir] = "sites/all/modules/contrib/vertical_tabs"
+  projects[vertical_tabs][subdir] = "contrib"
   projects[vertical_tabs][version] = "1.0-rc2"
 
 
@@ -97,27 +97,30 @@ projects[dlr_groups][type] = "module"
 projects[dlr_groups][subdir] = "features"
   
   ; dlr_domains dependencies
-  projects[domain][subdir] = "sites/all/modules/contrib/domain"
+  projects[domain][subdir] = "contrib"
   projects[domain][version] = "2.13"
 
   ; dlr_groups dependencies
   ;- contrib
-  projects[menu_attributes][subdir] = "sites/all/modules/contrib/menu_attributes"
+  projects[location][subdir] = "contrib"
+  projects[location][version] = "1.2"
+  
+  projects[menu_attributes][subdir] = "contrib"
   projects[menu_attributes][version] = "2.0-beta1"
   
-  projects[nice_menus][subdir] = "sites/all/modules/contrib/nice_menus"
+  projects[nice_menus][subdir] = "contrib"
   projects[nice_menus][version] = "2.1"
   
-  projects[nodehierarchy][subdir] = "sites/all/modules/contrib/nodehierarchy"
+  projects[nodehierarchy][subdir] = "contrib"
   projects[nodehierarchy][version] = "2.1"
 
-  projects[realname][subdir] = "sites/all/modules/contrib/realname"
+  projects[realname][subdir] = "contrib"
   projects[realname][version] = "1.x-dev"
 
-  projects[realname_userreference][subdir] = "sites/all/modules/contrib/realname_userreference"
+  projects[realname_userreference][subdir] = "contrib"
   projects[realname_userreference][version] = "1.2"
 
-  projects[viewfield][subdir] = "sites/all/modules/contrib/viewfield"
+  projects[viewfield][subdir] = "contrib"
   projects[viewfield][version] = "1.2"
   
   ;- custom

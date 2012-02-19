@@ -476,7 +476,7 @@ font-weight: bold;
 }
 
 #node-form input#edit-submit:hover {
-    background-color: #609946;
+    background: #609946;
 }
 
 #node-form input#edit-submit:focus {
@@ -509,7 +509,7 @@ font-weight: bold;
     width: 91px;
 }
 #node-form input#edit-delete:hover {
-    background-color: #A0230A;
+    background: #A0230A;
 }
 #node-form input#edit-delete:focus {
     -moz-border-bottom-colors: none;
@@ -541,7 +541,7 @@ font-weight: bold;
     width: 91px;
 }
 #node-form input#edit-preview:hover {
-    background-color: #F6B60A;
+    background: #F6B60A;
 }
 #node-form input#edit-preview:focus {
     -moz-border-bottom-colors: none;
@@ -573,7 +573,7 @@ font-weight: bold;
     width: 91px;
 }
 #node-form input#edit-preview-changes:hover {
-    background-color: #F6B60A;
+    background: #F6B60A;
 }
 #node-form input#edit-preview-changes:focus {
     -moz-border-bottom-colors: none;

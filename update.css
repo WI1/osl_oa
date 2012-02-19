@@ -241,6 +241,7 @@ body.front .node .content p { display: block; }
 	#node-form .fieldset, #node-form fieldset.collapsed, #node-form fieldset.collapsed .fieldset-content, #node-form fieldset.collapsed .fieldset-title, #node-form .fieldset-content,  #node-form legend .fieldset-title,  #node-form legend .fieldset-title a  { border: 0; border-radius: 0;}
     #node-form legend .fieldset-title a { background: #404040; color: #fff !important; }
     #node-form fieldset.collapsed .fieldset-title a { background: #eee; color: #404040 !important; border: 0 !important; list-style-image: none !important; border: none !important; height: auto !important; }
+    #node-form fieldset.collapsed .fieldset-title a:hover, #node-form legend .fieldset-title a:hover { color: #ccc} /* For groups without color field set, will be overriden by inline style from designkit */
 	#node-form legend .fieldset-title .icon { display: none; }
 
 
