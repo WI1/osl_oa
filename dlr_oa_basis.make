@@ -103,7 +103,7 @@ projects[dlr_groups][subdir] = "features"
   ; dlr_groups dependencies
   ;- contrib
   projects[location][subdir] = "contrib"
-  projects[location][version] = "1.2"
+  projects[location][version] = "3.1"
   
   projects[menu_attributes][subdir] = "contrib"
   projects[menu_attributes][version] = "2.0-beta1"
