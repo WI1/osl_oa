@@ -128,6 +128,13 @@ projects[dlr_groups][subdir] = "features"
 
   projects[viewfield][subdir] = "contrib"
   projects[viewfield][version] = "1.2"
+
+
+projects[dlr_info][download][type] = "git"
+projects[dlr_info][download][url] = "git://github.com/WI1/dlr_info.git"
+projects[dlr_info][type] = "module"
+projects[dlr_info][subdir] = "features"
+
   
   ;- custom
   projects[balanceonline_og_like][download][type] = "git"
