@@ -108,6 +108,9 @@ projects[dlr_groups][subdir] = "features"
 
   ; dlr_groups dependencies
   ;- contrib
+  projects[context_og][subdir] = "contrib"
+  projects[context_og][version] = "3.0"
+  
   projects[location][subdir] = "contrib"
   projects[location][version] = "3.1"
   
