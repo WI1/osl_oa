@@ -34,18 +34,6 @@ Navigation
     z-index: 20;
 	}
 
-
-
-#block-nice_menus-2 .nice-menu li a:hover
-		{
-border: 1px solid #fff;
-border-bottom: #fff !important;
-	}
-
-#block-nice_menus-2{
-margin-top: 3px;
-}
-
 #block-nice_menus-2 .nice-menu li ul {
 	border: 1px solid #666;
 	background-color: white;
@@ -53,8 +41,6 @@ margin-top: 3px;
 	width: 150px;
 	z-index:22;
 	}
-
-
 
 #block-nice_menus-2 .nice-menu li ul li a {
 	text-indent: 0;
