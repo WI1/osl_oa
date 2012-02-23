@@ -1668,6 +1668,10 @@ background: #404040 !important;
 	font-size: 16px !important;
 }
 
+#global .breadcrumb span a:hover {
+	text-decoration: underline;
+}
+
 #navigation a.logo {
   display: block;
   float: left;
@@ -1737,6 +1741,10 @@ margin-left: 0.4em;
 
    background: transparent;
    border: 0;
+}
+
+#space-tools .block-title:hover, #block-atrium-account .block-title:hover {
+	text-decoration: underline !important;
 }
 
 body #space-tools .block-title, body #header .block-widget .block-content, body #header .block .block-title{
