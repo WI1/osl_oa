@@ -1859,3 +1859,15 @@ table th {
 	background: 0;
 }
 
+.crayon-anchor {
+  background: transparent;
+}
+
+.crayon-swatch {
+  margin-right: -40px;	
+}
+
+.crayon-swatch-label {
+	visibility: hidden;
+}
+
