@@ -51,7 +51,8 @@ body.front .node .content p { display: block; }
 	#block-user-1 li a:hover, #block-user-1 li.active-trail a { background: none; text-decoration: underline; }
 	#block-menu-menu-fgtop li a.balance { height: 26px !important; }
 	
-	
+/* Tabellen */
+body table { font-size: 11px; line-height: 16px; border: 0; background: 0; }
 	
 /* Fokusgruppen Logomenue */
 #block-menu-menu-projekte .block-title { display: none; }

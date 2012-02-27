@@ -13,3 +13,7 @@
   background-image: url("images/sprite_skin.png") !important;
   width: 120px;
 }
+
+.block .minipager li.pager-current span {
+  color: #fff !important;	
+}

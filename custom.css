@@ -1758,7 +1758,10 @@ body #space-tools .block-title, body #header .block-widget .block-content, body 
 	padding: 4px 6px 4px 6px;
 }
 
-
+.dropdown-blocks .block-toggle li a, .dropdown-blocks .block-toggle .more-link a {
+	border: 0;
+	height: auto;
+}
 
 
 input.teaser-button, input.form-submit {
@@ -1797,6 +1800,10 @@ input.teaser-button, input.form-submit {
 	padding-top: 0;
 }
 
+.page-region .block-content {
+	padding: 0;
+}
+
 #features-menu li a span.icon {
 	display: none;
 }
@@ -1823,5 +1830,24 @@ input.teaser-button, input.form-submit {
 
 table th {
     text-shadow: none;
+}
+
+.block h3, .view h3, .item-list h3, table caption {
+	font-size: 14px;
+	color: #404040;
+}
+
+.view-activity-listing table {
+	display: table;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.view-activity-listing table caption {
+	margin-top: 0 !important;
+}
+
+.view-activity-listing table tr.odd, .view-activity-listing table tr.even {
+	background: 0;
 }
 
