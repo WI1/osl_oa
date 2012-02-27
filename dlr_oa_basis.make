@@ -10,7 +10,6 @@ projects[pressflow][download][type] = "get"
 projects[pressflow][download][url] = "http://files.pressflow.org/pressflow-6-current.tar.gz"
 projects[pressflow][type] = "core"
 
-
 ; Profiles
 projects[openatrium][type] = "profile"
   
@@ -105,6 +104,9 @@ projects[dlr_groups][subdir] = "features"
   ; dlr_domains dependencies
   projects[domain][subdir] = "contrib"
   projects[domain][version] = "2.13"
+  
+  projects[domain_admin][subdir] = "contrib"
+  projects[domain_admin][version] = "1.1"
 
   ; dlr_groups dependencies
   ;- contrib
@@ -160,4 +162,5 @@ projects[dlr_info][subdir] = "features"
   projects[projecttabs][type] = "module"
   projects[projecttabs][subdir] = "custom"
 
-
+;Helper Modules
+projects[masquerade][subdir] = "contrib"

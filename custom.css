@@ -1636,7 +1636,7 @@ border:1px solid #BBBBBB;
 }
 
 .breadcrumb {
-	width: 35%;
+	width: 25%;
 	float: left;
 }
 
@@ -1763,6 +1763,14 @@ body #space-tools .block-title, body #header .block-widget .block-content, body 
 	height: auto;
 }
 
+.dropdown-blocks .block-toggle .pane-right li {
+    float: left;
+    width: 70px;
+}
+.dropdown-blocks .block-toggle .pane-right li a {
+	padding: 2px 10px;
+	width: auto;
+}
 
 input.teaser-button, input.form-submit {
 	background: none;
