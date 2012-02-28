@@ -1,7 +1,7 @@
   </div></div>
 
   <?php if ($footer_message || $footer_links): ?>
-  <div id="footer"><div class='limiter clear-block container_12'>
+  <div id="footer"><div class='limiter clear-block'>
     <?php if ($footer): ?><?php print $footer; ?><?php endif; ?> 
     <?php if ($footer_message): ?><div class='footer-message'><?php print $footer_message ?></div><?php endif; ?>
     <?php if ($footer_links): ?><?php print theme('links', $footer_links) ?><?php endif; ?>
