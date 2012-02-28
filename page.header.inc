@@ -35,6 +35,7 @@
   
   <div id='page-tools'><div class='limiter clear-block container_12'>
     <?php $space_og = spaces_get_space();
+//	print_r($space_og->group);
 	if($space_og->type == "og"){ ?>
 		<h1 <?php print drupal_attributes($title_attr);?>><?php print $space_og->group->title; ?></h1>
 		<p class="long"><?php print $space_og->group->og_description; ?></p>
