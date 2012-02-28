@@ -1,5 +1,6 @@
 /* BALANCE Stylesheet */
 /* Main color: #EEEEEE */
+/* Dark grey: #404040 */
 
 .mendeley_title {
 	text-decoration: underline;
@@ -1008,11 +1009,22 @@ top: 5px;
 #footer {
 margin-top: 100px;
 overflow: hidden;
+padding: 0;
 }
 
-#footer .block .content {
+#footer .block {
+	margin-bottom: 0;
+}
+
+#footer .limiter {
+	padding: 0;
+}
+
+#footer .block-content {
 margin: 0 auto;
 width: 960px;
+border: 0;
+background: none;
 }
 
 #footer #block-menu-secondary-links {
@@ -1022,8 +1034,8 @@ background-color: #ffaa00 !important;
 }
 
 /**** Logoleiste ***/
-#block-block-6 {
-	background-color: #ccc;
+#block-boxes-foerderleiste {
+	background-color: #E5E5E5;
 }
 
 .sponsoren {
@@ -1063,7 +1075,7 @@ background-color: #ffaa00 !important;
 	width: 118px;
 	background-position: -441px 0;
 }
-.sponsoren #balance {
+.sponsoren #balance{
 	width: 146px;
 	background-position: -628px 0;
 }
@@ -1077,25 +1089,25 @@ background-color: #ffaa00 !important;
 }
 
 /** Sitemap **/
-#block-footer_sitemap-0 {
-background-color: #333;
+#block-footermap-0 {
+background-color: #404040;
 height: 200px;
 width: 100%;
 }
 
-#footer-sitemap  li {
+#block-footermap-0  li {
 border-right: 0 !important;
 margin: 0 !important;
 padding: 0 !important;
 width: 100px;
 }
 
-#footer-sitemap  li.expanded ul {
+#block-footermap-0  li.expanded ul {
 margin: 0 !important;
 padding: 0 !important;
 }
 
-#footer-sitemap  li.expanded li {
+#block-footermap-0 li.expanded li {
 display: block; 
 clear: both;
 border-right: 0 !important;
@@ -1103,15 +1115,20 @@ margin: 0 !important;
 padding: 0 !important;
 }
 
-#footer-sitemap  li.expanded li  a {
+#block-footermap-0  li.expanded li  a {
 font-weight: normal;
 }
 
-#footer-sitemap li  a {
+#block-footermap-0 li  a {
 color: #fff !important;
 font-weight: bold;
 }
 
+#block-footermap-0 a:hover {
+  border: 0;
+  background: 0;
+  text-decoration: underline;
+}
 
 .views-table {
 display: inline;
@@ -1206,7 +1223,7 @@ font-weight: bold;
 
 table.event-block tr.even td ,
 table.event-block tr.odd td {
-background-color: #ccc;
+background-color: #E5E5E5;
 border: 1px solid #fff;
 color: #fff
 }

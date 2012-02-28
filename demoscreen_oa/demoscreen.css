@@ -17,3 +17,19 @@
 .block .minipager li.pager-current span {
   color: #fff !important;	
 }
+
+
+/* FOOTER */
+.sponsoren a {
+    background-image: url("img/logoleiste72dpi.png");
+}
+
+.sponsoren #demoscreen {
+	width: 136px;
+	background-position: -628px 0;
+}
+.sponsoren #rwthaachen {
+	width: 157px;
+	background-position: -820px 0;
+}
+

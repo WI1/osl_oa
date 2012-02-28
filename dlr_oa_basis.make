@@ -68,12 +68,21 @@ projects[wi1init][subdir] = "features"
 
   projects[filefield][subdir] = "contrib"
   projects[filefield][version] = "3.10"
+  
+  projects[feedmine][subdir] = "contrib"
+  projects[feedmine][version] = "1.0"
+  
+  projects[footermap][subdir] = "contrib"
+  projects[footermap][version] = "1.7"
 
   projects[imagefield][subdir] = "contrib"
   projects[imagefield][version] = "3.10"
 
   projects[link][subdir] = "contrib"
   projects[link][version] = "2.9"
+
+  projects[masquerade][subdir] = "contrib"
+  projects[masquerade][version] = "1.7"
 
   projects[uuid][subdir] = "contrib"
   projects[uuid][version] = "1.0-beta2"
@@ -83,7 +92,7 @@ projects[wi1init][subdir] = "features"
 
   projects[vertical_tabs][subdir] = "contrib"
   projects[vertical_tabs][version] = "1.0-rc2"
-
+  
 
 ;-- b.2 specific
 projects[dlr_atrium_overrides][download][type] = "git"
@@ -161,6 +170,3 @@ projects[dlr_info][subdir] = "features"
   projects[projecttabs][download][url] = "git://github.com/WI1/projecttabs.git"
   projects[projecttabs][type] = "module"
   projects[projecttabs][subdir] = "custom"
-
-;Helper Modules
-projects[masquerade][subdir] = "contrib"
