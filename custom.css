@@ -342,13 +342,13 @@ color: #666;
 /* Page Title */
 /****************************/
 
-#page-title {
-height: 114px;
-color: #243D80;
-}
+.og-context #page-tools .page-title, .og-context #page-tools .og-description {
+ width: 700px;
+ float: left;
+ }
 
-#page-title h1 {
-word-wrap: break-word;
+.og-context #page-tools .group-logo {
+ margin-top: 16px;
 }
 
 /*****************************/
@@ -1888,3 +1888,5 @@ table th {
 	visibility: hidden;
 }
 
+#page-tools .context-links { padding: 0; } 
+.context-links ul { margin-bottom: 0; }
