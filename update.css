@@ -166,7 +166,7 @@ body table { font-size: 11px; line-height: 16px; border: 0; background: 0; }
 	#page-tools .tabs { height: 31px; margin: 10px 0; top: auto;  padding: 0; }
 	#page-tools .tabs .block, #page-tools .tabs .block-content { background: transparent; }
 	#page-tools div.tabs { border-left: #bbb 1px solid !important; border-bottom: #bbb 1px solid; }
-    #page-tools div.tabs.features-menu { margin-top: -5px; }
+    #page-tools div.tabs.features-menu { margin-top: 0; }
 	#page-tools .tabs #block-menu-features { border:0; }
 	#page-tools .tabs #block-menu-features .block-title { display: none; }
 	
