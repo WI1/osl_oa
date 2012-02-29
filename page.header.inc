@@ -38,7 +38,8 @@
     <?php if($active_space->type == "og"): ?>
       <h1 <?php print drupal_attributes($title_attr);?>><?php print $active_space->group->title; ?></h1>
       <p class="og-description"><?php print $active_space->group->og_description; ?></p>
-      <?php print theme('imagecache', 'projectlogo_2c_landscape', $active_space->group->field_projectlogo[0]['filepath'], $active_space->group->og_description, $active_space->group->title, array('class' => 'group-logo imagecache imagecache-projectlogo_3c_landscape',)); ?>
+      <?php $field = content_fields('field_projectlogo'); $filepath = isset($active_space->group->field_projectlogo[0]['filepath']) ? $active_space->group->field_projectlogo[0]['filepath'] : $field['widget']['default_image']['filepath']; ?>
+      <?php print theme('imagecache', 'projectlogo_2c_landscape', $filepath, $active_space->group->og_description, $active_space->group->title, array('class' => 'group-logo imagecache imagecache-projectlogo_3c_landscape',)); ?>
     <?php else : ?>	
       <?php if ($title): ?><h1 <?php print drupal_attributes($title_attr) ?>><?php print $title ?></h1><?php endif; ?>
       <?php if (isset($node) && !empty($node->og_description) && $node->og_description !== 'na'): ?><p class="long"><?php print $node->og_description; ?></p><?php endif; ?>
