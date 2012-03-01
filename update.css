@@ -252,6 +252,7 @@ body table { font-size: 11px; line-height: 16px; border: 0; background: 0; }
     #node-form fieldset.collapsed .fieldset-title a:hover, #node-form legend .fieldset-title a:hover { color: #ccc} /* For groups without color field set, will be overriden by inline style from designkit */
 	#node-form legend .fieldset-title .icon { display: none; }
 
+    #node-form .filter-options ul { display: none; }
 
 /* Gefaellt mir */
 body.node-type-balancewiki div.links.wiki { top: inherit !important; }
