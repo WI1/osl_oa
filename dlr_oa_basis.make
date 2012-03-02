@@ -122,6 +122,9 @@ projects[dlr_groups][subdir] = "features"
   projects[context_og][subdir] = "contrib"
   projects[context_og][version] = "3.0"
   
+  projects[og_user_roles][subdir] = "contrib"
+  projects[og_user_roles][version] = "4.1"
+
   projects[location][subdir] = "contrib"
   projects[location][version] = "3.1"
   
