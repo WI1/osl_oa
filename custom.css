@@ -1894,3 +1894,80 @@ table th {
 
 #page-tools .context-links { padding: 0; } 
 .context-links ul { margin-bottom: 0; }
+
+/****************************************/
+/* Node Reference */
+
+.node-type-project #node-form .tabledrag-processed thead {
+	display: none;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr.even,  .node-type-project #node-form .tabledrag-processed tbody tr.odd {
+	display: block !important;
+	float: left !important;
+	overflow: hidden !important;
+	width: 116px !important;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr.even div.node,  .node-type-project #node-form .tabledrag-processed tbody tr.odd div.node {
+	height: 100px;
+	width: 116px;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+}
+
+
+.node-type-project #node-form .tabledrag-processed tbody tr.even input.form-autocomplete,  .node-type-project #node-form .tabledrag-processed tbody tr.odd input.form-autocomplete {
+	display: none;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child input.form-autocomplete {
+	display: inline-block;
+}
+
+.node-type-project #node-form .tabledrag-processed .noderelationships-nodereference-create-button, 
+.node-type-project #node-form .tabledrag-processed .noderelationships-nodereference-search-button {
+	display: none;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child .noderelationships-nodereference-delete-button,
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child .noderelationships-nodereference-edit-button {
+	display: none;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child {
+	clear: left;
+	width: 100%;
+	border-bottom: 0;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child input {
+	width: 100%;
+	display: inline-block;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child td.content-multiple-drag {
+	visibility: hidden;
+}
+
+.node-type-project #node-form .tabledrag-processed tbody tr:last-child .noderelationships-nodereference-create-button {
+	display: inline-block;
+}
+
+.node-type-project #node-form .tabledrag-processed {
+	margin-bottom: 0;
+}
+
+.node-type-project #node-form .tabledrag-processed td.content-multiple-drag {
+	vertical-align: top;
+
+}
+
+.node-type-project #node-form .tabledrag-processed .content-add-more {
+	padding-left: 12px;
+  margin-top: 0;
+  border-bottom: 1px solid #D3E7F4;
+  margin-bottom: 1em;
+  margin-bottom: 1em;
+}

@@ -45,6 +45,7 @@ function dlr_oa_visibility($groups) {
 	return $output;
 }
 
+
 /**
  * Outputs a formatted link to the parent focusgroup
  *

@@ -119,29 +119,45 @@ projects[dlr_groups][subdir] = "features"
 
   ; dlr_groups dependencies
   ;- contrib
+  projects[buildmodes]][subdir] = "contrib"
+  projects[buildmodes][version] = "1.x-dev"
+  
   projects[context_og][subdir] = "contrib"
   projects[context_og][version] = "3.0"
   
-  projects[og_user_roles][subdir] = "contrib"
-  projects[og_user_roles][version] = "4.1"
-
   projects[location][subdir] = "contrib"
   projects[location][version] = "3.1"
   
   projects[menu_attributes][subdir] = "contrib"
   projects[menu_attributes][version] = "2.0-beta1"
+    
+  projects[modalframe][subdir] = "contrib"
+  projects[modalframe][version] = "1.7"
   
   projects[nice_menus][subdir] = "contrib"
   projects[nice_menus][version] = "2.1"
   
   projects[nodehierarchy][subdir] = "contrib"
   projects[nodehierarchy][version] = "2.1"
+    
+  projects[noderelationships][subdir] = "contrib"
+  projects[noderelationships][version] = "1.x-dev"
+  projects[noderelationships][patch][] = "http://drupal.org/files/issues/noderelationships.delete-842456-23.patch"
+  
+  projects[og_user_roles][subdir] = "contrib"
+  projects[og_user_roles][version] = "4.1"
 
   projects[realname][subdir] = "contrib"
   projects[realname][version] = "1.x-dev"
 
   projects[realname_userreference][subdir] = "contrib"
   projects[realname_userreference][version] = "1.2"
+
+  projects[reference_preview][subdir] = "contrib"
+  projects[reference_preview][version] = "2.x-dev"
+
+  projects[reverse_node_reference][subdir] = "contrib"
+  projects[reverse_node_reference][version] = "1.0"
 
   projects[viewfield][subdir] = "contrib"
   projects[viewfield][version] = "1.2"
