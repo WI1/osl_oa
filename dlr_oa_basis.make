@@ -202,6 +202,4 @@ libraries[tinymce][directory_name] = "tinymce"
 
 ; WYSIWYG
 projects[wysiwyg][subdir] = "contrib"
-; Add a patch to make wysiwyg exportable.
-projects[wysiwyg][patch][] = "http://drupal.org/files/issues/wysiwyg-624018-ctools-export-input-formats-2.patch"
 
