@@ -189,3 +189,19 @@ projects[dlr_info][subdir] = "features"
   projects[projecttabs][download][url] = "git://github.com/WI1/projecttabs.git"
   projects[projecttabs][type] = "module"
   projects[projecttabs][subdir] = "custom"
+
+;- libraries
+
+; TinyMCE 
+libraries[tinymce][download][type] = "get"
+libraries[tinymce][download][url] = "http://downloads.sourceforge.net/project/tinymce/TinyMCE/3.2.7/tinymce_3_2_7.zip"
+libraries[tinymce][directory_name] = "tinymce"
+
+  ;- libraries dependency
+  projects[libraries][subdir] = "contrib"
+
+; WYSIWYG
+projects[wysiwyg][subdir] = "contrib"
+; Add a patch to make wysiwyg exportable.
+projects[wysiwyg][patch][] = "http://drupal.org/files/issues/wysiwyg-624018-ctools-export-input-formats-2.patch"
+
