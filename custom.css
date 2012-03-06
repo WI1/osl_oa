@@ -1924,6 +1924,7 @@ table th {
 
 .node-type-project #node-form .tabledrag-processed tbody tr:last-child input.form-autocomplete {
 	display: inline-block;
+	width: 300px;
 }
 
 .node-type-project #node-form .tabledrag-processed .noderelationships-nodereference-create-button, 
@@ -1948,7 +1949,7 @@ table th {
 }
 
 .node-type-project #node-form .tabledrag-processed tbody tr:last-child td.content-multiple-drag {
-	visibility: hidden;
+	display: none;
 }
 
 .node-type-project #node-form .tabledrag-processed tbody tr:last-child .noderelationships-nodereference-create-button {

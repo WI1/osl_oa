@@ -39,6 +39,8 @@ body {
 /* Abstaende */
 p { margin-bottom: 1em; }
 dl, hr, pre, address, fieldset, ol, ul, table { margin-bottom: 2.5em; }
+dl dt { font-weight: bold; }
+dl dd { margin-left: 0; }
 
 /* Fliesstext */
 body.front .node .content p { display: block; }
