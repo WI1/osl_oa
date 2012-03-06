@@ -1903,10 +1903,10 @@ table th {
 }
 
 .node-type-project #node-form .tabledrag-processed tbody tr.even,  .node-type-project #node-form .tabledrag-processed tbody tr.odd {
-	display: block !important;
-	float: left !important;
-	overflow: hidden !important;
-	width: 116px !important;
+	display: block;
+	float: left;
+	overflow: hidden;
+	width: 116px;
 }
 
 .node-type-project #node-form .tabledrag-processed tbody tr.even div.node,  .node-type-project #node-form .tabledrag-processed tbody tr.odd div.node {
