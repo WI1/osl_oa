@@ -119,7 +119,7 @@ projects[dlr_groups][subdir] = "features"
 
   ; dlr_groups dependencies
   ;- contrib
-  projects[buildmodes]][subdir] = "contrib"
+  projects[buildmodes][subdir] = "contrib"
   projects[buildmodes][version] = "1.x-dev"
   
   projects[context_og][subdir] = "contrib"
@@ -140,7 +140,7 @@ projects[dlr_groups][subdir] = "features"
   projects[nodehierarchy][subdir] = "contrib"
   projects[nodehierarchy][version] = "2.1"
     
-  projects[noderelationships][subdir] = "contrib"
+  projects[noderelationships][subdir] = "patched"
   projects[noderelationships][version] = "1.x-dev"
   projects[noderelationships][patch][] = "http://drupal.org/files/issues/noderelationships.delete-842456-23.patch"
   projects[noderelationships][patch][] = "http://drupal.org/files/features-revert-660958-97.patch"
