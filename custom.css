@@ -1724,7 +1724,8 @@ margin-left: 0.4em;
 
 #page-tools h1.page-title, #page-tools h1.page-title-hidden {
 	margin-top: 16px;
-	margin-bottom: 0;
+	margin-bottom: 8px;
+	line-height: 22px;
 	text-indent: 0;
 }
 
