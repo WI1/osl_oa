@@ -142,8 +142,8 @@ projects[dlr_groups][subdir] = "features"
     
   projects[noderelationships][subdir] = "patched"
   projects[noderelationships][version] = "1.x-dev"
-  projects[noderelationships][patch][] = "http://drupal.org/files/issues/noderelationships.delete-842456-23.patch"
-  projects[noderelationships][patch][] = "http://drupal.org/files/features-revert-660958-97.patch"
+  projects[noderelationships][patch][842456] = "http://drupal.org/files/issues/noderelationships.delete-842456-23.patch"
+  projects[noderelationships][patch][660958] = "http://drupal.org/files/features-revert-660958-97.patch"
   
   projects[og_user_roles][subdir] = "contrib"
   projects[og_user_roles][version] = "4.1"
