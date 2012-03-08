@@ -437,3 +437,10 @@ function phptemplate_preprocess_custom_pager(&$vars) {
   $vars['first'] = empty($vars['nav_array']['first']) ? '' : l('Erste', 'node/' . $vars['nav_array']['first']);
   $vars['last'] = empty($vars['nav_array']['last']) ? '' : l('Letzte', 'node/' . $vars['nav_array']['last']);
 }
+
+/**
+ * Preprocessor for theme_page().
+ */
+function dlr_oa_preprocess_page(&$vars) {
+  $vars['logo'] = l(check_plain(variable_get('site_name', 'Drupal')), '/', array('attributes' => array('class' => 'logo'),'external' => TRUE));
+}
