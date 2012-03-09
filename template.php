@@ -444,3 +444,56 @@ function phptemplate_preprocess_custom_pager(&$vars) {
 function dlr_oa_preprocess_page(&$vars) {
   $vars['logo'] = l(check_plain(variable_get('site_name', 'Drupal')), '/', array('attributes' => array('class' => 'logo'),'external' => TRUE));
 }
+
+/**
+* Implementation of hook_theme.
+*
+* Register custom theme functions.
+*/
+function dlr_oa_theme() {
+  return array(
+    // The form ID.
+    'project_node_form' => array(
+      // Forms always take the form argument.
+      'arguments' => array('form' => NULL),
+    ),
+    
+  );
+}
+
+/**
+* Theme override for node page form.
+*
+* The function is named themename_formid.
+*/
+function dlr_oa_project_node_form($form) {
+  // Selects all fieldgroups from the $form array
+  $fieldgroups = array();
+  $fieldgroup = array();
+  $form_element = array();
+  foreach ($form as $form_element) {
+    if (is_array($form_element) && isset($form_element['#type']) && $form_element['#type'] == 'fieldset') {
+      $fieldgroups[] = $form_element;
+    }
+  }
+  
+  // Selects all nodereference fields from the field_info section of $form array
+  $fields = array();
+  $field = array();
+  foreach ($form['#field_info'] as $field) {
+    if ($field['module'] == 'nodereference' || $field['module'] == 'userreference' ) {
+      $fields[] = $field;
+    }
+  }
+
+ // Adds label element to noderefence multiple fields, as title is usually shown within table header
+  foreach ($fieldgroups as $fieldgroup) {
+    foreach ($fields as $field) {
+      if (isset($fieldgroup[$field['field_name']]) && $fieldgroup[$field['field_name']]['#theme'] = 'content_multiple_values' && $fieldgroup[$field['field_name']]['#type'] != 'nodereference_select' ) {
+	$form[$fieldgroup['#parents'][0]][$field['field_name']]['#prefix'] .= '<label>' . $fieldgroup[$field['field_name']]['#title'] . ':</label>';
+      }
+    } 
+  }
+
+return drupal_render($form);
+}

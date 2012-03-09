@@ -295,7 +295,7 @@ input[type=submit] { padding: 2px 4px; }
 .view-frontpage-hack .view-filters input { width: 129px; }
 legend { font-size: 14px; font-weight: bold; }
 label.over-apply { position: relative !important; padding: 5px 0 4px 0; color: #404040; }
-
+.form-item label, label {/*overrides ginkgo settings*/  font-size: 13px; text-transform: none; color: #404040;}
 
 /* Headerimage */
 .block-headerimage { display: none; }
