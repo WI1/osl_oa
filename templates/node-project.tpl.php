@@ -14,6 +14,9 @@
 <dt>Homepage</dt>
 <dd><?php print $node->field_projecthomepage[0]['view'] ?></dd>
 
+<dt>Email</dt>
+<dd><?php print $node->field_projectemail[0]['view'] ?></dd>
+
 
 <dt>Beteiligte Institutionen</dt>
 <dd>
