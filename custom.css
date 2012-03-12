@@ -1547,7 +1547,7 @@ float: left;
 .node-type-dokuwiki .node-form .tips {
 display: none;
 } 
-´
+ï¿½
  .node-type-dokuwiki .node-form ul.vertical-tabs-list, 
 .node-type-dokuwiki .node-form div.vertical-tabs-panes {
  display: none;
@@ -1972,4 +1972,8 @@ table th {
   border-bottom: 1px solid #D3E7F4;
   margin-bottom: 1em;
   margin-bottom: 1em;
+}
+
+div.litecal .litecal-data .views-field.title { 
+  color:#48A; 
 }
