@@ -191,6 +191,25 @@ projects[dlr_info][subdir] = "features"
   projects[projecttabs][type] = "module"
   projects[projecttabs][subdir] = "custom"
 
+;-- b.3 redmine connection
+projects[feedmine][download][type] = "git"
+projects[feedmine][download][url] = "git://github.com/WI1/dlr_info.git"
+projects[feedmine][type] = "module"
+projects[feedmine][subdir] = "custom"
+
+  ;- redmine dependencies
+  projects[redmine][subdir] = "contrib"
+  projects[redmine][version] = "2.0"
+
+  projects[rest_api_query][subdir] = "contrib"
+  projects[rest_api_query][version] = "1.0"
+
+  projects[redmine_user_access_keys][subdir] = "contrib"
+  projects[redmine_user_access_keys][version] = "2.0"
+
+  projects[profile][subdir] = "contrib"
+  projects[profile][version] = "6.22"
+  
 ;- libraries
 
 ; TinyMCE 
