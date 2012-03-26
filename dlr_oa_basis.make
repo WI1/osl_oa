@@ -204,12 +204,6 @@ projects[feedmine][subdir] = "custom"
   projects[rest_api_query][subdir] = "contrib"
   projects[rest_api_query][version] = "1.0"
 
-  projects[redmine_user_access_keys][subdir] = "contrib"
-  projects[redmine_user_access_keys][version] = "2.0"
-
-  projects[profile][subdir] = "contrib"
-  projects[profile][version] = "6.22"
-  
 ;- libraries
 
 ; TinyMCE 
