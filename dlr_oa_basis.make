@@ -93,6 +93,9 @@ projects[wi1init][subdir] = "features"
   projects[vertical_tabs][subdir] = "contrib"
   projects[vertical_tabs][version] = "1.0-rc2"
   
+  projects[panels][subdir] = "contrib"
+  projects[panels][version] = "3.10"
+
 
 ;-- b.2 specific
 projects[dlr_atrium_overrides][download][type] = "git"
@@ -193,7 +196,7 @@ projects[dlr_info][subdir] = "features"
 
 ;-- b.3 redmine connection
 projects[feedmine][download][type] = "git"
-projects[feedmine][download][url] = "git://github.com/WI1/dlr_info.git"
+projects[feedmine][download][url] = "git://github.com/WI1/feedmine.git"
 projects[feedmine][type] = "module"
 projects[feedmine][subdir] = "custom"
 
