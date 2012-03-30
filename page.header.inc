@@ -24,7 +24,6 @@
       <div id='space-tools'><div class='dropdown-blocks toggle-blocks clear-block'><?php print $space_tools ?></div></div>
     <?php endif; ?>
   </div></div>
-
   <?php if ($primary_links): ?>
   <div id='navigation'><div class='limiter clear-block container_12'>
     <?php print $logo ?>
@@ -42,10 +41,12 @@
       <?php print theme('imagecache', 'projectlogo_2c_landscape', $filepath, $active_space->group->og_description, $active_space->group->title, array('class' => 'group-logo imagecache imagecache-projectlogo_3c_landscape',)); ?>
     <?php else : ?>	
       <?php if ($title): ?><h1 <?php print drupal_attributes($title_attr) ?>><?php print $title ?></h1><?php endif; ?>
+      <?php if ($extrablanklines): // For better formatting of User Profile?><div ><?php print $extrablanklines ?></div><?php endif; ?>
       <?php if (isset($node) && !empty($node->og_description) && $node->og_description !== 'na'): ?><p class="long"><?php print $node->og_description; ?></p><?php endif; ?>
     <?php endif; ?>
     <?php if ($page_tools): ?><div class='tabs clear-block features-menu'><?php print $page_tools ?></div><?php endif; ?>
     <?php if ($context_links): ?><div class='context-links'><?php print $context_links ?></div><?php endif; ?>
+    <?php if ($extrablanklines): // For better formatting of User Profile?><div ><?php print $extrablanklines ?></div><?php endif; ?>
     <?php if ($tabs): ?><div class='tabs clear-block'><?php print $tabs ?></div><?php endif; ?>
     <?php if ($tabs2): ?>
        <div id='secondary-tabs'><?php print $tabs2 ?></div>

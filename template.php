@@ -443,6 +443,9 @@ function phptemplate_preprocess_custom_pager(&$vars) {
  */
 function dlr_oa_preprocess_page(&$vars) {
   $vars['logo'] = l(check_plain(variable_get('site_name', 'Drupal')), '/', array('attributes' => array('class' => 'logo'),'external' => TRUE));
+  
+  // Remove some User tabs from the Profile Page
+  dlr_oa_remove_userprofile_tabs(&$vars);
 }
 
 /**
@@ -496,4 +499,52 @@ function dlr_oa_project_node_form($form) {
   }
 
 return drupal_render($form);
+}
+/**
+* Remove undesired local task tabs.
+* Set $label as NULL to remove the whole tab group
+* 
+*/
+function dlr_oa_removetab(&$vars,$tabname,$label) {
+  if(!isset ($label)){
+    $vars[$tabname] = '';
+    return;
+  }
+  $tabs = explode("\n", $vars[$tabname]);
+  $vars[$tabname] = '';
+
+  foreach ($tabs as $tab) {
+    if (strpos($tab, '>' . $label . '<') === FALSE) {
+      $vars[$tabname] .= $tab . "\n";
+    }
+  }
+}
+/**
+* Keep these labels only and delete the others
+*
+* 
+*/
+function dlr_oa_keeptabs(&$vars,$tabname,$labels) {
+  $tabs = explode("\n", $vars[$tabname]);
+  $vars[$tabname] = '';
+  foreach ($tabs as $tab){
+    foreach ($labels as $label) {
+      if (strpos($tab, '>' . $label . '<') !== FALSE) {
+        $vars[$tabname] .= $tab . "\n";
+        break;
+      }
+    }
+  }
+}
+
+function dlr_oa_remove_userprofile_tabs(&$vars) {
+  $pageitem = menu_get_item(); // Hiding primary links for user profile pages 
+  if (isset($pageitem['path']) && strpos($pageitem['path'], "user/%") !== FALSE) {
+    dlr_oa_removetab(&$vars, 'tabs', NULL);
+    dlr_oa_keeptabs(&$vars, 'tabs2', array('1' => 'Account', '2' => 'Profile', '3' => 'Picture'));
+    $vars['page_tools'] = NULL;
+    $vars['extrablanklines'] = '<BR>';
+    if($pageitem['path'] == "user/%")
+      $vars['title'] = NULL;
+  }
 }
