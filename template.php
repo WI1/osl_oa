@@ -1,550 +1,502 @@
 <?php
-// $Id:
-function dlr_oa_node_more_link($node) {
-	return '<div class="node-more-link">&hellip; ' . l('weiterlesen', 'node/' . $node->nid) . '</div>';
-}
 
-function dlr_oa_addthis_button() {
-	return '<div class="addthis_button_div">
-		<a class="addthis_button" href="http://www.addthis.com/bookmark.php?v=250&amp;username=stoeckit"><img src="/sites/balanceonline.org/themes/balance/img/sm-share-en.gif" width="83" height="16" alt="Bookmark and Share" style="border:0"/></a>
-	</div>';
+/**
+ * Implementation of hook_theme().
+ */
+function ginkgo_theme() {
+  $items = array();
+
+  // Use simple form.
+  $items['comment_form'] =
+  $items['user_pass'] =
+  $items['user_login'] =
+  $items['user_register'] = array(
+    'arguments' => array('form' => array()),
+    'path' => drupal_get_path('theme', 'rubik') .'/templates',
+    'template' => 'form-simple',
+    'preprocess functions' => array(
+      'rubik_preprocess_form_buttons',
+      'rubik_preprocess_form_legacy'
+    ),
+  );
+  return $items;
 }
 
 /**
- * Overrides theme_event_more_link: the 'read more' link for events
- *
- * @param string path
- *   The url to use for the read more link
+ * Add an href-based class to links for themers to implement icons.
  */
-function dlr_oa_event_more_link($path) {
-	return '<div class="more-link">'. l('Alle Termine', $path) .'</div>';
-}
+function ginkgo_icon_links(&$links) {
+  if (!empty($links)) {
+    foreach ($links as $k => $v) {
+      if (empty($v['attributes'])) {
+        $v['attributes'] = array('class' => '');
+      }
+      else if (empty($v['attributes']['class'])) {
+        $v['attributes']['class'] = '';
+      }
+      $v['attributes']['class'] .= ' icon-'. _ginkgo_icon_class($v['href']);
 
-/**
- * Overrides theme_event_upcoming_item: an individual upcoming event block item
- *
- * @param node
- *   The node to render as an upcoming event
- */
-function dlr_oa_event_upcoming_item($node, $types = array()) {
-	$formatted_date = date('d.m.', strtotime($node->event_start));
+      // Detect and replace counter occurrences with markup.
+      $start = strpos($v['title'], '(');
+      $end = strpos($v['title'], ')');
+      if ($start !== FALSE && $end !== FALSE && $start < $end) {
+        $v['title'] = strtr($v['title'], array('(' => "<span class='count'>", ')' => "</span>"));
+      }
 
-	$output = l($formatted_date . ' | ' . $node->title, 'node/' . $node->nid, array('attributes' => array('title' => $node->title)));
-	return $output;
-}
-
-
-/**
- * Outputs visibility information for a given set of Organic Groups
- *
- * @param array $groups
- *   e.g. 45 => 'ACHTINO' (og_groups_both)
- */
-function dlr_oa_visibility($groups) {
-	$output = sprintf('<div class="visibility" title="Sichtbar für %s"></div>', implode(' | ', $groups));
-	return $output;
-}
-
-
-/**
- * Outputs a formatted link to the parent focusgroup
- *
- * @param object node
- *   current node
- * @param object parent
- *   parent node
- */
-function dlr_oa_parent_focusgroup($node, $parent) {
-
-	//echo '<div>';
-	//echo "<b>Ansprechpartner</b><br>";
-	//if($node->picture){
-	//	echo '<img src="/'.$node->picture.'"><br>';
-	//}
-	//echo $node->name."<br>";
-	//$userobj = unserialize($node->data);
-	//echo "Telefon: ".$userobj['addresses']['phone']."<br>";
-	//$userurl = drupal_get_path_alias('user/'.$node->uid);
-	//echo '<a href="/'.$userurl.'/contact">Kontaktieren</a>';
-	//echo "</div><br>";
-
-	if($parent && user_access('view focusgroups')) {
-
-		echo sprintf('<p id="parent-fg">Das Projekt %s ist Teil der Fokusgruppe %s</p>', $node->title, phptemplate_group_list_item($parent, TRUE, FALSE));
-
-		if($node->field_projecthomepage[0]['url']){
-			echo 'Projekthomepage<br><a href="'.$node->field_projecthomepage[0]['url'].'">'.$node->field_projecthomepage[0]['display_title'].'</a><br><br>';
-		}
-		if($node->field_synopsis[0]['view']){
-			echo "Projektexposé<br>" . $node->field_synopsis[0]['view']."<br>";
-		}
-	}
-}
-
-/**
- * workaround if setlocale(LC_TIME, "de_DE"); doesn't work
- *
- * @param string start
- * @param string end
- * @todo working setLocale
- */
-function dlr_oa_timeframe($start, $end = '0000-00-00 00:00:00') {
-	$dateString = _dlr_oa_timeframe_original($start, $end);
-
-	$daysEn = array('Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday');
-	$daysDe = array('Montag','Dienstag','Mittwoch','Donnerstag','Freitag','Samstag','Sonntag');
-
-	return str_replace($daysEn, $daysDe, $dateString);
-}
-
-/**
- * Formats one or two dates in the form "Montag, den 30. bis Dienstag den 31.12.2010"
- * @param string start
- * @param string end
- */
-function _dlr_oa_timeframe_original($start, $end) {
-	$start_date = substr($start, 0, 10);
-	$end_date = substr($end, 0, 10);
-
-	$start = strtotime($start);
-	$end = strtotime($end);
-
-	if(!$start) {
-		return;
-	} elseif(!$end || $start_date == $end_date) {
-		return date('l, \d\e\n j.n.Y', $start);
-	} else {
-		if(date('Y', $start) == date('Y', $end)) {
-			//same year
-			if(date('n', $start) == date('n', $end)) {
-				//same month
-				return date('l, \d\e\n j.', $start) . ' bis ' . date('l, \d\e\n j.n.Y', $end);
-			} else {
-				//different month
-				return date('l, \d\e\n j.n.', $start) . ' bis ' . date('l, \d\e\n j.n.Y', $end);
-			}
-		} else {
-			//different year
-			return date('l, \d\e\n j.n.Y.', $start) . ' bis ' . date('l, \d\e\n j.n.Y', $end);
-		}
-	}
-}
-
-
-/**
- * Override or insert PHPTemplate variables into the search_theme_form template.
- *
- * @param $vars
- *   A sequential array of variables to pass to the theme template.
- * @param $hook
- *   The name of the theme function being called (not used in this case.)
- */
-function dlr_oa_preprocess_search_block_form(&$vars, $hook) {
-	// todo: replace this by a more drupal-way solution
-	$vars['search_form'] = str_replace('Diese Website durchsuchen:', 'Suche …', $vars['search_form']);
-}
-
-/**
- * Replace username with display name
- * Copies large parts of theme_username
- *
- * @param array object
- * @return string
- */
- /*
-function dlr_oa_username($object) {
-	// copy of theme_username from here on
-	if ($object->uid && $object->name) {
-		if(isset($object->profile_firstname)) {
-			$full_name = implode(' ', array($object->profile_firstname, $object->profile_lastname));
-		} else {
-			$user = user_load($object->uid);
-			$full_name = implode(' ', array($user->profile_firstname, $user->profile_lastname));
-		}
-		// Shorten the name when it is too long or it will break many tables.
-		if (drupal_strlen($full_name) > 20) {
-			$name = drupal_substr($full_name, 0, 18) .'…';
-		}
-		else {
-			$name = $full_name;
-		}
-
-		if (user_access('access user profiles')) {
-			$output = l($name, 'user/'. $object->uid, array('title' => t('View user profile.')));
-		}
-		else {
-			$output = check_plain($name);
-		}
-	} else if ($object->name) {
-		// Sometimes modules display content composed by people who are
-		// not registered members of the site (e.g. mailing list or news
-		// aggregator modules). This clause enables modules to display
-		// the true author of the content.
-		if ($object->homepage) {
-	  $output = l($object->name, $object->homepage);
-		}
-		else {
-	  $output = check_plain($object->name);
-		}
-
-		$output .= ' ('. t('not verified') .')';
-	}
-	else {
-		$output = variable_get('anonymous', t('Anonymous'));
-	}
-
-	return $output;
-}
-*/
-/**
- * Prints menu item children of a given node id
- *
- * @param array node
- * @param string title
- * @return string
- */
-function phptemplate_print_children($node, $title = '') {
-	$current_menu_item = db_fetch_array(db_query("SELECT mlid FROM {menu_links} WHERE link_path = 'node/%d' AND link_title LIKE 'Fokusgruppe %'", $node->nid));
-	$children = db_query("SELECT * FROM {menu_links} WHERE plid = %d AND link_path != 'node/%d' ORDER BY weight", $current_menu_item['mlid'], $node->nid);
-
-	$children_items = array();
-	while ($c = db_fetch_array($children)) {
-		$children_items[] = l($c['link_title'], $c['link_path']);
-	}
-
-	return theme_item_list($children_items, $title);
-}
-
-/**
- * Formats Names: Jakob -> Jakobs, Andreas -> Andreas’
- *
- * @param string owner
- * @return string
- */
-function phptemplate_owner($owner) {
-	return $owner . (in_array(substr($owner, -1), array('s', 'x')) ? '’' : 's');
-}
-
-/**
- * Outputs a HTML list for organic groups
- *
- * @param array groups
- */
-function phptemplate_group_list($groups) {
-	$out = '';
-
-	foreach($groups as $g) {
-		$out .= '<div class="group-list-item">' . phptemplate_group_list_item($g) . '</div>';
-	}
-
-	return $out;
-}
-
-/**
- * Outputs a formatted group badge to use in a list
- *
- * @param array g
- * @param boolean with_text
- * @return string
- */
-function phptemplate_group_list_item($g, $withTitle = TRUE, $withCreateLink = FALSE) {
-	if($g->field_projectlogo[0]['filepath']) {
-		$image = theme('imagecache', 'projectlogo_1-2c', $g->field_projectlogo[0]['filepath']);
-	} else {
-		$image = '';
-	}
-
-	$out = l($image, 'node/' . $g->nid, array('html' => TRUE, 'attributes' => array('title' => $g->title)));
-
-	if($withTitle || $withCreateLink) {
-		if(isset($g->user_is_active) && $g->user_is_active === '0') {
-			$pending = '<br />' . t('Wartet auf Bestätigung', NULL, 'de');
-		} else {
-			$pending = '';
-		}
-		
-		$out .= '<ul>';
-
-		if($withTitle) {
-			$out .= '<li class="group_title">' . l($g->title, 'node/' . $g->nid, array('html' => TRUE)) . $pending . '</li>';
-		}
-
-		if($withCreateLink) {
-			$out .= '<li class="node_add">' . l('Beitrag schreiben', 'node/add/blog', array('query' => 'gids[]='. $g->nid)) . '</li>';
-		}
-
-		$out .= '</ul>';
-	}
-
-
-	return $out;
-}
-
-/**
- * Outputs a link to write a new og blog post in the active organic group
- *
- * @param object $node
- */
-
-function dlr_oa_menu_item_link($link) {
-	if ($link['path']=='node/%/edit') { 
-		$link['localized_options']['attributes']['hide'] .= 'true';
-	}
-	return l($link['title'], $link['href'], $link['localized_options']);
-}
-/**
- * Outputs a HTML vCard
- *
- * @param int uid
- * @return string
- */
-function phptemplate_business_card($uid) {
-	$hcardOutput = t('Noch keine Person eingetragen', NULL, 'de');
-
-	if($uid) {
-		$user = user_load($uid);
-
-		$hcard = array(
-			'url' => '/user/' . $user->uid,
-			'given-name' => $user->profile_firstname,
-			'family-name' => $user->profile_lastname,
-			'street-address' => $user->addresses['street'],
-			'postal-code' => $user->addresses['postal_code'],
-			'locality' => $user->addresses['city'],
-			'country-name' => $user->addresses['country'],
-			'phone-work-value' => $user->addresses['phone'],
-			'fax-work-value' => $user->addresses['fax'],
-			'logo' => theme('user_picture', $user),
-		);
-
-		$hcardOutput =
-'<div class="vcard" style="display: inline-block;">
-	<span class="logo">' . $hcard['logo'] . '</span>
-	<span class="fn n">
-		<a class="url" href="' . $hcard['url'] . '">
-			<span class="given-name">' . $hcard['given-name'] . '</span>
-			<span class="family-name">' . $hcard['family-name'] . '</span>
-		</a>
-	</span>
-	<div class="adr">
-		<div class="street-address">' . $hcard['street-address'] . '</div>
-		<span class="postal-code">' . $hcard['postal-code'] . '</span> <span class="locality">' . $hcard['locality'] . '</span>
-		<div class="country-name hide">' . $hcard['country-name'] . '</div>
-	</div>
-	<div class="tel"><span class="type">' . t('Tel.', NULL, 'de') . '</span>: <span class="value">' . $hcard['phone-work-value'] . '</span></div>
-	<div class="tel"><span class="type">' . t('Fax', NULL, 'de') . '</span>: <span class="value">' . $hcard['fax-work-value'] . '</span></div>
-</div>';
-	}
-
-	return $hcardOutput;
-}
-function dlr_oa_upload_form_current(&$form) {
-	$header = array('', t('Description'),t('Delete'));
-	//$header = array();
-	drupal_add_tabledrag('upload-attachments', 'order', 'sibling', 'upload-weight');
-
-	foreach (element_children($form) as $key) {
-		// Add class to group weight fields for drag and drop.
-		$form[$key]['weight']['#attributes']['class'] = 'upload-weight';
-
-		$row = array('');
-		$row[] = drupal_render($form[$key]['description']);
-		$row[] = drupal_render($form[$key]['remove']);
-		//  $row[] = drupal_render($form[$key]['list']);
-
-		//    $row[] = drupal_render($form[$key]['size']);
-		$rows[] = array('data' => $row, 'class' => 'draggable');
-	}
-	$output = '<br><br>'.theme('table', $header, $rows, array('id' => 'upload-attachments'));
-	$output .= drupal_render($form);
-	return $output;
-
-}
-
-function dlr_oa_upload_form_new(&$form) {
-	$files = & $form['files'];
-	$files['#weight']=10;
-	foreach ($files as $fileId =>$file) {
-		if (is_int($fileId)) {
-			unset($files[$fileId]['size']);
-			$files[$fileId]['description']['#size']=50;
-		}
-	}
-	$output = drupal_render($form);
-	return $output;
-
-}
-
-function phptemplate_preprocess_flag(&$vars) {
-  //$vars['link_text'] = '<span class="famfam active balance-like></span>';
-}
-
-function pn_node($node, $mode = 'n') {
-  if (!function_exists('prev_next_nid')) {
-    return NULL;
-  }
-
-  switch($mode) {
-    case 'p':
-      $n_nid = prev_next_nid($node->nid, 'prev');
-      $link_text = 'previous';
-      break;
-
-    case 'n':
-      $n_nid = prev_next_nid($node->nid, 'next');
-      $link_text = 'next';
-      break;
-
-    default:
-      return NULL;
-  }
-
-  if ($n_nid) {
-    $n_node = node_load($n_nid);
-
-    $options = array(
-      'attributes' => array('class' => 'thumbnail'),
-      'html'  => TRUE,
-    );
-    switch($n_node->type) {
-      // For image nodes only
-      case 'image':
-        // This is an image node, get the thumbnail
-        $html = l(image_display($n_node, 'thumbnail'), "node/$n_nid", $options);
-        $html .= l($link_text, "node/$n_nid", array('html' => TRUE));
-        return $html;
-
-      // For video nodes only
-      case 'video':
-        foreach ($n_node->files as $fid => $file) {
-          $html  = '<img src="' . base_path() . $file->filepath;
-          $html .= '" alt="' . $n_node->title;
-          $html .= '" title="' . $n_node->title;
-          $html .= '" class="image image-thumbnail" />';
-          $img_html = l($html, "node/$n_nid", $options);
-          $text_html = l($link_text, "node/$n_nid", array('html' => TRUE));
-          return $img_html . $text_html;
-        }
-      default:
-        // Add other node types here if you want.
+      $v['title'] = filter_xss_admin("<span class='icon'></span><span class='label'>". $v['title'] ."</span>");
+      $v['html'] = TRUE;
+      $links[$k] = $v;
     }
   }
 }
 
-function phptemplate_preprocess_custom_pager(&$vars) {
-  // if we're at the end, the nav_array item for this (eg first) is NULL;
-  // no need to compare it to current index.
-  $vars['first'] = empty($vars['nav_array']['first']) ? '' : l('Erste', 'node/' . $vars['nav_array']['first']);
-  $vars['last'] = empty($vars['nav_array']['last']) ? '' : l('Letzte', 'node/' . $vars['nav_array']['last']);
-}
+/**
+ * Preprocess overrides ===============================================
+ */
 
 /**
  * Preprocessor for theme_page().
  */
-function dlr_oa_preprocess_page(&$vars) {
-  $vars['logo'] = l(check_plain(variable_get('site_name', 'Drupal')), '/', array('attributes' => array('class' => 'logo'),'external' => TRUE));
+function ginkgo_preprocess_page(&$vars) {
+  // Switch layout for 404/403 pages.
+  $headers = drupal_get_headers();
+  if ((strpos($headers, 'HTTP/1.1 403 Forbidden') !== FALSE) || strpos($headers, 'HTTP/1.1 404 Not Found') !== FALSE) {
+    $vars['template_files'][] = 'layout-wide';
+  }
+
+  // Add body class for layout.
+  $vars['attr']['class'] .= !empty($vars['template_files']) ? ' '. end($vars['template_files']) : '';
+
+  // Don't show the navigation in the admin section.
+  // Otherwise add icon markup to main menu.
+  if (arg(0) === 'admin') {
+    $vars['primary_links'] = '';
+  }
+  else {
+    ginkgo_icon_links($vars['primary_links']);
+  }
+
+  // If tabs are active, the title is likely shown in them. Don't show twice.
+  $vars['title_attr'] = array('class' => 'page-title');
+  $vars['title_attr']['class'] .= (!empty($vars['tabs']) || menu_get_object()) ? ' page-title-hidden' : '';
+
+  // Show mission text on login page for anonymous users.
+  global $user;
+  $vars['mission'] = (!$user->uid && arg(0) == 'user') ? filter_xss_admin(variable_get('site_mission', '')) : '';
+
+  // Fallback logo.
+  $vars['logo'] = !empty($vars['logo']) ? $vars['logo'] : l(check_plain(variable_get('site_name', 'Drupal')), '<front>', array('attributes' => array('class' => 'logo')));
   
-  // Remove some User tabs from the Profile Page
-  dlr_oa_remove_userprofile_tabs(&$vars);
+  // Footer links
+  $vars['footer_links'] = isset($vars['footer_links']) ? $vars['footer_links'] : array();
+  $item = menu_get_item('admin');
+  if ($item && $item['access']) {
+    $vars['footer_links']['admin'] = $item;
+  }
+
+  // IE7 CSS
+  // @TODO: Implement IE styles key in tao.
+  $ie = base_path() . drupal_get_path('theme', 'ginkgo') .'/ie.css';
+  $vars['ie'] = "<!--[if lte IE 8]><style type='text/css' media='screen'>@import '{$ie}';</style><![endif]-->";
+
+  // Help text toggler link.
+  $vars['help_toggler'] = !empty($vars['help']) ? l(t('Help'), $_GET['q'], array('fragment' => 'block-atrium-help', 'attributes' => array('id' => 'help-toggler', 'class' => 'palette-toggle'))) : '';
 }
 
 /**
-* Implementation of hook_theme.
-*
-* Register custom theme functions.
-*/
-function dlr_oa_theme() {
-  return array(
-    // The form ID.
-    'project_node_form' => array(
-      // Forms always take the form argument.
-      'arguments' => array('form' => NULL),
-    ),
-    
+ * Preprocessor for theme_block().
+ */
+function ginkgo_preprocess_block(&$vars) {
+  // If block is in a toggleable region and does not have a subject, mark it as a "widget,"
+  // i.e. show its contents rather than a toggle trigger label.
+  if (in_array($vars['block']->region, array('header', 'page_tools', 'space_tools'))) {
+    if (empty($vars['block']->subject)) {
+      $vars['attr']['class'] .= ' block-widget';
+    }
+    else {
+      $vars['attr']['class'] .= ' block-toggle';
+      // Add invisible link element for toggling block via keyboard.
+      $vars['title'] = l(t('Toggle'), $_GET['q'], array('fragment' => $vars['attr']['id'], 'attributes' => array('class' => 'toggle element-invisible'))) . $vars['title'];
+    }
+  }
+  if ($vars['block']->region === 'palette') {
+    // Palette region requires module-level jQuery UI, Cookie, JSON includes.
+    // Note that drupal_add_js() only works here because blocks are rendered
+    // prior to the retrieval of javascript files in template_preprocess_page().
+    module_exists('admin') ? drupal_add_js(drupal_get_path('module', 'admin') .'/includes/jquery.cookie.js') : '';
+    module_exists('jquery_ui') ? jquery_ui_add(array('ui.draggable')) : '';
+    module_exists('context_ui') ? drupal_add_js(drupal_get_path('module', 'context_ui') .'/json2.js') : '';
+
+    // Add close button to palette region blocks.
+    $vars['title'] = "<span class='close'></span>{$vars['title']}";
+  }
+  $vars['attr']['class'] .= empty($vars['block']->subject) ? ' block-notitle' : '';
+}
+
+/**
+ * Preprocessor for theme_context_block_editable_region().
+ */
+function ginkgo_preprocess_context_block_editable_region(&$vars) {
+  if (in_array($vars['region'], array('header', 'page_tools', 'space_tools', 'palette'))) {
+    $vars['editable'] = FALSE;
+  }
+}
+
+/**
+ * Preprocessor for theme_help().
+ */
+function ginkgo_preprocess_help(&$vars) {
+  $vars['layout'] = FALSE;
+  $vars['links'] = '';
+}
+
+/**
+ * Preprocessor for theme_node().
+ */
+function ginkgo_preprocess_node(&$vars) {
+  if (!empty($vars['terms'])) {
+    $label = t('Tagged');
+    $terms = "<div class='field terms clear-block'><span class='field-label-inline-first'>{$label}:</span> {$vars['terms']}</div>";
+    $vars['content'] =  $terms . $vars['content'];
+  }
+  $vars['title'] = check_plain($vars['node']->title);
+  $vars['layout'] = FALSE;
+
+  // Add node-page class.
+  $vars['attr']['class'] .= $vars['node'] === menu_get_object() ? ' node-page' : '';
+
+  // Don't show the full node when a comment is being previewed.
+  $vars = context_get('comment', 'preview') == TRUE ? array() : $vars;
+
+  // Clear out catchall template file suggestions like those made by og.
+  // TODO refactor
+  if (!empty($vars['template_files'])) {
+    foreach ($vars['template_files'] as $k => $f) {
+      if (strpos($f, 'node-'.$vars['type']) === FALSE) {
+        unset($vars['template_files'][$k]);
+      }
+    }
+  }
+}
+
+/**
+ * Preprocessor for theme_comment().
+ */
+function ginkgo_preprocess_comment(&$vars) {
+  // Add a time decay class.
+  $decay = _ginkgo_get_comment_decay($vars['node']->nid, $vars['comment']->timestamp);
+  $vars['attr']['class'] .= " decay-{$decay['decay']}";
+
+  // If subject field not enabled, replace the title with a number.
+  if (!variable_get("comment_subject_field_{$vars['node']->type}", 1)) {
+    $vars['title'] = l("#{$decay['order']}", "node/{$vars['node']->nid}", array('fragment' => "comment-{$vars['comment']->cid}"));
+  }
+
+  // We're totally previewing a comment... set a context so others can bail.
+  if (module_exists('context')) {
+    if (empty($vars['comment']->cid) && !empty($vars['comment']->form_id)) {
+      context_set('comment', 'preview', TRUE);
+    }
+    else if (context_isset('comment', 'preview')) {
+      $vars = array();
+    }
+  }
+}
+
+/**
+ * Preprocessor for theme_node_form().
+ */
+function ginkgo_preprocess_node_form(&$vars) {
+  // Add node preview to top of the form if present
+  $preview = theme('node_preview', NULL, TRUE);
+  $vars['form']['preview'] = array('#type' => 'markup', '#weight' => -1000, '#value' => $preview);
+
+  if (!empty($vars['form']['archive'])) {
+    $vars['sidebar']['archive'] = $vars['form']['archive'];
+    unset($vars['form']['archive']);
+  }
+}
+
+/**
+ * Function overrides =================================================
+ */
+
+/**
+ * Make logo markup overridable.
+ */
+function ginkgo_designkit_image($name, $filepath) {
+  if ($name === 'logo') {
+    $title = variable_get('site_name', '');
+    if (module_exists('spaces') && $space = spaces_get_space()) {
+      $title = $space->title();
+    }
+    $url = imagecache_create_url("designkit-image-{$name}", $filepath);
+    $options = array('attributes' => array('class' => 'logo', 'style' => "background-position:100% 50%; background-image:url('{$url}')"));
+    return l($space->title, '<front>', $options);
+  }
+  return theme_designkit_image($name, $filepath);
+}
+
+/**
+ * More link theme override.
+ */
+function ginkgo_more_link($url, $title) {
+  return '<div class="more-link">'. t('<a href="@link" title="@title">View more</a>', array('@link' => check_url($url), '@title' => $title)) .'</div>';
+}
+
+/**
+ * Override of theme_breadcrumb().
+ */
+function ginkgo_breadcrumb($breadcrumb) {
+  $breadcrumb = empty($breadcrumb) ? array(l(t('Home'), '<front>')) : $breadcrumb;
+  $i = 0;
+  foreach ($breadcrumb as $k => $link) {
+    $breadcrumb[$k] = "<span class='link link-{$i}'>{$link}</span>";
+    $i++;
+  }
+  $breadcrumb = implode("<span class='divider'></span>", $breadcrumb);
+
+  // Marker for this group as public or private.
+  $space = spaces_get_space();
+  if ($space && $space->type === 'og') {
+    $attr = $space->group->og_private ?
+      array('title' => t('Private'), 'class' => 'private') :
+      array('title' => t('Public'), 'class' => 'public');
+    $link = l('', $_GET['q'], array('attributes' => $attr));
+    $breadcrumb .= "<span class='space'>{$link}</span>";
+  }
+
+  return "<div class='breadcrumb'>{$breadcrumb}</div>";
+}
+
+/**
+ * Override of theme_pager(). Tao has already done the hard work for us.
+ * Just exclude last/first links.
+ */
+function ginkgo_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
+  $pager_list = theme('pager_list', $tags, $limit, $element, $parameters, $quantity);
+
+  $links = array();
+  $links['pager-previous'] = theme('pager_previous', ($tags[1] ? $tags[1] : t('Prev')), $limit, $element, 1, $parameters);
+  $links['pager-next'] = theme('pager_next', ($tags[3] ? $tags[3] : t('Next')), $limit, $element, 1, $parameters);
+  $pager_links = theme('links', $links, array('class' => 'links pager pager-links'));
+
+  if ($pager_list) {
+    return "<div class='pager clear-block'>$pager_list $pager_links</div>";
+  }
+}
+
+/**
+ * Override of theme_views_mini_pager().
+ * Wrappers, tao handles the rest.
+ */
+function ginkgo_views_mini_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
+  $tags[1] = t('Prev');
+  $tags[3] = t('Next');
+  $minipager = tao_views_mini_pager($tags, $limit, $element, $parameters, $quantity);
+  return $minipager ? "<div class='pager minipager clear-block'>{$minipager}</div>" : '';
+}
+
+/**
+ * Override of theme_node_preview().
+ * We remove the teaser check / view here ... for nearly all use cases
+ * this is more confusing and overbearing than anything else. We also
+ * add a static variable as a trigger so that we can render node_preview
+ * inside our form, rather than separate.
+ */
+function ginkgo_node_preview($node = NULL, $show = FALSE) {
+  static $output;
+  if (!isset($output) && $node) {
+    $element = array(
+      '#title' => t('Preview'),
+      '#children' => node_view($node, 0, FALSE, 0),
+      '#collapsed' => FALSE,
+      '#collapsible' => TRUE,
+      '#attributes' => array('class' => 'node-preview'),
+    );
+    $output = theme('fieldset', $element);
+  }
+  return $show ? $output : '';
+}
+
+/**
+ * Override of theme_content_multiple_values().
+ * Adds a generic wrapper.
+ */
+function ginkgo_content_multiple_values($element) {
+  $output = theme_content_multiple_values($element);
+  $field_name = $element['#field_name'];
+  $field = content_fields($field_name);
+  if ($field['multiple'] >= 1) {
+    return "<div class='content-multiple-values'>{$output}</div>";
+  }
+  return $output;
+}
+
+/**
+ * Override of theme('node_submitted').
+ */
+function ginkgo_node_submitted($node) {
+  $byline = theme('username', $node);
+  $date = module_exists('reldate') ? reldate_format_date($node->created) : format_date($node->created, 'small');
+  return "<div class='byline'>{$byline}</div><div class='date'>$date</div>";
+}
+
+/**
+ * Override of theme('comment_submitted').
+ */
+function ginkgo_comment_submitted($comment) {
+  $comment->created = $comment->timestamp;
+  return ginkgo_node_submitted($comment);
+}
+
+
+/**
+ * Preprocessor for theme('views_view_fields').
+ */
+function ginkgo_preprocess_views_view_fields(&$vars) {
+  foreach ($vars['fields'] as $field) {
+    if ($class = _ginkgo_get_views_field_class($field->handler)) {
+      $field->class = $class;
+    }
+  }
+
+  // Write this as a row plugin to allow modules/features to define this stuff.
+  if (get_class($vars['view']->style_plugin) == 'views_plugin_style_list') {
+    $enable_grouping = TRUE;
+
+    // Override arrays for grouping
+    $view_id = "{$vars['view']->name}:{$vars['view']->current_display}";
+    $overrides = array(
+      "profile_display:page_1" => array(),
+      "blog_comments:block_1" => array(
+        'meta' => array('date', 'user-picture', 'username', 'author'),
+      ),
+    );
+    if (isset($overrides[$view_id])) {
+      $groups = $overrides[$view_id];
+    }
+    else {
+      $groups = array(
+        'meta' => array('date', 'user-picture', 'username', 'related-title', 'author'),
+        'admin' => array('edit', 'delete'),
+      );
+    }
+
+    foreach ($vars['fields'] as $id => $field) {
+      $found = FALSE;
+      foreach ($groups as $group => $valid_fields) {
+        if (in_array($field->class, $valid_fields)) {
+          $grouped[$group][$id] = $field;
+          $found = TRUE;
+          break;
+        }
+      }
+      if (!$found) {
+        $grouped['content'][$id] = $field;
+      }
+    }
+
+    // If the listing doesn't have any fields that will be grouped
+    // fallback to default (non-grouped) formatting.
+    $enable_grouping = count($grouped) <= 1 ? FALSE : TRUE;
+    $vars['classes'] = isset($vars['classes']) ? $vars['classes'] : '';
+    foreach (array_keys($grouped) as $group) {
+      $vars['classes'] .= " grouping-{$group}";
+    }
+  }
+  else {
+    $enable_grouping = FALSE;
+    $grouped = array('content' => $vars['fields']);
+  }
+  $vars['enable_grouping'] = $enable_grouping;
+  $vars['grouped'] = $grouped;
+}
+
+/**
+ * Preprocessor for theme('views_view_table').
+ */
+function ginkgo_preprocess_views_view_table(&$vars) {
+  $view = $vars['view'];
+  foreach ($view->field as $field => $handler) {
+    if (isset($vars['fields'][$field]) && $class = _ginkgo_get_views_field_class($handler)) {
+      $vars['fields'][$field] = $class;
+    }
+  }
+}
+
+/**
+ * Helper function to get the appropriate class name for Views field.
+ */
+function _ginkgo_get_views_field_class($handler) {
+  $handler_class = get_class($handler);
+  $search = array(
+    'project' => 'project',
+    'priority' => 'priority',
+    'status' => 'status',
+
+    'history_user' => 'new',
+
+    'date' => 'date',
+    'timestamp' => 'date',
+
+    'user_picture' => 'user-picture',
+    'username' => 'username',
+    'name' => 'username',
+
+    'markup' => 'markup',
+    'xss' => 'markup',
+
+    'spaces_feature' => 'feature',
+    'group_nids' => 'group',
+
+    'numeric' => 'number',
+    'count' => 'count',
+
+    'edit' => 'edit',
+    'delete' => 'delete',
   );
+  foreach ($search as $needle => $class) {
+    if (strpos($handler_class, $needle) !== FALSE) {
+      return $class;
+    }
+  }
+  // Fallback
+  if (!empty($handler->relationship) && ($handler->view->base_table !== 'users')) {
+    return "related-{$handler->field}";
+  }
+  return $handler->field;
 }
 
 /**
-* Theme override for node page form.
-*
-* The function is named themename_formid.
-*/
-function dlr_oa_project_node_form($form) {
-  // Selects all fieldgroups from the $form array
-  $fieldgroups = array();
-  $fieldgroup = array();
-  $form_element = array();
-  foreach ($form as $form_element) {
-    if (is_array($form_element) && isset($form_element['#type']) && $form_element['#type'] == 'fieldset') {
-      $fieldgroups[] = $form_element;
+ * Return both an order (e.g. #1 for oldest to #n for the nth comment)
+ * and a decay value (0 for newest, 10 for oldest) for a given comment.
+ */
+function _ginkgo_get_comment_decay($nid, $timestamp) {
+  static $timerange;
+  if (!isset($timerange[$nid])) {
+    $range = array();
+    $result = db_query("SELECT timestamp FROM {comments} WHERE nid = %d ORDER BY timestamp ASC", $nid);
+    $i = 1;
+    while ($row = db_fetch_object($result)) {
+      $timerange[$nid][$row->timestamp] = $i;
+      $i++;
     }
   }
-  
-  // Selects all nodereference fields from the field_info section of $form array
-  $fields = array();
-  $field = array();
-  foreach ($form['#field_info'] as $field) {
-    if ($field['module'] == 'nodereference' || $field['module'] == 'userreference' ) {
-      $fields[] = $field;
-    }
+  if (!empty($timerange[$nid][$timestamp])) {
+    $decay = max(array_keys($timerange[$nid])) - min(array_keys($timerange[$nid]));
+    $decay = $decay > 0 ? ((max(array_keys($timerange[$nid])) - $timestamp) / $decay) : 0;
+    $decay = floor($decay * 10);
+    return array('order' => $timerange[$nid][$timestamp], 'decay' => $decay);
   }
-
- // Adds label element to noderefence multiple fields, as title is usually shown within table header
-  foreach ($fieldgroups as $fieldgroup) {
-    foreach ($fields as $field) {
-      if (isset($fieldgroup[$field['field_name']]) && $fieldgroup[$field['field_name']]['#theme'] = 'content_multiple_values' && $fieldgroup[$field['field_name']]['#type'] != 'nodereference_select' ) {
-	$form[$fieldgroup['#parents'][0]][$field['field_name']]['#prefix'] .= '<label>' . $fieldgroup[$field['field_name']]['#title'] . ':</label>';
-      }
-    } 
-  }
-
-return drupal_render($form);
+  return array('order' => 1, 'decay' => 0);
 }
+
+
 /**
-* Remove undesired local task tabs.
-* Set $label as NULL to remove the whole tab group
-* 
-*/
-function dlr_oa_removetab(&$vars,$tabname,$label) {
-  if(!isset ($label)){
-    $vars[$tabname] = '';
-    return;
-  }
-  $tabs = explode("\n", $vars[$tabname]);
-  $vars[$tabname] = '';
-
-  foreach ($tabs as $tab) {
-    if (strpos($tab, '>' . $label . '<') === FALSE) {
-      $vars[$tabname] .= $tab . "\n";
-    }
-  }
-}
-/**
-* Keep these labels only and delete the others
-*
-* 
-*/
-function dlr_oa_keeptabs(&$vars,$tabname,$labels) {
-  $tabs = explode("\n", $vars[$tabname]);
-  $vars[$tabname] = '';
-  foreach ($tabs as $tab){
-    foreach ($labels as $label) {
-      if (strpos($tab, '>' . $label . '<') !== FALSE) {
-        $vars[$tabname] .= $tab . "\n";
-        break;
-      }
-    }
-  }
-}
-
-function dlr_oa_remove_userprofile_tabs(&$vars) {
-  $pageitem = menu_get_item(); // Hiding primary links for user profile pages 
-  if (isset($pageitem['path']) && strpos($pageitem['path'], "user/%") !== FALSE) {
-    dlr_oa_removetab(&$vars, 'tabs', NULL);
-    dlr_oa_keeptabs(&$vars, 'tabs2', array('1' => 'Account', '2' => 'Profile', '3' => 'Picture'));
-    $vars['page_tools'] = NULL;
-    $vars['extrablanklines'] = '<BR>';
-    if($pageitem['path'] == "user/%")
-      $vars['title'] = NULL;
-  }
+ * Generate an icon class from a path.
+ */
+function _ginkgo_icon_class($path) {
+  $path = drupal_get_path_alias($path);
+  return str_replace('/', '-', $path);
 }

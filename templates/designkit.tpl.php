@@ -8,14 +8,8 @@
 .dropdown-blocks .block-toggle .item-list li a:focus,
 .pager li.pager-current,
 .more-link a:hover,
-#node-form fieldset.collapsed .fieldset-title a:hover, 
-#node-form legend .fieldset-title a:hover { background-color:<?php print $background ?>; }
-
-#page-tools .tabs #block-menu-features.block ul.menu li.active-trail { background: <?php print $background ?> !important; }
-#page-tools .tabs #block-menu-features.block ul.menu li.active-trail a { color: #ffffff !important; text-shadow: none;}
-#page-tools .tabs #block-menu-features.block ul.menu li:hover { background: <?php print $background ?> !important; }
-#page-tools .tabs #block-menu-features.block ul.menu li:hover a { color: #ffffff !important; text-shadow: none;}
-
+#global,
+#navigation { background-color:<?php print $background ?>; }
 
 body #space-tools .block-title { background-color:<?php print designkit_colorshift($background, '#000000', .3) ?>; }
 

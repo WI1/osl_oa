@@ -9,5 +9,6 @@
 <div id='right'><div class='page-region'>
   <?php if ($right) print $right ?>
 </div></div>
-
+<?php if (!(isset($node) && $node->type == "exhibit")): ?>
 <?php include 'page.footer.inc'; ?>
+<?php endif; ?>

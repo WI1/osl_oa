@@ -13,7 +13,7 @@
   <?php if (!empty($title)): ?>
     <h2 class='<?php print $hook ?>-title'>
       <?php if (!empty($new)): ?><a id='new' class='new'><?php print('New') ?></a><?php endif; ?>
-      <a href="<?php print $node_url ?>"><?php print $title ?></a>
+      <?php print $title ?>
     </h2>
   <?php endif; ?>
 
