@@ -3,7 +3,7 @@
 /**
  * Implementation of hook_theme().
  */
-function ginkgo_theme() {
+function osl_oa_theme() {
   $items = array();
 
   // Use simple form.
@@ -25,7 +25,7 @@ function ginkgo_theme() {
 /**
  * Add an href-based class to links for themers to implement icons.
  */
-function ginkgo_icon_links(&$links) {
+function osl_oa_icon_links(&$links) {
   if (!empty($links)) {
     foreach ($links as $k => $v) {
       if (empty($v['attributes'])) {
@@ -34,7 +34,7 @@ function ginkgo_icon_links(&$links) {
       else if (empty($v['attributes']['class'])) {
         $v['attributes']['class'] = '';
       }
-      $v['attributes']['class'] .= ' icon-'. _ginkgo_icon_class($v['href']);
+      $v['attributes']['class'] .= ' icon-'. _osl_oa_icon_class($v['href']);
 
       // Detect and replace counter occurrences with markup.
       $start = strpos($v['title'], '(');
@@ -57,7 +57,7 @@ function ginkgo_icon_links(&$links) {
 /**
  * Preprocessor for theme_page().
  */
-function ginkgo_preprocess_page(&$vars) {
+function osl_oa_preprocess_page(&$vars) {
   // Switch layout for 404/403 pages.
   $headers = drupal_get_headers();
   if ((strpos($headers, 'HTTP/1.1 403 Forbidden') !== FALSE) || strpos($headers, 'HTTP/1.1 404 Not Found') !== FALSE) {
@@ -73,7 +73,7 @@ function ginkgo_preprocess_page(&$vars) {
     $vars['primary_links'] = '';
   }
   else {
-    ginkgo_icon_links($vars['primary_links']);
+    osl_oa_icon_links($vars['primary_links']);
   }
 
   // If tabs are active, the title is likely shown in them. Don't show twice.
@@ -96,7 +96,7 @@ function ginkgo_preprocess_page(&$vars) {
 
   // IE7 CSS
   // @TODO: Implement IE styles key in tao.
-  $ie = base_path() . drupal_get_path('theme', 'ginkgo') .'/ie.css';
+  $ie = base_path() . drupal_get_path('theme', 'osl_oa') .'/ie.css';
   $vars['ie'] = "<!--[if lte IE 8]><style type='text/css' media='screen'>@import '{$ie}';</style><![endif]-->";
 
   // Help text toggler link.
@@ -106,7 +106,7 @@ function ginkgo_preprocess_page(&$vars) {
 /**
  * Preprocessor for theme_block().
  */
-function ginkgo_preprocess_block(&$vars) {
+function osl_oa_preprocess_block(&$vars) {
   // If block is in a toggleable region and does not have a subject, mark it as a "widget,"
   // i.e. show its contents rather than a toggle trigger label.
   if (in_array($vars['block']->region, array('header', 'page_tools', 'space_tools'))) {
@@ -136,7 +136,7 @@ function ginkgo_preprocess_block(&$vars) {
 /**
  * Preprocessor for theme_context_block_editable_region().
  */
-function ginkgo_preprocess_context_block_editable_region(&$vars) {
+function osl_oa_preprocess_context_block_editable_region(&$vars) {
   if (in_array($vars['region'], array('header', 'page_tools', 'space_tools', 'palette'))) {
     $vars['editable'] = FALSE;
   }
@@ -145,7 +145,7 @@ function ginkgo_preprocess_context_block_editable_region(&$vars) {
 /**
  * Preprocessor for theme_help().
  */
-function ginkgo_preprocess_help(&$vars) {
+function osl_oa_preprocess_help(&$vars) {
   $vars['layout'] = FALSE;
   $vars['links'] = '';
 }
@@ -153,7 +153,7 @@ function ginkgo_preprocess_help(&$vars) {
 /**
  * Preprocessor for theme_node().
  */
-function ginkgo_preprocess_node(&$vars) {
+function osl_oa_preprocess_node(&$vars) {
   if (!empty($vars['terms'])) {
     $label = t('Tagged');
     $terms = "<div class='field terms clear-block'><span class='field-label-inline-first'>{$label}:</span> {$vars['terms']}</div>";
@@ -182,9 +182,9 @@ function ginkgo_preprocess_node(&$vars) {
 /**
  * Preprocessor for theme_comment().
  */
-function ginkgo_preprocess_comment(&$vars) {
+function osl_oa_preprocess_comment(&$vars) {
   // Add a time decay class.
-  $decay = _ginkgo_get_comment_decay($vars['node']->nid, $vars['comment']->timestamp);
+  $decay = _osl_oa_get_comment_decay($vars['node']->nid, $vars['comment']->timestamp);
   $vars['attr']['class'] .= " decay-{$decay['decay']}";
 
   // If subject field not enabled, replace the title with a number.
@@ -206,7 +206,7 @@ function ginkgo_preprocess_comment(&$vars) {
 /**
  * Preprocessor for theme_node_form().
  */
-function ginkgo_preprocess_node_form(&$vars) {
+function osl_oa_preprocess_node_form(&$vars) {
   // Add node preview to top of the form if present
   $preview = theme('node_preview', NULL, TRUE);
   $vars['form']['preview'] = array('#type' => 'markup', '#weight' => -1000, '#value' => $preview);
@@ -224,7 +224,7 @@ function ginkgo_preprocess_node_form(&$vars) {
 /**
  * Make logo markup overridable.
  */
-function ginkgo_designkit_image($name, $filepath) {
+function osl_oa_designkit_image($name, $filepath) {
   if ($name === 'logo') {
     $title = variable_get('site_name', '');
     if (module_exists('spaces') && $space = spaces_get_space()) {
@@ -240,14 +240,14 @@ function ginkgo_designkit_image($name, $filepath) {
 /**
  * More link theme override.
  */
-function ginkgo_more_link($url, $title) {
+function osl_oa_more_link($url, $title) {
   return '<div class="more-link">'. t('<a href="@link" title="@title">View more</a>', array('@link' => check_url($url), '@title' => $title)) .'</div>';
 }
 
 /**
  * Override of theme_breadcrumb().
  */
-function ginkgo_breadcrumb($breadcrumb) {
+function osl_oa_breadcrumb($breadcrumb) {
   $breadcrumb = empty($breadcrumb) ? array(l(t('Home'), '<front>')) : $breadcrumb;
   $i = 0;
   foreach ($breadcrumb as $k => $link) {
@@ -273,7 +273,7 @@ function ginkgo_breadcrumb($breadcrumb) {
  * Override of theme_pager(). Tao has already done the hard work for us.
  * Just exclude last/first links.
  */
-function ginkgo_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
+function osl_oa_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
   $pager_list = theme('pager_list', $tags, $limit, $element, $parameters, $quantity);
 
   $links = array();
@@ -290,7 +290,7 @@ function ginkgo_pager($tags = array(), $limit = 10, $element = 0, $parameters = 
  * Override of theme_views_mini_pager().
  * Wrappers, tao handles the rest.
  */
-function ginkgo_views_mini_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
+function osl_oa_views_mini_pager($tags = array(), $limit = 10, $element = 0, $parameters = array(), $quantity = 9) {
   $tags[1] = t('Prev');
   $tags[3] = t('Next');
   $minipager = tao_views_mini_pager($tags, $limit, $element, $parameters, $quantity);
@@ -304,7 +304,7 @@ function ginkgo_views_mini_pager($tags = array(), $limit = 10, $element = 0, $pa
  * add a static variable as a trigger so that we can render node_preview
  * inside our form, rather than separate.
  */
-function ginkgo_node_preview($node = NULL, $show = FALSE) {
+function osl_oa_node_preview($node = NULL, $show = FALSE) {
   static $output;
   if (!isset($output) && $node) {
     $element = array(
@@ -323,7 +323,7 @@ function ginkgo_node_preview($node = NULL, $show = FALSE) {
  * Override of theme_content_multiple_values().
  * Adds a generic wrapper.
  */
-function ginkgo_content_multiple_values($element) {
+function osl_oa_content_multiple_values($element) {
   $output = theme_content_multiple_values($element);
   $field_name = $element['#field_name'];
   $field = content_fields($field_name);
@@ -336,7 +336,7 @@ function ginkgo_content_multiple_values($element) {
 /**
  * Override of theme('node_submitted').
  */
-function ginkgo_node_submitted($node) {
+function osl_oa_node_submitted($node) {
   $byline = theme('username', $node);
   $date = module_exists('reldate') ? reldate_format_date($node->created) : format_date($node->created, 'small');
   return "<div class='byline'>{$byline}</div><div class='date'>$date</div>";
@@ -345,18 +345,18 @@ function ginkgo_node_submitted($node) {
 /**
  * Override of theme('comment_submitted').
  */
-function ginkgo_comment_submitted($comment) {
+function osl_oa_comment_submitted($comment) {
   $comment->created = $comment->timestamp;
-  return ginkgo_node_submitted($comment);
+  return osl_oa_node_submitted($comment);
 }
 
 
 /**
  * Preprocessor for theme('views_view_fields').
  */
-function ginkgo_preprocess_views_view_fields(&$vars) {
+function osl_oa_preprocess_views_view_fields(&$vars) {
   foreach ($vars['fields'] as $field) {
-    if ($class = _ginkgo_get_views_field_class($field->handler)) {
+    if ($class = _osl_oa_get_views_field_class($field->handler)) {
       $field->class = $class;
     }
   }
@@ -416,10 +416,10 @@ function ginkgo_preprocess_views_view_fields(&$vars) {
 /**
  * Preprocessor for theme('views_view_table').
  */
-function ginkgo_preprocess_views_view_table(&$vars) {
+function osl_oa_preprocess_views_view_table(&$vars) {
   $view = $vars['view'];
   foreach ($view->field as $field => $handler) {
-    if (isset($vars['fields'][$field]) && $class = _ginkgo_get_views_field_class($handler)) {
+    if (isset($vars['fields'][$field]) && $class = _osl_oa_get_views_field_class($handler)) {
       $vars['fields'][$field] = $class;
     }
   }
@@ -428,7 +428,7 @@ function ginkgo_preprocess_views_view_table(&$vars) {
 /**
  * Helper function to get the appropriate class name for Views field.
  */
-function _ginkgo_get_views_field_class($handler) {
+function _osl_oa_get_views_field_class($handler) {
   $handler_class = get_class($handler);
   $search = array(
     'project' => 'project',
@@ -472,7 +472,7 @@ function _ginkgo_get_views_field_class($handler) {
  * Return both an order (e.g. #1 for oldest to #n for the nth comment)
  * and a decay value (0 for newest, 10 for oldest) for a given comment.
  */
-function _ginkgo_get_comment_decay($nid, $timestamp) {
+function _osl_oa_get_comment_decay($nid, $timestamp) {
   static $timerange;
   if (!isset($timerange[$nid])) {
     $range = array();
@@ -496,7 +496,7 @@ function _ginkgo_get_comment_decay($nid, $timestamp) {
 /**
  * Generate an icon class from a path.
  */
-function _ginkgo_icon_class($path) {
+function _osl_oa_icon_class($path) {
   $path = drupal_get_path_alias($path);
   return str_replace('/', '-', $path);
 }

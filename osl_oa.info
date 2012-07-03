@@ -1,9 +1,9 @@
 name = "osl_oa"
-description = "Next gen ginkgo (aka 'coldbrew')."
+description = "OSL theme based on Ginko."
 core = "6.x"
 atrium = "1.x"
 engine = "phptemplate"
-base theme = "ginko"
+base theme = "ginkgo"
 
 stylesheets[screen][] = "style.css"
 stylesheets[screen][] = "osl_oa.css"
