@@ -1,5 +1,7 @@
 <?php include 'page.header.inc'; ?>
-
+<div id='left'><div class='page-region'>
+  <?php if ($left) print $left ?>
+</div></div>
 <div id='content'><div class='page-region'>
   <?php if ($content): ?>
     <div class='page-content content-wrapper clear-block'><?php print $content ?></div>

@@ -556,14 +556,20 @@ div.pager {
 
     .page-region .block .block-title a { color:#333; }
 
+    
+#left {
+    float: left;
+    width: 20%;
+}    
 #content {
   float:left;
-  width:65%;
+  width:60%;
   }
 
 #right {
   float:right;
-  width:34.99%;
+  /*width:34.99%;*/
+  width:20%;
   }
 
 .page-region { padding:20px 10px; }

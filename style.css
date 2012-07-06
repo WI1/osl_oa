@@ -351,10 +351,10 @@ body.logged-in #block-atrium-account .block-title {
   }
 
 #features-menu li a {
-  color:#fff;
+  color:#333333;
   position:relative;
   line-height:40px;
-  width:40px;
+  width:100px;
   height:40px;
   padding:5px 10px;
   overflow:hidden;
