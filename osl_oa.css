@@ -1605,3 +1605,11 @@ ul.searchlight-facet-active { background:#fff; }
     width: auto;
     position: relative;
     }
+    
+    #features-menu li.active a, #features-menu li.active a.active {
+     color: #333;
+    }
+    
+    #features-menu li a {
+     color: #fff;
+    }

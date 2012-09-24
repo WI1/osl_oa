@@ -18,7 +18,7 @@
       </div>
     <?php endif; ?>
     <?php print $breadcrumb ?>
-    <?php print $logo ?>
+    <?//php print $logo ?>
   </div></div>
 
   <?php if ($primary_links): // replaced primary with secondary links?>
