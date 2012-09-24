@@ -300,6 +300,15 @@ body.logged-in #block-atrium-account .block-title {
     height:50px;
     }
 
+#navigation a.logo {
+    background-image: url("images/logo.png") !important;
+    width: 80px;
+    display: block;
+    float: left;
+    height: 60px;
+    background-repeat: no-repeat;
+}    
+    
 #space-tools {
   position:absolute;
   right:20px;
@@ -354,7 +363,7 @@ body.logged-in #block-atrium-account .block-title {
   color:#333333;
   position:relative;
   line-height:40px;
-  width:100px;
+  width:120px;
   height:40px;
   padding:5px 10px;
   overflow:hidden;
@@ -377,7 +386,7 @@ body.logged-in #block-atrium-account .block-title {
   #features-menu li.active a,
   #features-menu li.active a.active {
     padding:4px 9px 5px;
-    width:auto;
+    width:100px;
     }
 
   #features-menu li a span.label {

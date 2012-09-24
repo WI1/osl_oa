@@ -1591,3 +1591,17 @@ ul.searchlight-facet-active { background:#fff; }
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     }
+
+    #navigation a.logo {
+    background-image: url("images/Logo.png") !important;
+    position: absolute;
+    text-indent: -999px;
+    height: 100px;
+    width: 100px;
+    }
+    
+    #features-menu {
+    float: left;
+    width: auto;
+    position: relative;
+    }

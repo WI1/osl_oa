@@ -1,5 +1,8 @@
 <?php include 'page.header.inc'; ?>
 <div id='left'><div class='page-region'>
+  <div id='navigation'>
+    <?php print $logo ?>
+  </div>
   <?php if ($left) print $left ?>
 </div></div>
 <div id='content'><div class='page-region'>
