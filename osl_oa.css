@@ -1639,3 +1639,7 @@ ul.searchlight-facet-active { background:#fff; }
     #block-atrium_calendar-mini .litecal-title, .litecal-label {
       color: #fff;
     }
+    
+    #page #left .block-content .block-block-1{
+      background-color: #fff;
+    }
