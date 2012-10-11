@@ -48,7 +48,7 @@ a {
 .pager li.pager-current,
 .more-link a:hover,
 #global,
-#navigation { background-color:#44aa55; }
+#navigation { background-color:#0E71B4; }
 
 body #space-tools .block-title { background-color:#2f773b; }
 
@@ -310,9 +310,11 @@ body.logged-in #block-atrium-account .block-title {
 }    
     
 #space-tools {
-  position:absolute;
+  /*position:absolute;
   right:20px;
-  top:20px;
+  top:20px;*/
+  position: inherit;
+  float: right;
   }
 
 #space-tools .block-widget,
@@ -338,7 +340,7 @@ body.logged-in #block-atrium-account .block-title {
   position:absolute;
   left:20px;
   height:50px;
-  }
+}
 
 #features-menu li {
   background-position:0px 50px;
@@ -526,7 +528,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   #page-tools .tabs {
     padding-top:5px;
     position:absolute;
-    left:20px;
+    /*left:20px;*/
     }
 
   #page-tools .context-links,

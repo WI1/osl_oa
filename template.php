@@ -58,7 +58,7 @@ function osl_oa_icon_links(&$links) {
  * Preprocessor for theme_page().
  */
 function osl_oa_preprocess_page(&$vars) {
-  $vars['logo'] = "<a href='/' class='logo'>OSL</a>";
+  $vars['logo'] = "<a href='/' class='logo'></a>";
   
   // Switch layout for 404/403 pages.
   $headers = drupal_get_headers();

@@ -1591,25 +1591,50 @@ ul.searchlight-facet-active { background:#fff; }
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     }
+    
+/*Added changes by Hari*/
 
+#global .limiter { max-width:1280px; }
+#navigation .limiter { max-width:1280px; }
+#page-tools .limiter { max-width:1280px; }
+   
     #navigation a.logo {
-    background-image: url("images/Logo.png") !important;
-    position: absolute;
-    text-indent: -999px;
-    height: 100px;
-    width: 100px;
+    background-image: url("images/logo.png") !important;
+    background-size: 100% Auto;
+    position: relative;
+    width: 236px;
+    height: 236px;
+    display: block;
+    overflow: visible;
+    margin: 0 0 10px;
+    float: none;
     }
     
     #features-menu {
     float: left;
     width: auto;
     position: relative;
+    text-align: center;
+    font-weight: bold;
+    font-size: 120%;
     }
     
     #features-menu li.active a, #features-menu li.active a.active {
      color: #333;
+     width: auto;
+     padding: 5px;
     }
     
     #features-menu li a {
      color: #fff;
+     width: auto;
+     padding: 5px;
+    }
+    
+    #block-atrium_calendar-mini .block-content {
+      background: none repeat scroll 0 0 #B22222;
+    }
+    
+    #block-atrium_calendar-mini .litecal-title, .litecal-label {
+      color: #fff;
     }
