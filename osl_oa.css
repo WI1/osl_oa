@@ -1598,14 +1598,14 @@ ul.searchlight-facet-active { background:#fff; }
 #navigation .limiter { max-width:1280px; }
 #page-tools .limiter { max-width:1280px; }
    
-    #navigation a.logo {
+    #logo-wrapper a.logo {
     background-image: url("images/logo.png") !important;
     background-size: 100% Auto;
+    background-repeat: no-repeat;
     position: relative;
-    width: 236px;
+    width: 100%;
     height: 236px;
     display: block;
-    overflow: visible;
     margin: 0 0 10px;
     float: none;
     }
@@ -1636,10 +1636,15 @@ ul.searchlight-facet-active { background:#fff; }
       background: none repeat scroll 0 0 #B22222;
     }
     
+    
+    #right .block-content {
+      background: none repeat scroll 0 0 #B22222;
+    }
+    
     #block-atrium_calendar-mini .litecal-title, .litecal-label {
       color: #fff;
     }
     
     #page #left #block-block-1 .block-content{
-      background-color: #fff;
+      background-color: transparent;
     }
