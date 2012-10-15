@@ -1622,14 +1622,14 @@ ul.searchlight-facet-active { background:#fff; }
     #features-menu li.active a, #features-menu li.active a.active {
      color: #333;
      width: auto;
-     padding: 5px 15px;
+     padding: 5px 25px;
     }
     
     #features-menu li a {
      color: #fff;
      width: auto;
      padding-left: 5px;
-     padding: 5px 15px;
+     padding: 5px 25px;
     }
     
     #block-atrium_calendar-mini .block-content {
