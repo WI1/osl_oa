@@ -1645,3 +1645,9 @@ ul.searchlight-facet-active { background:#fff; }
     #page #left #block-block-1 .block-content{
       background-color: transparent;
     }
+    
+    #page {
+      background-color: #0b4d79;
+    }
+    
+    #page .limiter { background-color: #ffffff; }
