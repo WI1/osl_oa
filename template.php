@@ -156,11 +156,11 @@ function osl_oa_preprocess_help(&$vars) {
  * Preprocessor for theme_node().
  */
 function osl_oa_preprocess_node(&$vars) {
-  if (!empty($vars['terms'])) {
+  /*if (!empty($vars['terms'])) {
     $label = t('Tagged');
     $terms = "<div class='field terms clear-block'><span class='field-label-inline-first'>{$label}:</span> {$vars['terms']}</div>";
     $vars['content'] =  $terms . $vars['content'];
-  }
+  } Commenting it out as it is repeated*/
   $vars['title'] = check_plain($vars['node']->title);
   $vars['layout'] = FALSE;
 
