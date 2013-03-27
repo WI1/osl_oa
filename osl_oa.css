@@ -676,7 +676,7 @@ color: #fff;
 .block .menu li.collapsed,
 .block .menu li.expanded { background:#fff url(images/sprite_base.png) 0px -60px no-repeat; }
 
-.block .menu li.leaf { background:#fff url(images/sprite_base.png) 0px -110px no-repeat; }
+.block .menu li.leaf { background: transparent url(images/sprite_base.png) 0px -110px no-repeat;}
 
 /* RESET, now do it again */
 .drilldown .menu ul,
