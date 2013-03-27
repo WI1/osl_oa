@@ -553,8 +553,12 @@ div.pager {
   color: #fff;
 }
 
-#content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content a { 
+#content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content .node-title a{ 
   color: #B22222;
+}
+
+#content .page-region .block-content a { 
+  color: #333;
 }
 
 .page-region .block .block-title a { color:#333; }
@@ -1697,4 +1701,14 @@ div.litecal .litecal-slot-today {
 
 #header {
   float: right;
+}
+
+#header .block-toggle .block-content {
+left: auto !important;
+right: 5px !important;
+border-radius: 5px 0 5px 5px;
+}
+
+#block-atrium-search span.icon {
+margin-top: 5px;
 }
