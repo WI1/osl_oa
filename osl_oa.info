@@ -5,9 +5,10 @@ atrium = "1.x"
 engine = "phptemplate"
 base theme = "ginkgo"
 
+stylesheets[screen][] = "osl_oa.css"
 stylesheets[screen][] = "style.css"
 stylesheets[screen][] = "layout.css"
-stylesheets[screen][] = "osl_oa.css"
+
 
 stylesheets[print][] = "print-custom.css"
 
