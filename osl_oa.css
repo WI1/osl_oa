@@ -549,8 +549,12 @@ div.pager {
   background: transparent;
 }
 
-#page .page-region .block label, .page-region .block-content .description, .page-region .block-content a { 
+#page .page-region .block label, #page .page-region .block-content .description, #page .page-region .block-content a { 
 color: #fff;
+}
+
+#content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content a { 
+color: #333;
 }
 
 .page-region .block .block-title a { color:#333; }
