@@ -532,11 +532,11 @@ div.pager {
 
 .page-region .block-notitle .block-content {
   border-top-color:#ddd;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
+  -moz-border-radius:0px;
+  -webkit-border-radius:0px;
 }
 
-.page-region .block .block-title {
+body .page-region .block .block-title {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   color: #333;
@@ -1646,7 +1646,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #page {
-  background-color: #0b4d79;
+  background-color: #c1d5e2;
 }
 
 #page .limiter { background: none repeat scroll 0 0 #FFFFFF; }
