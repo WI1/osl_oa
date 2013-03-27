@@ -523,15 +523,11 @@ div.pager {
     padding:0px;
     }
 
-  .page-region .block-content {
-    -moz-border-radius:0px 0px 5px 5px;
-    -webkit-border-radius:0px 0px 5px 5px;
-
-    clear:left;
-    background:#eee;
-    border:1px solid #ddd;
-    border-color:#fff #ddd #ccc;
-    padding:9px;
+    .page-region .block-content {
+      -moz-border-radius: 0px;
+      -webkit-border-radius: 0px;
+      background: #B22222;
+      border: 0px;
     }
 
     .page-region .block-notitle .block-content {
@@ -540,19 +536,17 @@ div.pager {
       -webkit-border-radius:5px;
       }
 
-  .page-region .block .block-title {
-    -moz-border-radius:5px 5px 0px 0px;
-    -webkit-border-radius:5px 5px 0px 0px;
-
-    color:#333;
-    text-shadow:#fff 0px 1px 0px;
-    font-size:13px;
-
-    padding:4px 9px;
-    border:1px solid #ddd;
-    border-bottom-color:#ccc;
-    background:#eee url(images/sprite_bleeds.png) 0px -400px repeat-x;
-    }
+      .page-region .block .block-title {
+        -moz-border-radius: 0px;
+        -webkit-border-radius: 0px;
+        color: #333;
+        text-shadow: 0;
+        font-size: 13px;
+        padding: 4px 9px;
+        border: 0px;
+        border-bottom-color: #ccc;
+        background: #ffffff;
+      }
 
     .page-region .block .block-title a { color:#333; }
 

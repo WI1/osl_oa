@@ -6,8 +6,8 @@ engine = "phptemplate"
 base theme = "ginkgo"
 
 stylesheets[screen][] = "style.css"
-stylesheets[screen][] = "osl_oa.css"
 stylesheets[screen][] = "layout.css"
+stylesheets[screen][] = "osl_oa.css"
 
 stylesheets[print][] = "print-custom.css"
 
