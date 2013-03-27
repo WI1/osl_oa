@@ -541,12 +541,16 @@ div.pager {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   color: #333;
-  text-shadow: 0;
-  font-size: 14px;
+  text-shadow: none;
+  font-size: 15px;
   padding: 4px 9px;
   border: 0px;
   border-bottom-color: #ccc;
   background: transparent;
+}
+
+#page .page-region .block label, .page-region .block-content .description, .page-region .block-content a { 
+color: #fff;
 }
 
 .page-region .block .block-title a { color:#333; }
