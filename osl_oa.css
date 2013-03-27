@@ -752,7 +752,7 @@ div.comment {
 
 .comment-title,
 .node-title {
-  padding:10px 0px;
+  padding:10px 0px 10px 10px;
   margin:0px;
   font-size:20px;
   font-weight:300;
@@ -1594,7 +1594,7 @@ ul.searchlight-facet-active .searchlight-facet {
 /*Added changes by Hari*/
 
 #global .limiter { max-width:1280px; }
-#navigation .limiter { max-width:1280px; }
+#navigation .limiter { max-width:1280px; width: 675px;}
 #page-tools .limiter { max-width:1280px; }
 
 #logo-wrapper a.logo {
@@ -1620,13 +1620,13 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #features-menu li.active a, #features-menu li.active a.active {
-  color: #333;
+  color: purple;
   width: auto;
   padding: 5px 25px;
 }
 
 #features-menu li a {
-  color: #fff;
+  color: #A5D9EF;
   width: auto;
   padding-left: 5px;
   padding: 5px 25px;
