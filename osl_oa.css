@@ -542,7 +542,7 @@ div.pager {
   -webkit-border-radius: 0px;
   color: #333;
   text-shadow: none;
-  font-size: 15px;
+  font-size: 18px;
   padding: 4px 9px;
   border: 0px;
   border-bottom-color: #ccc;
@@ -550,11 +550,11 @@ div.pager {
 }
 
 #page .page-region .block label, #page .page-region .block-content .description, #page .page-region .block-content a { 
-color: #fff;
+  color: #fff;
 }
 
 #content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content a { 
-color: #B22222;
+  color: #B22222;
 }
 
 .page-region .block .block-title a { color:#333; }
@@ -1627,21 +1627,18 @@ ul.searchlight-facet-active .searchlight-facet {
   font-size: 120%;
 }
 
-#features-menu li {
-   padding: 0px 19px 0px 19px;
-}
 
 #features-menu li.active a, #features-menu li.active a.active {
   color: purple;
   width: auto;
-  padding: 5px 25px;
+  padding: 5px 50px;
 }
 
 #features-menu li a {
   color: #A5D9EF;
   width: auto;
   padding-left: 5px;
-  padding: 5px 25px;
+  padding: 5px 50px;
 }
 
 #block-atrium_calendar-mini .block-content {
@@ -1669,11 +1666,11 @@ ul.searchlight-facet-active .searchlight-facet {
 **/
 
 div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
- display: none;
+  display: none;
 }
 
 div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
-background: transparent;
+  background: transparent;
 }
 
 div.litecal .litecal-slot {
@@ -1687,9 +1684,17 @@ div.litecal .litecal-timespan {
 }
 
 .litecal .litecal-slot a {
-color: white;
+  color: white;
 }
 
 div.litecal .litecal-slot-today {
-background: green;
+  background: green;
+}
+
+.marker, .form-required {
+  color: green;
+}
+
+#header {
+  float: right;
 }
