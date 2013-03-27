@@ -541,12 +541,20 @@ div.pager {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   color: #333;
-  text-shadow: 0;
-  font-size: 14px;
+  text-shadow: none;
+  font-size: 15px;
   padding: 4px 9px;
   border: 0px;
   border-bottom-color: #ccc;
   background: transparent;
+}
+
+#page .page-region .block label, #page .page-region .block-content .description, #page .page-region .block-content a { 
+color: #fff;
+}
+
+#content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content a { 
+color: #333;
 }
 
 .page-region .block .block-title a { color:#333; }
@@ -672,7 +680,7 @@ div.pager {
 .block .menu li.collapsed,
 .block .menu li.expanded { background:#fff url(images/sprite_base.png) 0px -60px no-repeat; }
 
-.block .menu li.leaf { background:#fff url(images/sprite_base.png) 0px -110px no-repeat; }
+.block .menu li.leaf { background: transparent url(images/sprite_base.png) 0px -110px no-repeat;}
 
 /* RESET, now do it again */
 .drilldown .menu ul,
