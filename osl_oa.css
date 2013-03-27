@@ -542,11 +542,11 @@ div.pager {
   -webkit-border-radius: 0px;
   color: #333;
   text-shadow: 0;
-  font-size: 13px;
+  font-size: 14px;
   padding: 4px 9px;
   border: 0px;
   border-bottom-color: #ccc;
-  background: #ffffff;
+  background: transparent;
 }
 
 .page-region .block .block-title a { color:#333; }
@@ -793,7 +793,7 @@ div.comment {
   overflow:hidden;
 }
 
-.block .node-submitted { background: transparent; }
+.block .node-submitted { background: #fff; }
 
 .comment-submitted {
   -moz-border-radius:0px 0px 0px 5px;
