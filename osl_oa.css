@@ -1671,8 +1671,13 @@ div.litecal .litecal-slot {
 
 div.litecal .litecal-timespan {
   border-right: 0px;
+  background: transparent;
 }
 
 .litecal .litecal-slot a {
 color: white;
+}
+
+div.litecal .litecal-slot-today {
+background: green;
 }
