@@ -1611,6 +1611,7 @@ ul.searchlight-facet-active { background:#fff; }
     }
     
     #features-menu {
+    left: 20px;  
     float: left;
     width: auto;
     position: relative;

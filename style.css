@@ -528,7 +528,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   #page-tools .tabs {
     padding-top:5px;
     position:absolute;
-    /*left:20px;*/
+    padding-left: 276px;
     }
 
   #page-tools .context-links,
