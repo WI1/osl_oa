@@ -510,9 +510,9 @@ div.pager {
  * Page layout ========================================================
 */
 #page .limiter {
-  min-height:300px;
+  min-height:900px;
   padding:0px 0px;
-  background:url(images/vrule.png) 65% 0% repeat-y;
+  background: transparent;
 }
 
 .page-region .content-wrapper,
@@ -521,6 +521,7 @@ div.pager {
 .page-region .block {
   border:0px;
   padding:0px;
+  background: transparent;
 }
 
 .page-region .block-content {
@@ -536,7 +537,7 @@ div.pager {
   -webkit-border-radius:0px;
 }
 
-body .page-region .block .block-title {
+#page .page-region .block .block-title {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
   color: #333;
@@ -792,7 +793,7 @@ div.comment {
   overflow:hidden;
 }
 
-.block .node-submitted { background:#fff; }
+.block .node-submitted { background: transparent; }
 
 .comment-submitted {
   -moz-border-radius:0px 0px 0px 5px;
@@ -1649,4 +1650,4 @@ ul.searchlight-facet-active .searchlight-facet {
   background-color: #c1d5e2;
 }
 
-#page .limiter { background: none repeat scroll 0 0 #FFFFFF; }
+#page .limiter {  }
