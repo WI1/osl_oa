@@ -1655,6 +1655,10 @@ ul.searchlight-facet-active .searchlight-facet {
   color: #fff;
 }
 
+ .litecal-label {
+  color: #333;
+}
+
 #page #left #block-block-1 .block-content{
   background-color: transparent;
 }
@@ -1687,8 +1691,8 @@ div.litecal .litecal-timespan {
   background: transparent;
 }
 
-.litecal .litecal-slot a {
-  color: white;
+.litecal-compact .litecal-slot a {
+  color: #fff;
 }
 
 div.litecal .litecal-slot-today {
