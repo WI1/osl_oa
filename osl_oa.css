@@ -547,6 +547,7 @@ div.pager {
   border: 0px;
   border-bottom-color: #ccc;
   background: transparent;
+  text-transform: uppercase;
 }
 
 #page .page-region .block label, #page .page-region .block-content .description, #page .page-region .block-content a { 
@@ -767,7 +768,8 @@ div.comment {
   padding:10px 0px 10px 10px;
   margin:0px;
   font-size:20px;
-  font-weight:300;
+  font-weight:700;
+  text-transform: uppercase;
 }
 
 .comment-title {
@@ -1629,11 +1631,12 @@ ul.searchlight-facet-active .searchlight-facet {
   text-align: center;
   font-weight: bold;
   font-size: 120%;
+  text-transform: uppercase;
 }
 
 
 #features-menu li.active a, #features-menu li.active a.active {
-  color: purple;
+  color: #B22222;
   width: auto;
   padding: 5px 50px;
 }
