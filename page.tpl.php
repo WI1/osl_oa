@@ -7,9 +7,8 @@
 </div></div>
 <div id='content'><div class='page-region'>
   <?php if (!empty($title)): ?>
-    <h2 class='<?php print $hook ?>-title'>
-      <?php if (!empty($new)): ?><a id='new' class='new'><?php print('New') ?></a><?php endif; ?>
-      <?php print $title ?>
+    <h2 class='node-title'>
+      <?php print $title //using class node-title so title is formatted consistently?>
     </h2>
   <?php endif; ?>
   <?php if ($content): ?>
