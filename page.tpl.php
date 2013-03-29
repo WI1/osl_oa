@@ -6,7 +6,7 @@
   <?php if ($left) print $left ?>
 </div></div>
 <div id='content'><div class='page-region'>
-  <?php if (!empty($title)): ?>
+  <?php if (!empty($title) && !isset($node)): ?>
     <h2 class='node-title'>
       <?php print $title //using class node-title so title is formatted consistently?>
     </h2>
