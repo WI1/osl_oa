@@ -1747,5 +1747,5 @@ body.front .node .content p {
 }
 
 .location.vcard {
-float: left;
+  display: table-row-group
 }
