@@ -883,9 +883,9 @@ div.comment {
 
 div.node .field {
   background:transparent;
-  padding:0px;
+  padding:0px 0px 4px 0px;
   margin:0px;
-  padding-bottom: 4px !important;
+  min-height: 24px;
 }
 
 div.node .field .field-label,
