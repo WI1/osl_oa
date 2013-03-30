@@ -1726,15 +1726,15 @@ table {
   border-width: 0px;
 }
 
-.field-field-small-teaser, .field-field-event-teaser {
-padding: 3px 20px 0 0 !important;
+.view-frontpage .field-field-small-teaser, .view-frontpage .field-field-event-teaser {
+padding: 3px 15px 0 0 !important;
 float: left;	
 }
 
 div.node .field .field-label-inline-first {
 font-size: 10px;
 padding: 0px 5px;
-width: 175px ;
+width: 165px ;
 display: block;
 float: left;
 margin: 0 10px 5px 0;
