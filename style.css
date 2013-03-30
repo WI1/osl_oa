@@ -6,7 +6,7 @@
 body.tao,
 input,
 textarea,
-select { font-family:Arial,Helvetica,sans-serif; }
+select { /*font-family:Arial,Helvetica,sans-serif; */ font-family: "Lucida","Lucida Grande","Trebuchet MS",Tahoma,Verdana,sans-serif;}
 
 body.tao {
   background:#fff;
@@ -349,17 +349,8 @@ body.logged-in #block-atrium-account .block-title {
 }
 
 #features-menu li.active {
-  border:1px solid #fff;
-  border-bottom:0px;
-  height:49px;
-
-  background-position:0px -210px;
-  background-repeat:repeat-x;
-
-  -moz-border-radius-topleft:3px;
-  -moz-border-radius-topright:3px;
-  -webkit-border-top-left-radius:3px;
-  -webkit-border-top-right-radius:3px;
+  border: none;
+  background: none;
 }
 
 #features-menu li a {
