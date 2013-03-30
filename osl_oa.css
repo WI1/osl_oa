@@ -891,10 +891,17 @@ div.node .field {
 div.node .field .field-label,
 div.node .field .field-label-inline,
 div.node .field .field-label-inline-first {
-  font-size:11px;
-  font-weight:bold;
-  color:#333;
-  text-transform:uppercase;
+font-size: 10px;
+padding: 0px 5px;
+width: 165px;
+display: block;
+float: left;
+margin: 0 10px 5px 0;
+-webkit-border-radius: 3px;
+font-weight: bold;
+color: #333;
+text-transform: uppercase;
+background-color: #ecf4f8;
 }
 
 div.node .field .field-label-inline,
@@ -1731,14 +1738,7 @@ padding: 3px 15px 0 0 !important;
 float: left;	
 }
 
-div.node .field .field-label-inline-first {
-font-size: 10px;
-padding: 0px 5px;
-width: 165px ;
-display: block;
-float: left;
-margin: 0 10px 5px 0;
-}
+
 
 body.front .node .content p {
 border-bottom: 0;
