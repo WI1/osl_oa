@@ -1726,7 +1726,7 @@ table {
   border-width: 0px;
 }
 
-.field-field-smallteaser, .field-field-eventteaser {
+.field-field-small-teaser, .field-field-event-teaser {
 padding: 3px 20px 0 0 !important;
 float: left;	
 }
