@@ -527,7 +527,7 @@ div.pager {
 .page-region .block-content {
   -moz-border-radius: 0px;
   -webkit-border-radius: 0px;
-  background: #B22222;
+  background: transparent;
   border: 0px;
 }
 
@@ -1643,13 +1643,16 @@ ul.searchlight-facet-active .searchlight-facet {
 
 
 #features-menu li.active a, #features-menu li.active a.active {
-  color: #B22222;
+  color: #c1d5e2;
   width: 180px;
   padding: 10px 14px 0px 14px;
+  overflow: visible;
+  background-position: 0px -160px;
+  background-repeat: no-repeat;
 }
 
 #features-menu li a {
-  color: #c1d5e2;
+  color: white;
   width: 180px;
   padding: 10px 14px 0px 14px;
   line-height: 30px;
