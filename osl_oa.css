@@ -551,7 +551,7 @@ div.pager {
 }
 
 #page .page-region .block label, #page .page-region .block-content .description, #page .page-region .block-content a { 
-  color: #fff;
+ /* color: #fff;*/
 }
 
 #content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content .node-title a{ 
