@@ -771,6 +771,9 @@ div.comment {
   font-weight:700;
   text-transform: uppercase;
 }
+.node-title a {
+color: #333;
+}
 
 .page-title {
   padding:10px 0px 30px 10px;
