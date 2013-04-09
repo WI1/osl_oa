@@ -401,8 +401,12 @@ div.messages li:last-child {
 /**
  * Pager ==============================================================
 */
-.block .boxes-box-controls,
 div.pager {
+  background:transparent;
+  border-width:0;
+}
+
+.block .boxes-box-controls {
   -moz-border-radius:3px;
   -webkit-border-radius:3px;
 

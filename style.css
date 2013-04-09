@@ -270,7 +270,8 @@ body.logged-in #block-atrium-account .block-title {
   font-weight:normal;
   font-size:11px;
   padding:19px 0px 20px;
-  color:#999;
+  color:#fff;
+  background: #888;
 }
 
 #footer a { color:#666; }
