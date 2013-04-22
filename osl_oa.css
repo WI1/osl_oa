@@ -769,11 +769,15 @@ div.comment {
 
 .comment-title,
 .node-title {
-  padding:10px 0px 30px 0px;
+  padding:30px 0px 10px 10px;
   margin:0px;
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
+  background-image:url(https://dl.dropboxusercontent.com/u/16702205/Stripes_osl.png)
+  background-size: 100%;
+
+
 }
 .node-title a {
   color: #333;
@@ -1671,7 +1675,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #features-menu li a {
-  color: white;
+  color: #a8dcf4;
   width: 180px;
   padding: 10px 14px 0px 14px;
   line-height: 30px;
