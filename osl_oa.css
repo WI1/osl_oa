@@ -774,7 +774,7 @@ div.comment {
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
-  background-image:url("images/Stripes_osl.png");
+  background-image:url("images/Stripes_osl_transparent.png");
   background-size: 100%;
 
 
@@ -1666,7 +1666,7 @@ ul.searchlight-facet-active .searchlight-facet {
 
 
 #features-menu li.active a, #features-menu li.active a.active {
-  color: #c1d5e2;
+  color: #a8dcf4;
   width: 180px;
   padding: 10px 14px 0px 14px;
   overflow: visible;
