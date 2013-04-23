@@ -1682,7 +1682,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #block-atrium_calendar-mini .block-content {
-  background: none repeat scroll 0 0 #B22222;
+  background: none repeat scroll 0 0 #009d6e;
 }
 
 
@@ -1794,3 +1794,16 @@ body.front .node .content p {
 .location.vcard {
   display: table-row-group
 }
+
+
+/*new chages
+**/
+.boxes-box-content strong {
+    color: #133F84;
+}
+
+.boxes-box-content p {
+    color: #194594;
+}
+
+
