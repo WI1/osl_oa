@@ -774,7 +774,7 @@ div.comment {
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
-  background-image:url("images/Stripes_osl_a8dcf4.jpg");
+  background-image:url("images/HG_Topics_130429a.gif");
   background-size: 100%;
 
 
@@ -1682,7 +1682,8 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #block-atrium_calendar-mini .block-content {
-  background: none repeat scroll 0 0 #009d6e;
+  background-image: url("images/Calender-osl246-251.png");
+  background-size: 100% auto;
 }
 
 
@@ -1700,7 +1701,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #page {
-  background-color: #a8dcf4;
+  background-color: #ECF8F4;
 }
 
 #page .limiter {  }
