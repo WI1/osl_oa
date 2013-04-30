@@ -818,7 +818,7 @@ div.comment {
   font-size:11px;
   color:#666;
   text-shadow:#fff 0px 1px 0px;
-  background:#eee;
+  background:#eeec;
 
   margin:0px;
   padding:5px 5px 4px 5px;
@@ -1685,7 +1685,7 @@ ul.searchlight-facet-active .searchlight-facet {
 
 #block-atrium_calendar-mini .block-content {
   background-image: url("images/Calender-osl246-251.png");
-  background-size: 100% auto;
+  background-size: 100% 100%;
 }
 
 
