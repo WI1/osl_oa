@@ -830,7 +830,9 @@ div.comment {
   overflow:hidden;
 }
 
-.block .node-submitted { background: #fff; }
+.block .node-submitted { background: #fff; 
+  margin: 5px 5px 0 0;
+}
 
 .comment-submitted {
   -moz-border-radius:0px 0px 0px 5px;
