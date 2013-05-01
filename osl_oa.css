@@ -767,7 +767,7 @@ div.comment {
   padding:0px 0px 10px;
 }
 
-.comment-title,
+.page-title,
 .node-title {
   padding:30px 0px 10px 10px;
   margin:0px;
@@ -776,8 +776,6 @@ div.comment {
   text-transform: uppercase;
   background-image:url("images/HG_Topics_130429a.gif");
   background-size: 100%;
-
-
 }
 .node-title a {
   color: #009d6e;
