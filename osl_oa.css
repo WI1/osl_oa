@@ -831,7 +831,7 @@ div.comment {
 }
 
 .block .node-submitted { background: #fff; 
-  margin: 5px 5px 0 0;
+                         margin: 5px 5px 0 0;
 }
 
 .comment-submitted {
@@ -1735,8 +1735,12 @@ div.litecal .litecal-timespan {
 }
 
 div.litecal .litecal-slot-today {
-  border: #00ff00 3px solid;
-  border-radius: 25px;
+  /*border: #00ff00 3px solid;
+  border-radius: 25px;*/
+  background-image: url('images/circle_grn.png');
+  background-position: 6px -3px;
+  background-repeat: no-repeat;
+  background-size: 90%;
 }
 
 div.litecal-full .litecal-slot {
@@ -1803,11 +1807,11 @@ body.front .node .content p {
 /*new chages
 **/
 .boxes-box-content strong {
-    color: #133F84;
+  color: #133F84;
 }
 
 .boxes-box-content p {
-    color: #194594;
+  color: #194594;
 }
 
 
