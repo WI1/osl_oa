@@ -559,7 +559,7 @@ div.pager {
 }
 
 #content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content .node-title a{ 
-  color: #B22222;
+  color: #009d6e;
 }
 
 #content .page-region .block-content a { 
@@ -769,14 +769,18 @@ div.comment {
 
 .comment-title,
 .node-title {
-  padding:10px 0px 30px 0px;
+  padding:30px 0px 10px 10px;
   margin:0px;
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
+  background-image:url("images/HG_Topics_130429a.gif");
+  background-size: 100%;
+
+
 }
 .node-title a {
-  color: #333;
+  color: #009d6e;
 }
 
 .page-region .page-title {
@@ -814,7 +818,7 @@ div.comment {
   font-size:11px;
   color:#666;
   text-shadow:#fff 0px 1px 0px;
-  background:#eee;
+  background:#eeec;
 
   margin:0px;
   padding:5px 5px 4px 5px;
@@ -826,7 +830,9 @@ div.comment {
   overflow:hidden;
 }
 
-.block .node-submitted { background: #fff; }
+.block .node-submitted { background: #fff; 
+  margin: 5px 5px 0 0;
+}
 
 .comment-submitted {
   -moz-border-radius:0px 0px 0px 5px;
@@ -1662,7 +1668,7 @@ ul.searchlight-facet-active .searchlight-facet {
 
 
 #features-menu li.active a, #features-menu li.active a.active {
-  color: #c1d5e2;
+  color: #a8dcf4;
   width: 180px;
   padding: 10px 14px 0px 14px;
   overflow: visible;
@@ -1671,14 +1677,15 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #features-menu li a {
-  color: white;
+  color: #a8dcf4;
   width: 180px;
   padding: 10px 14px 0px 14px;
   line-height: 30px;
 }
 
 #block-atrium_calendar-mini .block-content {
-  background: none repeat scroll 0 0 #B22222;
+  background-image: url("images/Calender-osl246-251.png");
+  background-size: 100% 100%;
 }
 
 
@@ -1696,7 +1703,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #page {
-  background-color: #c1d5e2;
+  background-color: #ECF8F4;
 }
 
 #page .limiter {  }
@@ -1790,3 +1797,16 @@ body.front .node .content p {
 .location.vcard {
   display: table-row-group
 }
+
+
+/*new chages
+**/
+.boxes-box-content strong {
+    color: #133F84;
+}
+
+.boxes-box-content p {
+    color: #194594;
+}
+
+
