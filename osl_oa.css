@@ -770,18 +770,19 @@ div.comment {
 .page-title,
 .node-title {
   padding:30px 0px 10px 10px;
-  margin:0px;
+  margin:0 0 15px 0;
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
   background-image:url("images/HG_Topics_130429a.gif");
   background-size: 100%;
+  color: #009d6e;
 }
 .page-title a, .node-title a {
   color: #009d6e;
 }
 
-.page-region .page-title {
+/*.page-region .page-title {
   padding:10px 0px 30px 0px;
 }
 
@@ -791,7 +792,7 @@ div.comment {
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
-}
+}*/
 
 .comment-title {
   border-top:3px solid #999;
