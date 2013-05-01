@@ -1762,6 +1762,10 @@ div.litecal-full .litecal-slot {
   border-bottom: 1px solid #fff;
 }
 
+div.litecal-compact .litecal-slot .label span {
+  font-size: 10px;
+
+}
 .marker, .form-required {
   color: green;
 }
