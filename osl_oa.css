@@ -777,7 +777,7 @@ div.comment {
   background-image:url("images/HG_Topics_130429a.gif");
   background-size: 100%;
 }
-.node-title a {
+.page-title a, .node-title a {
   color: #009d6e;
 }
 
