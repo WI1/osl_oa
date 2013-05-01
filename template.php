@@ -59,7 +59,7 @@ function osl_oa_icon_links(&$links) {
  */
 function osl_oa_preprocess_page(&$vars) {
   $vars['logo'] = "<a href='/' class='logo'></a>";
-  
+  if($vars['is_front']) $vars['title'] = $vars['site_name'];
   // Switch layout for 404/403 pages.
   $headers = drupal_get_headers();
   if ((strpos($headers, 'HTTP/1.1 403 Forbidden') !== FALSE) || strpos($headers, 'HTTP/1.1 404 Not Found') !== FALSE) {
