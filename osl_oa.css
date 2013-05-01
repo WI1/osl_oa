@@ -1818,4 +1818,6 @@ body.front .node .content p {
   color: #194594;
 }
 
-
+.crayon-anchor {
+  opacity: 0.7;
+}
