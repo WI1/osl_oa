@@ -367,10 +367,10 @@ body.logged-in #block-atrium-account .block-title {
   background-position:0px -110px;
   background-repeat:no-repeat;
 
-  -moz-border-radius-topleft:3px;
+/*  -moz-border-radius-topleft:3px;
   -moz-border-radius-topright:3px;
   -webkit-border-top-left-radius:3px;
-  -webkit-border-top-right-radius:3px;
+  -webkit-border-top-right-radius:3px;*/
 }
 
 #features-menu li a:hover {
