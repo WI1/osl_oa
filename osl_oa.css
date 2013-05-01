@@ -1684,8 +1684,9 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #block-atrium_calendar-mini .block-content {
-  background-image: url("images/Calender-osl246-251.png");
+  background-image: url("images/Calender-osl246-281.png");
   background-size: 100% 100%;
+  padding-bottom: 45px;
 }
 
 
