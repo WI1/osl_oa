@@ -538,6 +538,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 #page-tools .page-title-hidden {
   text-indent:-999px;
   overflow:hidden;
+  display: none;
 }
 
 #page-tools .page-title a.username {
