@@ -767,23 +767,24 @@ div.comment {
   padding:0px 0px 10px;
 }
 
-.comment-title,
+.page-title,
 .node-title {
   padding:30px 0px 10px 10px;
-  margin:0px;
+  margin:0 0 15px 0;
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
   background-image:url("images/HG_Topics_130429a.gif");
   background-size: 100%;
-
-
+  color: #009d6e;
 }
-.node-title a {
+
+
+.page-title a, .node-title a {
   color: #133F84;
 }
 
-.page-region .page-title {
+/*.page-region .page-title {
   padding:10px 0px 30px 0px;
 }
 
@@ -793,7 +794,7 @@ div.comment {
   font-size:20px;
   font-weight:700;
   text-transform: uppercase;
-}
+}*/
 
 .comment-title {
   border-top:3px solid #999;
@@ -831,7 +832,7 @@ div.comment {
 }
 
 .block .node-submitted { background: #fff; 
-  margin: 5px 5px 0 0;
+                         margin: 5px 5px 0 0;
 }
 
 .comment-submitted {
@@ -1684,8 +1685,9 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #block-atrium_calendar-mini .block-content {
-  background-image: url("images/Calender-osl246-251.png");
+  background-image: url("images/Calender-osl246-281.png");
   background-size: 100% 100%;
+  padding-bottom: 45px;
 }
 
 
@@ -1726,7 +1728,7 @@ div.litecal .litecal-slot {
 }
 
 div.litecal .litecal-timespan {
-  border-right: 0px;
+  border: 0px;
   background: transparent;
 }
 
@@ -1735,7 +1737,12 @@ div.litecal .litecal-timespan {
 }
 
 div.litecal .litecal-slot-today {
-  background: green;
+  /*border: #00ff00 3px solid;
+  border-radius: 25px;*/
+  background-image: url('images/circle_grn.png');
+  background-position: 6px -3px;
+  background-repeat: no-repeat;
+  background-size: 90%;
 }
 
 div.litecal-full .litecal-slot {
@@ -1757,6 +1764,10 @@ div.litecal-full .litecal-slot {
   border-bottom: 1px solid #fff;
 }
 
+div.litecal-compact .litecal-slot .label span {
+  font-size: 10px;
+
+}
 .marker, .form-required {
   color: green;
 }
@@ -1802,11 +1813,11 @@ body.front .node .content p {
 /*new chages
 **/
 .boxes-box-content strong {
-    color: #133F84;
+  color: #133F84;
 }
 
 .boxes-box-content p {
-    color: #194594;
+  color: #194594;
 }
 
 
@@ -1824,4 +1835,8 @@ text-transform: none;
     color: #009D6E;
 }
 
+
+.crayon-anchor {
+  opacity: 0.7;
+}
 
