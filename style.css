@@ -533,6 +533,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   font-weight:normal;
   line-height:30px;
   text-shadow:#fff 0px 1px 0px;
+  display:none;
 }
 
 #page-tools .page-title-hidden {

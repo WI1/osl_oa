@@ -780,7 +780,7 @@ div.comment {
 
 }
 .node-title a {
-  color: #009d6e;
+  color: #133F84;
 }
 
 .page-region .page-title {
@@ -1807,6 +1807,21 @@ body.front .node .content p {
 
 .boxes-box-content p {
     color: #194594;
+}
+
+
+.block-content .node-title {
+font-style: italic;
+text-transform: none;
+}
+
+
+#page #right .page-region .block-title {
+    color: #133F84;
+}
+
+#page #content .block .block-title { 
+    color: #009D6E;
 }
 
 
