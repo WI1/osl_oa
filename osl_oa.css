@@ -1791,7 +1791,7 @@ table {
   border-width: 0px;
 }
 
-.view-frontpage .field-field-small-teaser, .field-field-event-teaser {
+.view-frontpage .field-field-small-teaser, .field-field-event-teaser, .view-frontpage field-field-teaser {
   padding: 3px 15px 0 0 !important;
   float: left;	
 }
