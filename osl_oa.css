@@ -1743,6 +1743,7 @@ div.litecal .litecal-slot-today {
   background-position: 6px -3px;
   background-repeat: no-repeat;
   background-size: 90%;
+  z-index: 1;
 }
 
 div.litecal-full .litecal-slot {
