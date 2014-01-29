@@ -291,6 +291,7 @@ div.messages li:last-child {
   width:20px;
   height:20px;
   margin-right:5px;
+  margin-top: 5px;
 }
 
 .dropdown-blocks .block .toggle-active {
@@ -1769,9 +1770,10 @@ div.litecal-full .litecal-slot {
 }
 
 div.litecal-compact .litecal-slot .label span {
-  font-size: 10px;
-
+  font-size: 15px;
+  font-weight: 800;
 }
+
 .marker, .form-required {
   color: green;
 }
@@ -1877,3 +1879,18 @@ text-transform: none;
 #block-boxes-footersitemap .block-content {
   background: none;
 }
+
+
+/* Design Anpassungen -- Farben*/
+
+/* header*/
+#global {
+  background-color: white;
+}
+
+#global .breakcrumb { /* TODO needs FIX -- just temporarily */
+  /* hausschen zur Startseite, damit man es noch sieht weiss auf schwarz*/
+  background-color: black;
+}
+
+/* navigation */
