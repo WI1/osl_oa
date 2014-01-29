@@ -1885,7 +1885,7 @@ text-transform: none;
 
 /* header*/
 #global {
-  background-color: white;
+  background-color: white !important;
 }
 
 #global .breakcrumb { /* TODO needs FIX -- just temporarily */
