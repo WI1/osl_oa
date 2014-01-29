@@ -1710,7 +1710,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #page {
-  background-color: #ECF8F4;
+  background-color: #FFFFFF;
 }
 
 #page .limiter { max-width: 1280px; }
@@ -1885,7 +1885,7 @@ text-transform: none;
 
 /* header*/
 #global {
-  background-color: white;
+  background-color: #134776;
 }
 
 #global .breakcrumb { /* TODO needs FIX -- just temporarily */
@@ -1894,3 +1894,9 @@ text-transform: none;
 }
 
 /* navigation */
+
+/*frontpage*/
+
+#block-views-frontpage-block_1 {
+background-color: #EAF3F9;
+}

@@ -516,6 +516,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   border-bottom:1px solid #ccc;
   position:relative;
   z-index:1;
+  background-color: #D0E3F1;
 }
 
 #page-tools .page-title,
