@@ -560,7 +560,7 @@ div.pager {
 }
 
 #content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content .node-title a{ 
-  color: #009d6e;
+  color: rgb(19, 71, 118);
 }
 
 #content .page-region .block-content a { 
@@ -1847,7 +1847,7 @@ text-transform: none;
 }
 
 #page #content .block .block-title { 
-    color: #009D6E;
+    color: rgb(19, 71, 118);
 }
 
 
@@ -1908,4 +1908,18 @@ text-transform: none;
 
 #block-views-frontpage-block_1 {
 background-color: #EAF3F9;
+}
+
+.block .node-submitted {
+  background: none repeat scroll 0% 0% transparent;
+  border: 5px;
+}
+
+.boxes-box-content p {
+  color: rgb(0, 0, 0);
+}
+
+.boxes-box-content p {
+  color: rgb(25, 69, 148);
+  line-height: 2;
 }
