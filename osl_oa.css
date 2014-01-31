@@ -1850,37 +1850,6 @@ text-transform: none;
   max-width: none;
 }
 
-#footer {
-  background-color: white;
-}
-
-#footer .limiter {
-  max-width: 1280px;
-}
-
-#block-boxes-footersitemap {
-	width: 100%;
-
-	background-image: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0, #F2F2F2),
-		color-stop(1, #FFFFFF)
-	);
-	background-image: -o-linear-gradient(bottom, #F2F2F2 0%, #FFFFFF 100%);
-	background-image: -moz-linear-gradient(bottom, #F2F2F2 0%, #FFFFFF 100%);
-	background-image: -webkit-linear-gradient(bottom, #F2F2F2 0%, #FFFFFF 100%);
-	background-image: -ms-linear-gradient(bottom, #F2F2F2 0%, #FFFFFF 100%);
-	background-image: linear-gradient(to bottom, #F2F2F2 0%, #FFFFFF 100%);
-
-}
-
-#block-boxes-footersitemap .block-content {
-  background: none;
-}
-
-
 /* Design Anpassungen -- Farben*/
 
 /* header*/
@@ -1894,3 +1863,34 @@ text-transform: none;
 }
 
 /* navigation */
+
+
+/* footer */
+
+#footer {
+  background-color: white;
+}
+
+#footer .limiter {
+  max-width: 1280px;
+}
+
+#footer-blocks {
+  width: 100%;
+}
+
+#block-menu-primary-links {
+  width: 100%;
+}
+
+block-menu-primary-links ul.menu li {
+  display: inline;
+  float: left;
+  background: none !important;
+  width: 150px;
+}
+
+#footer .menu a {
+  border-bottom: none !important;
+  font-size: 12px;
+}
