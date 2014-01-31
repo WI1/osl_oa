@@ -1924,3 +1924,12 @@ background-color: #EAF3F9;
   color: rgb(25, 69, 148);
   line-height: 2;
 }
+
+/* artikel überschriften font*/
+#content h2.page-title {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 42px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2em;
+}
