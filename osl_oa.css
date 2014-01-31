@@ -1895,6 +1895,10 @@ text-transform: none;
   font-size: 12px;
 }
 
+#footer .menu a:active, #footer .menu a:hover {
+  background-color: white !important;
+}
+
 
 /* header*/
 #global {
