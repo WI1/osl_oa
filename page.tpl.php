@@ -1,8 +1,10 @@
 <?php include 'page.header.inc'; ?>
 <div id='left'><div class='page-region'>
-  <div id='logo-wrapper'>
-    <?php print $logo ?>
+  <!-- <div id='logo-wrapper'>
+    old logo position, now it is in a block!
+    <?php // print $logo ?>
   </div>
+  -->
   <?php if ($left) print $left ?>
 </div></div>
 <div id='content'><div class='page-region'>
