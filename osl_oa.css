@@ -560,7 +560,7 @@ div.pager {
 }
 
 #content .page-region .block label, #content .page-region .block-content .description, #content .page-region .block-content .node-title a{ 
-  color: #009d6e;
+  color: rgb(19, 71, 118);
 }
 
 #content .page-region .block-content a { 
@@ -769,7 +769,7 @@ div.comment {
 }
 
 .page-title,
-.node-title {
+.page-content .node-title {
   padding:30px 0px 10px 10px;
   margin:0 0 15px 0;
   font-size:20px;
@@ -780,9 +780,17 @@ div.comment {
   color: #133F84;
 }
 
+.view-content .node-title {
+  padding:30px 0px 10px 10px;
+  margin:0 0 15px 0;
+  font-size:22px;
+  
+  color: #133F84;
+}
+
 
 .page-title a, .node-title a {
-  color: #133F84;
+  color: #01325D;
 }
 
 /*.page-region .page-title {
@@ -1674,16 +1682,17 @@ ul.searchlight-facet-active .searchlight-facet {
 
 
 #features-menu li.active a, #features-menu li.active a.active {
-  color: #a8dcf4;
+  color: #FFFFFF;
   width: 180px;
   padding: 10px 14px 0px 14px;
   overflow: visible;
   background-position: 0px -160px;
   background-repeat: no-repeat;
+  font-size: 18px;
 }
 
 #features-menu li a {
-  color: #a8dcf4;
+  color: #D0E3F1;
   width: 180px;
   padding: 10px 14px 0px 14px;
   line-height: 30px;
@@ -1710,7 +1719,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #page {
-  background-color: #ECF8F4;
+  background-color: #FFFFFF;
 }
 
 #page .limiter { max-width: 1280px; }
@@ -1770,7 +1779,7 @@ div.litecal-full .litecal-slot {
 }
 
 div.litecal-compact .litecal-slot .label span {
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 800;
 }
 
@@ -1838,7 +1847,7 @@ text-transform: none;
 }
 
 #page #content .block .block-title { 
-    color: #009D6E;
+    color: rgb(19, 71, 118);
 }
 
 
@@ -1857,18 +1866,9 @@ text-transform: none;
   background-color: white !important;
 }
 
-#global .breakcrumb { /* TODO needs FIX -- just temporarily */
-  /* hausschen zur Startseite, damit man es noch sieht weiss auf schwarz*/
-  background-color: black;
-}
-
-/* navigation */
-
-
 /* footer */
-
 #footer {
-  background-color: white;
+  background-color: #134776;
 }
 
 #footer .limiter {
@@ -1883,7 +1883,7 @@ text-transform: none;
   width: 100%;
 }
 
-block-menu-primary-links ul.menu li {
+#block-menu-primary-links ul.menu li {
   display: inline;
   float: left;
   background: none !important;
@@ -1893,4 +1893,30 @@ block-menu-primary-links ul.menu li {
 #footer .menu a {
   border-bottom: none !important;
   font-size: 12px;
+}
+
+
+/* header*/
+#global {
+  background-color: #134776;
+}
+
+/*frontpage*/
+
+#block-views-frontpage-block_1 {
+background-color: #EAF3F9;
+}
+
+.block .node-submitted {
+  background: none repeat scroll 0% 0% transparent;
+  border: 5px;
+}
+
+.boxes-box-content p {
+  color: rgb(0, 0, 0);
+}
+
+.boxes-box-content p {
+  color: rgb(25, 69, 148);
+  line-height: 2;
 }
