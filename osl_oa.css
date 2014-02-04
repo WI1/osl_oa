@@ -1938,3 +1938,9 @@ background-color: #EAF3F9;
 .crayon-4 {
 background-color: #D0E3F1;
 }
+
+/*Text soll nicht umfließen*/
+#block-views-frontpage-block_1 .node-content p {
+margin-left: 195px;
+margin-right: 10px;
+}
