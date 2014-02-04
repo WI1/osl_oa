@@ -1753,9 +1753,9 @@ div.litecal .litecal-slot-today {
   /*border: #00ff00 3px solid;
   border-radius: 25px;*/
   background-image: url('images/circle_grn.png');
-  background-position: 6px -3px;
+  background-position: 9.7px -4.4px;
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 80%;
   z-index: 1;
 }
 
