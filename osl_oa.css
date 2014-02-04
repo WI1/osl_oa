@@ -1699,7 +1699,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #block-atrium_calendar-mini .block-content {
-  background-image: url("images/Calender-osl246-281.png");
+  background-image: url("images/Calender-osl246-281_blue.png");
   background-size: 100% 100%;
   padding-bottom: 45px;
 }
@@ -1932,4 +1932,9 @@ background-color: #EAF3F9;
   font-size: 18px;
   font-weight: bold;
   line-height: 1.2em;
+}
+
+/*Balken im Kalender*/
+.crayon-4 {
+background-color: #D0E3F1;
 }
