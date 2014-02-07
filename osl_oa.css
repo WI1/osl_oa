@@ -771,7 +771,7 @@ div.comment {
 /* Artikel überschriften*/
 .page-title,
 .page-content .node-title {
-  padding: 0px 0px 0px 10px;
+  padding: 0px; /* frontseite braucht extra tag!!*/
   /* margin:0 0 15px 0; */
   font-size:20px;
   font-weight:800;
@@ -1907,10 +1907,11 @@ text-transform: none;
 }
 
 /*frontpage*/
-
+/*
 #block-views-frontpage-block_1 {
 background-color: #EAF3F9;
 }
+*/
 
 .block .node-submitted {
   background: none repeat scroll 0% 0% transparent;
@@ -1930,7 +1931,7 @@ background-color: #EAF3F9;
 #content h2.page-title {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 42px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1.2em;
 }
@@ -1947,6 +1948,11 @@ background-color: #EAF3F9;
 }
 
 /*Kalender Aenderungen*/
+div.litecal .litecal-title h3.litecal-title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 div.litecal .litecal-slot .label {
   float: none;
 }
@@ -1959,6 +1965,17 @@ div.litecal .litecal-slot .label span.num {
   color: black;
 }
 
+pane-views-events-upcoming-block-1 h2.pane-title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+
+#pane-views-calendar-mainpage-block-2 {
+  /* abstand nach oben zu upcomingevents*/
+  margin-top: 30px;
+}
+
 /*Content Bereich --> Verlinkung und Image-margin*/
 #content .page-region .block-content a:hover {
   color: #222;
@@ -1967,4 +1984,17 @@ div.litecal .litecal-slot .label span.num {
 
 #block-views-frontpage-block_1 .view-content .field.field-type-filefield.field-field-event-teaser {
 padding-right: 10px !important;
+}
+
+
+/* Gradient fuer Artikel... test */
+#content div.view-content div.views-row {
+  background: rgba(236,248,244,1);
+  background: -moz-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(236,248,244,1)), color-stop(100%, rgba(234,243,249,1)));
+  background: -webkit-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
+  background: -o-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
+  background: -ms-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
+  background: linear-gradient(to right, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf8f4', endColorstr='#eaf3f9', GradientType=1 );
 }
