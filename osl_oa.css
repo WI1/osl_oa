@@ -1965,9 +1965,16 @@ div.litecal .litecal-slot .label span.num {
   color: black;
 }
 
-pane-views-events-upcoming-block-1 h2.pane-title {
+#pane-views-events-upcoming-block-1 {
+  /* abstand zur seitenüberschrift*/
+  margin-top: 20px;
+}
+
+#pane-views-events-upcoming-block-1 h2.pane-title {
   text-transform: uppercase;
   font-size: 20px;
+  color: #666;
+  font-weight: bold;
 }
 
 
