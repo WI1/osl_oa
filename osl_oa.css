@@ -771,7 +771,7 @@ div.comment {
 /* Artikel überschriften*/
 .page-title,
 .page-content .node-title {
-  padding: 0px 0px 0px 10px;
+  padding: 0px; /* frontseite braucht extra tag!!*/
   /* margin:0 0 15px 0; */
   font-size:20px;
   font-weight:800;
@@ -1931,7 +1931,7 @@ background-color: #EAF3F9;
 #content h2.page-title {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 42px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
   line-height: 1.2em;
 }
