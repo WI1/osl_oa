@@ -1761,7 +1761,7 @@ div.litecal .litecal-slot-today {
 }
 
 div.litecal-full .litecal-slot {
-  background: #c1d5e9;
+  background: white;
   border-left: 2px solid #ddd;
   border-right: 2px solid #ddd;
 }
@@ -1953,6 +1953,8 @@ div.litecal .litecal-title h3.litecal-title {
   font-size: 20px;
 }
 
+
+
 div.litecal .litecal-slot .label {
   float: none;
 }
@@ -2004,4 +2006,10 @@ padding-right: 10px !important;
   background: -ms-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
   background: linear-gradient(to right, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf8f4', endColorstr='#eaf3f9', GradientType=1 );
+}
+
+
+#pane-views-events-upcoming-block-1 div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
+  /* centers images in upcoming events block*/
+  text-align: center;
 }
