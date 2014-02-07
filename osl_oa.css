@@ -1948,6 +1948,11 @@ background-color: #EAF3F9;
 }
 
 /*Kalender Aenderungen*/
+div.litecal .litecal-title h3.litecal-title {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
 div.litecal .litecal-slot .label {
   float: none;
 }
