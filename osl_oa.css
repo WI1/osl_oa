@@ -1965,6 +1965,11 @@ div.litecal .litecal-slot .label span.num {
   color: black;
 }
 
+#pane-views-calendar-mainpage-block-2 {
+  /* abstand nach oben zu upcomingevents*/
+  margin-top: 30px;
+}
+
 /*Content Bereich --> Verlinkung und Image-margin*/
 #content .page-region .block-content a:hover {
   color: #222;
