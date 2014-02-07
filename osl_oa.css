@@ -2010,7 +2010,7 @@ padding-right: 10px !important;
 }
 
 
-div.pane-views-events-upcoming-block-1 div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
+div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
   /* centers images in upcoming events block*/
   text-align: center;
 }
