@@ -35,7 +35,7 @@ a {
 
 .block-title { font-weight:bold; }
 
-.limiter { padding:0px 20px; }
+.limiter { padding:0px 20px; max-width: 1280px;}
 
 #page .limiter { max-width:1280px; }
 
