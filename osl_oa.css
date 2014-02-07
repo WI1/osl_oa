@@ -1466,13 +1466,13 @@ table.views-view-grid div.picture {
 /**
  * LITECAL ============================================================
 */
-.litecal .litecal-title h3.litecal-title {
+#block-atrium_calendar-mini .litecal .litecal-title h3.litecal-title {
   font-size:20px;
   padding:0px;
 }
 
-.litecal .litecal-header .litecal-label { text-align:center; }
-.litecal .date { color:inherit; }
+#block-atrium_calendar-mini .litecal .litecal-header .litecal-label { text-align:center; }
+#block-atrium_calendar-mini .litecal .date { color:inherit; }
 
 /**
  * Empty text =========================================================
@@ -1707,11 +1707,11 @@ ul.searchlight-facet-active .searchlight-facet {
 
 
 
-#block-atrium_calendar-mini .litecal-title, .litecal-label {
+#block-atrium_calendar-mini .litecal-title, #block-atrium_calendar-mini .litecal-label {
   color: #fff;
 }
 
-.litecal-label {
+#block-atrium_calendar-mini .litecal-label {
   color: #333;
 }
 
@@ -1728,29 +1728,29 @@ ul.searchlight-facet-active .searchlight-facet {
 /* Formatting Litecal
 **/
 
-div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
+#block-atrium_calendar-mini div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
   display: none;
 }
 
-div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
+#block-atrium_calendar-mini div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
   background: transparent;
 }
 
-div.litecal .litecal-slot {
+#block-atrium_calendar-mini div.litecal .litecal-slot {
   background: transparent;
   border-left: 0px;
 }
 
-div.litecal .litecal-timespan {
+#block-atrium_calendar-mini div.litecal .litecal-timespan {
   border: 0px;
   background: transparent;
 }
 
-.litecal-compact .litecal-slot a {
+#block-atrium_calendar-mini .litecal-compact .litecal-slot a {
   color: #fff;
 }
 
-div.litecal .litecal-slot-today {
+#block-atrium_calendar-mini div.litecal .litecal-slot-today {
   /*border: #00ff00 3px solid;
   border-radius: 25px;*/
   background-image: url('images/circle_grn.png');
@@ -1760,26 +1760,26 @@ div.litecal .litecal-slot-today {
   z-index: 1;
 }
 
-div.litecal-full .litecal-slot {
+#block-atrium_calendar-mini div.litecal-full .litecal-slot {
   background: white;
   border-left: 2px solid #ddd;
   border-right: 2px solid #ddd;
 }
 
-.litecal-full .litecal-header .litecal-label {
+#block-atrium_calendar-mini .litecal-full .litecal-header .litecal-label {
   font-size: 115%;
 }
 
-.litecal-full .litecal-slot .label span.num {
+#block-atrium_calendar-mini .litecal-full .litecal-slot .label span.num {
   font-size: 105%;
 }
 
 
-.litecal-full .litecal-timespan {
+#block-atrium_calendar-mini .litecal-full .litecal-timespan {
   border-bottom: 1px solid #fff;
 }
 
-div.litecal-compact .litecal-slot .label span {
+#block-atrium_calendar-mini div.litecal-compact .litecal-slot .label span {
   font-size: 13px;
   font-weight: 800;
 }
@@ -2010,7 +2010,7 @@ padding-right: 10px !important;
 }
 
 
-div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
+ div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
   /* centers images in upcoming events block*/
   text-align: center;
 }
