@@ -537,7 +537,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 #page-tools .tabs {
   padding-top:5px;
   position:absolute;
-  padding-left: 276px;
+  padding-left: 17px;
 }
 
 #page-tools .context-links,
@@ -647,20 +647,20 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   color:#888;
   font-weight:bold;
   font-size:13px;
-  -moz-border-radius:5px;
-  -webkit-border-radius:5px;
+  /*-moz-border-radius:5px;*/
+  /*-webkit-border-radius:5px;*/
   text-shadow:#fff 0px 1px 0px;
   padding:5px 10px;
-  margin-right:1px;
+  /*margin-right:1px;*/
   background:transparent;
 }
 
 #page-tools .tabs li a:hover {
   color:#333;
-  background:#ddd;
-  padding:4px 9px;
+  background:transparent;
+  padding:4px 9px 9px;
   border:1px solid #ccc;
-  border-color:#ccc #ddd #fff;
+  border-color:#ccc #ddd;
 }
 
 #page-tools .tabs li a:active {
@@ -672,8 +672,8 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 #page-tools .tabs li a.active {
   background:#fff;
   color:#333;
-  -moz-border-radius:5px 5px 0px 0px;
-  -webkit-border-radius:5px 5px 0px 0px;
+  /*-moz-border-radius:5px 5px 0px 0px;*/
+  /*-webkit-border-radius:5px 5px 0px 0px;*/
 
   padding:4px 9px 10px;
   border-width:1px 1px 0px;
