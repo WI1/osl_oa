@@ -2014,3 +2014,50 @@ padding-right: 10px !important;
   /* centers images in upcoming events block*/
   text-align: center;
 }
+
+/*Changes on Search-field*/
+#block-atrium-search #edit-search-wrapper label {
+display: none;
+}
+
+#block-atrium-search #atrium-search-form .form-submit {
+text-indent: -999px;
+padding: 2px 13px;
+position: relative;
+height: 30px;
+width: 30px;
+margin-left: -220px;
+margin-top: 5px;
+background: transparent;
+border: 0 !important;
+-webkit-box-shadow: white 0px 0px 0px;
+-moz-box-shadow: white 0px 0px 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+}
+
+#block-atrium-search #edit-search-wrapper #edit-search {
+width: 170px;
+margin-left: 33px;
+margin-top: 5px;
+padding: 0px;
+height: 20px !important;
+border: none;
+background: transparent;
+}
+
+#block-atrium-search #edit-search-wrapper {
+background: url("images/search.jpg") no-repeat !important;
+width: 220px;
+height: 40px;
+margin: 0px;
+margin-left: 4px;
+float: left;
+display: inline-block;
+padding: 5px 0px 0px 5px;
+}
+
+#block-atrium-search .block-content.clear-block {
+padding-top: 0px;
+padding-left: 0px;
+}
