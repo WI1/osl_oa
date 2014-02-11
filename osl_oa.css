@@ -405,6 +405,7 @@ div.messages li:last-child {
 div.pager {
   background:transparent;
   border-width:0;
+  border: 1px solid #ddd;
 }
 
 .block .boxes-box-controls {
@@ -1916,6 +1917,8 @@ background-color: #EAF3F9;
 .block .node-submitted {
   background: none repeat scroll 0% 0% transparent;
   border: 5px;
+  margin-top: 20px;
+  margin-right: 1px;
 }
 
 .boxes-box-content p {
@@ -1997,7 +2000,8 @@ padding-right: 10px !important;
 }
 
 
-/* Gradient fuer Artikel... test */
+/* Erstmal auskommentiert, da wahrscheinlich weißer Hintergrund bleiben wird
+Gradient fuer Artikel... test
 #content div.view-content div.views-row {
   background: rgba(236,248,244,1);
   background: -moz-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
@@ -2008,7 +2012,7 @@ padding-right: 10px !important;
   background: linear-gradient(to right, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf8f4', endColorstr='#eaf3f9', GradientType=1 );
 }
-
+*/
 
  div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
   /* centers images in upcoming events block*/
@@ -2059,5 +2063,17 @@ padding: 5px 0px 0px 5px;
 
 #block-atrium-search .block-content.clear-block {
 padding-top: 0px;
+padding-left: 0px;
+}
+
+.view-frontpage .views-row .node {
+border-bottom: 1px solid #ddd;
+}
+
+.view-frontpage .views-row-last .node {
+border: 0;
+}
+
+.view-frontpage .views-row .node-title {
 padding-left: 0px;
 }
