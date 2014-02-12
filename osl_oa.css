@@ -577,7 +577,8 @@ div.pager {
 
 #left {
   float: left;
-  width: 17%;
+  width: 15%;
+  padding: 40px 10px 20px;
 }
 
 #center {
@@ -587,13 +588,12 @@ div.pager {
 
 #content {
   float:left;
-  width:66%;
+  width:70%;
 }
 
 #right {
   float:right;
-  /*width:34.99%;*/
-  width:33%;
+  width:30%;
 }
 
 .page-region { padding:35px 10px 20px; /*vorher 20px 10px*/}

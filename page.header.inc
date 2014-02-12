@@ -11,7 +11,9 @@
 
   <?php print $skipnav ?>
   <div class='limiter clear-block'>
-    <div id='left'><div class='page-region'><?php if ($left) print $left ?></div></div> 
+    <div id='left'>
+        <div id="logo-wrapper"><a href="/" class="logo"></a></div>
+        <?php if ($left) print $left ?></div>
     <div id='center'>
       <div id='global'>
         <div class='limiter clear-block'>
