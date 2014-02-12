@@ -577,16 +577,22 @@ div.pager {
 #left {
   float: left;
   width: 17%;
-}    
+}
+
+#center {
+    float: right;
+    width: 83%;
+}
+
 #content {
   float:left;
-  width:60%;
+  width:66%;
 }
 
 #right {
   float:right;
   /*width:34.99%;*/
-  width:23%;
+  width:33%;
 }
 
 .page-region { padding:35px 10px 20px; /*vorher 20px 10px*/}
@@ -1650,9 +1656,19 @@ ul.searchlight-facet-active .searchlight-facet {
 
 /*Added changes by Hari*/
 
-#global .limiter { max-width:1280px; }
-#navigation .limiter { max-width:1280px; width: 1260px; line-height: 20px; padding-top: 0px; height: 60px;}
-#page-tools .limiter { max-width:1280px; }
+#global .limiter { 
+  max-width:1280px; 
+}
+#navigation .limiter { 
+  max-width:1280px; 
+  line-height: 20px; 
+  padding: 0px; 
+  height: 60px;
+}
+#page-tools .limiter { 
+  max-width:1280px; 
+  padding: 0;
+}
 #secondary-tabs .limiter { max-width: 1280px; }
 
 #messages { background-color: #ECF8F4; }
@@ -1677,24 +1693,24 @@ ul.searchlight-facet-active .searchlight-facet {
   position: relative;
   text-align: center;
   font-weight: bold;
-  font-size: 120%;
   text-transform: uppercase;
 }
 
 
 #features-menu li.active a, #features-menu li.active a.active {
   color: #FFFFFF;
-  width: 180px;
+  width: 120px;
   padding: 10px 14px 0px 14px;
   overflow: visible;
-  background-position: 0px -160px;
-  background-repeat: no-repeat;
-  font-size: 18px;
+  font-size: 110%;
+  
+  background-position: 0 -70px;
+  
 }
 
 #features-menu li a {
   color: #D0E3F1;
-  width: 180px;
+  width: 120px;
   padding: 10px 14px 0px 14px;
   line-height: 30px;
 }
@@ -1719,9 +1735,7 @@ ul.searchlight-facet-active .searchlight-facet {
   background-color: transparent;
 }
 
-#page {
-  background-color: #FFFFFF;
-}
+
 
 #page .limiter { max-width: 1280px; }
 

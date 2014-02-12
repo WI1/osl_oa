@@ -35,7 +35,9 @@ a {
 
 .block-title { font-weight:bold; }
 
-.limiter { padding:0px 20px; max-width: 1280px;}
+.limiter { 
+  max-width: 1280px;
+}
 
 #page .limiter { max-width:1280px; }
 
@@ -62,7 +64,7 @@ a {
 .dropdown-blocks .block-toggle .item-list li a:focus,
 .pager li.pager-current,
 .more-link a:hover,
-#global,
+
 #navigation { background-color:#0E71B4; }
 
 body #space-tools .block-title { background-color:#094F7E; }
@@ -370,16 +372,18 @@ body.logged-in #block-atrium-account .block-title {
 }
 
 #features-menu li a {
+  font-size: 100%;
   color:#333333;
   position:relative;
   line-height:40px;
   width:120px;
-  height:40px;
+  height:50px;
   padding:5px 10px;
   overflow:hidden;
 
-  background-position:0px -110px;
-  background-repeat:no-repeat;
+  background-position: 0 -200px;
+  background-repeat: no-repeat;
+  background-size: 360px 600px;
 
 /*  -moz-border-radius-topleft:3px;
   -moz-border-radius-topright:3px;
@@ -389,7 +393,8 @@ body.logged-in #block-atrium-account .block-title {
 
 #features-menu li a:hover {
   overflow:visible;
-  background-position:0px -160px;
+  
+  background-position: 0 -70px;
   background-repeat:no-repeat;
 }
 
