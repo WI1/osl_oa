@@ -405,6 +405,7 @@ div.messages li:last-child {
 div.pager {
   background:transparent;
   border-width:0;
+  border: 1px solid #ddd;
 }
 
 .block .boxes-box-controls {
@@ -1472,13 +1473,13 @@ table.views-view-grid div.picture {
 /**
  * LITECAL ============================================================
 */
-.litecal .litecal-title h3.litecal-title {
+#block-atrium_calendar-mini .litecal .litecal-title h3.litecal-title {
   font-size:20px;
   padding:0px;
 }
 
-.litecal .litecal-header .litecal-label { text-align:center; }
-.litecal .date { color:inherit; }
+#block-atrium_calendar-mini .litecal .litecal-header .litecal-label { text-align:center; }
+#block-atrium_calendar-mini .litecal .date { color:inherit; }
 
 /**
  * Empty text =========================================================
@@ -1723,11 +1724,11 @@ ul.searchlight-facet-active .searchlight-facet {
 
 
 
-#block-atrium_calendar-mini .litecal-title, .litecal-label {
+#block-atrium_calendar-mini .litecal-title, #block-atrium_calendar-mini .litecal-label {
   color: #fff;
 }
 
-.litecal-label {
+#block-atrium_calendar-mini .litecal-label {
   color: #333;
 }
 
@@ -1742,29 +1743,29 @@ ul.searchlight-facet-active .searchlight-facet {
 /* Formatting Litecal
 **/
 
-div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
+#block-atrium_calendar-mini div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
   display: none;
 }
 
-div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
+#block-atrium_calendar-mini div.litecal .litecal-slot-gutter, div.litecal .litecal-slot-gutter .label span, div.litecal .litecal-slot-gutter .label span a {
   background: transparent;
 }
 
-div.litecal .litecal-slot {
+#block-atrium_calendar-mini div.litecal .litecal-slot {
   background: transparent;
   border-left: 0px;
 }
 
-div.litecal .litecal-timespan {
+#block-atrium_calendar-mini div.litecal .litecal-timespan {
   border: 0px;
   background: transparent;
 }
 
-.litecal-compact .litecal-slot a {
+#block-atrium_calendar-mini .litecal-compact .litecal-slot a {
   color: #fff;
 }
 
-div.litecal .litecal-slot-today {
+#block-atrium_calendar-mini div.litecal .litecal-slot-today {
   /*border: #00ff00 3px solid;
   border-radius: 25px;*/
   background-image: url('images/circle_grn.png');
@@ -1774,26 +1775,26 @@ div.litecal .litecal-slot-today {
   z-index: 1;
 }
 
-div.litecal-full .litecal-slot {
-  background: #c1d5e9;
+#block-atrium_calendar-mini div.litecal-full .litecal-slot {
+  background: white;
   border-left: 2px solid #ddd;
   border-right: 2px solid #ddd;
 }
 
-.litecal-full .litecal-header .litecal-label {
+#block-atrium_calendar-mini .litecal-full .litecal-header .litecal-label {
   font-size: 115%;
 }
 
-.litecal-full .litecal-slot .label span.num {
+#block-atrium_calendar-mini .litecal-full .litecal-slot .label span.num {
   font-size: 105%;
 }
 
 
-.litecal-full .litecal-timespan {
+#block-atrium_calendar-mini .litecal-full .litecal-timespan {
   border-bottom: 1px solid #fff;
 }
 
-div.litecal-compact .litecal-slot .label span {
+#block-atrium_calendar-mini div.litecal-compact .litecal-slot .label span {
   font-size: 13px;
   font-weight: 800;
 }
@@ -1930,6 +1931,8 @@ background-color: #EAF3F9;
 .block .node-submitted {
   background: none repeat scroll 0% 0% transparent;
   border: 5px;
+  margin-top: 20px;
+  margin-right: 1px;
 }
 
 .boxes-box-content p {
@@ -1967,6 +1970,8 @@ div.litecal .litecal-title h3.litecal-title {
   font-size: 20px;
 }
 
+
+
 div.litecal .litecal-slot .label {
   float: none;
 }
@@ -1979,13 +1984,21 @@ div.litecal .litecal-slot .label span.num {
   color: black;
 }
 
-pane-views-events-upcoming-block-1 h2.pane-title {
+
+div.pane-views-events-upcoming-block-1 {
+  /* abstand zur seitenüberschrift*/
+  margin-top: 20px;
+}
+
+div.pane-views-events-upcoming-block-1 h2.pane-title {
   text-transform: uppercase;
   font-size: 20px;
+  color: #666;
+  font-weight: bold;
 }
 
 
-#pane-views-calendar-mainpage-block-2 {
+div.pane-views-calendar-mainpage-block-2 {
   /* abstand nach oben zu upcomingevents*/
   margin-top: 30px;
 }
@@ -2001,7 +2014,8 @@ padding-right: 10px !important;
 }
 
 
-/* Gradient fuer Artikel... test */
+/* Erstmal auskommentiert, da wahrscheinlich weißer Hintergrund bleiben wird
+Gradient fuer Artikel... test
 #content div.view-content div.views-row {
   background: rgba(236,248,244,1);
   background: -moz-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
@@ -2011,4 +2025,69 @@ padding-right: 10px !important;
   background: -ms-linear-gradient(left, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
   background: linear-gradient(to right, rgba(236,248,244,1) 0%, rgba(234,243,249,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ecf8f4', endColorstr='#eaf3f9', GradientType=1 );
+}
+*/
+
+ div.pane-views-events-upcoming-block-1 td.field_event_teaser_fid {
+  /* centers images in upcoming events block*/
+  text-align: center;
+}
+
+/*Changes on Search-field*/
+#block-atrium-search #edit-search-wrapper label {
+display: none;
+}
+
+#block-atrium-search #atrium-search-form .form-submit {
+text-indent: -999px;
+padding: 2px 13px;
+position: relative;
+height: 30px;
+width: 30px;
+margin-left: -220px;
+margin-top: 5px;
+background: transparent;
+border: 0 !important;
+-webkit-box-shadow: white 0px 0px 0px;
+-moz-box-shadow: white 0px 0px 0px;
+-moz-border-radius: 0px;
+-webkit-border-radius: 0px;
+}
+
+#block-atrium-search #edit-search-wrapper #edit-search {
+width: 170px;
+margin-left: 33px;
+margin-top: 5px;
+padding: 0px;
+height: 20px !important;
+border: none;
+background: transparent;
+}
+
+#block-atrium-search #edit-search-wrapper {
+background: url("images/search.jpg") no-repeat !important;
+width: 220px;
+height: 40px;
+margin: 0px;
+margin-left: 4px;
+float: left;
+display: inline-block;
+padding: 5px 0px 0px 5px;
+}
+
+#block-atrium-search .block-content.clear-block {
+padding-top: 0px;
+padding-left: 0px;
+}
+
+.view-frontpage .views-row .node {
+border-bottom: 1px solid #ddd;
+}
+
+.view-frontpage .views-row-last .node {
+border: 0;
+}
+
+.view-frontpage .views-row .node-title {
+padding-left: 0px;
 }
