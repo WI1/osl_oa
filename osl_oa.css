@@ -1668,7 +1668,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 #page-tools .limiter { 
   max-width:1280px; 
-  padding: 0;
+  padding: 20px 0;
 }
 #secondary-tabs .limiter { max-width: 1280px; }
 
@@ -1879,7 +1879,7 @@ text-transform: none;
 
 /* header*/
 #global {
-  background-color: white !important;
+  background-color: #D0E3F1 !important;
 }
 
 /* footer */
@@ -1916,10 +1916,6 @@ text-transform: none;
 }
 
 
-/* header*/
-#global {
-  background-color: #134776;
-}
 
 /*frontpage*/
 /*
@@ -2090,4 +2086,23 @@ border: 0;
 
 .view-frontpage .views-row .node-title {
 padding-left: 0px;
+}
+
+
+#page-tools ul.primary-tabs li.active, #page-tools .tabs ul.primary-links li.active {
+  border-bottom: 1px solid #fff !important;
+  background: #fff !important;
+}
+
+#page-tools ul.primary-tabs li, #page-tools .tabs #block-menu-features.block ul.menu li {
+  font-weight: bold !important;
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin: 0 !important;
+  border: #bbb 1px solid !important;
+  border-bottom: none !important;
+  height: 30px !important;
+  background: url(images/tabbg.jpg) repeat-x;
+  width: auto;
 }

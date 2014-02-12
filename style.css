@@ -245,7 +245,7 @@ body.logged-in #block-atrium-account .block-title {
 /* Breadcrumb */
 #global .breadcrumb {
   float:left;
-  padding:5px;
+  padding:5px 10px;
   height:30px;
   line-height:30px;
   font-size:20px;
@@ -271,7 +271,9 @@ body.logged-in #block-atrium-account .block-title {
   width:20px;
 }
 
-#global .breadcrumb span.link-0 a { background-position:0px -265px; }
+#global .breadcrumb span.link-0 a { 
+  background-position:0px -265px; 
+}
 
 #global .breadcrumb span.space { padding-left:5px; }
 #global .breadcrumb span.space a.private { background-position:-40px -265px; }
@@ -530,19 +532,18 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
  * Page tools ========================================================
 */
 #page-tools {
-  background:#eee url(images/sprite_bleeds.png) 0px -360px repeat-x;
+  /**background:#eee url(images/sprite_bleeds.png) 0px -360px repeat-x;*
   height:39px;
-  border-bottom:1px solid #ccc;
+  /**border-bottom:1px solid #ccc;
   position:relative;
-  z-index:1;
-  background-color: #D0E3F1;
+  z-index:1;*/
 }
 
 #page-tools .page-title,
 #page-tools .tabs {
   padding-top:5px;
-  position:absolute;
-  padding-left: 17px;
+  float: left;
+  
 }
 
 #page-tools .context-links,
@@ -592,8 +593,8 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 }
 
 #page-tools .context-links {
-  border-left:1px solid #ccc;
-  padding:7px 0px 7px 5px;
+  /*border-left:1px solid #ccc;*/
+  padding:7px 7px 7px 5px;
   height:25px;
   line-height:15px;
   overflow:hidden;
@@ -658,6 +659,8 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   padding:5px 10px;
   /*margin-right:1px;*/
   background:transparent;
+  
+
 }
 
 #page-tools .tabs li a:hover {
@@ -669,21 +672,18 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 }
 
 #page-tools .tabs li a:active {
-  background:#ccc;
-  border-color:#bbb #ccc #eee;
+ /* background:#ccc;
+  border-color:#bbb #ccc #eee;*/
 }
 
 #page-tools .tabs li.active a,
 #page-tools .tabs li a.active {
-  background:#fff;
+  
   color:#333;
   /*-moz-border-radius:5px 5px 0px 0px;*/
-  /*-webkit-border-radius:5px 5px 0px 0px;*/
-
-  padding:4px 9px 10px;
-  border-width:1px 1px 0px;
-  border-color:#ccc #ddd;
-  border-style:solid;
+  /*-webkit-border-radius:5px 5px 0px 0px;
+  padding:4px 9px 10px;*/
+  
 }
 
 /**
