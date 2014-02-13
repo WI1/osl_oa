@@ -292,7 +292,7 @@ body.logged-in #block-atrium-account .block-title {
   background: #888;
 }
 
-#footer a { color:#666; }
+#footer a { /*color:#666;*/ color: #fff; }
 
 #footer .footer-message { float:left; }
 
@@ -379,7 +379,7 @@ body.logged-in #block-atrium-account .block-title {
   position:relative;
   line-height:40px;
   width:120px;
-  height:50px;
+  height:40px;
   padding:5px 10px;
   overflow:hidden;
 

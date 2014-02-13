@@ -1664,7 +1664,7 @@ ul.searchlight-facet-active .searchlight-facet {
   max-width:1280px; 
   line-height: 20px; 
   padding: 0px; 
-  height: 60px;
+  
 }
 #page-tools .limiter { 
   max-width:1280px; 
@@ -1879,7 +1879,7 @@ text-transform: none;
 
 /* header*/
 #global {
-  background-color: #D0E3F1 !important;
+  background-color: white !important;
 }
 
 /* footer */
@@ -1912,10 +1912,18 @@ text-transform: none;
 }
 
 #footer .menu a:active, #footer .menu a:hover {
-  background-color: white !important;
+  font-weight: bold;
+  background-color: #134776;
 }
 
+#footer-blocks .block-content {
+    background-color: #134776;
+}
 
+#footer-blocks .block {
+    background-color: #134776;
+    padding-left: 0;
+}
 
 /*frontpage*/
 /*
@@ -2105,4 +2113,14 @@ padding-left: 0px;
   height: 30px !important;
   background: url(images/tabbg.jpg) repeat-x;
   width: auto;
+}
+
+
+.block .block-content {
+    padding: 0 9px 19px;
+
+}
+
+.block {
+    border: none;	
 }

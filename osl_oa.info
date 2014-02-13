@@ -10,6 +10,7 @@ stylesheets[screen][] = "layout.css"
 stylesheets[screen][] = "osl_oa.css"
 
 stylesheets[print][] = "print-custom.css"
+stylesheets[print][] = "font-awesome-4.0.3/css/font-awesome.css"
 
 scripts[] = "js/osl_oa.js"
 
