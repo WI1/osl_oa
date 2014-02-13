@@ -548,7 +548,7 @@ div.pager {
   -webkit-border-radius: 0px;
   color: #333;
   text-shadow: none;
-  font-size: 16px;
+  font-size: 14px;
   padding: 4px 9px;
   border: 0px;
   border-bottom-color: #ccc;
@@ -1474,7 +1474,7 @@ table.views-view-grid div.picture {
  * LITECAL ============================================================
 */
 #block-atrium_calendar-mini .litecal .litecal-title h3.litecal-title {
-  font-size:20px;
+  font-size:18px;
   padding:0px;
 }
 
@@ -2115,6 +2115,22 @@ padding-left: 0px;
   width: auto;
 }
 
+/** Blocks formatting*/
+
+.block-content .view-events-upcoming td.views-field.date {
+  padding: 3px 0px 2px 5px;
+  background-color: #84389C;
+  display: block;
+  width: 99%;
+  color: #fff;
+}
+
+.block-content .view-events-upcoming td.views-field.title {
+  padding: 10px 0 0 7px;
+  border-bottom: 10px solid #fff;
+  display: inline;
+  float: left;
+}
 
 .block .block-content {
     padding: 0 9px 19px;
@@ -2123,4 +2139,9 @@ padding-left: 0px;
 
 .block {
     border: none;	
+}
+
+#right .page-region .block .block-title {
+  border-bottom: 1px solid #CCC !important;
+  margin-bottom: 8px;
 }

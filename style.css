@@ -255,10 +255,11 @@ body.logged-in #block-atrium-account .block-title {
 
 #global .breadcrumb span,
 #global .breadcrumb span a {
-  color:#fff;
+  color: #0E71B4;
   height:30px;
   float:left;
   font-size: 80%;
+  line-height: 30px;
 }
 
 #global .breadcrumb span.space a,
@@ -666,7 +667,7 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
 #page-tools .tabs li a:hover {
   color:#333;
   background:transparent;
-  padding:4px 9px 9px;
+  padding:4px 9px 4px;
   border:1px solid #ccc;
   border-color:#ccc #ddd;
 }
