@@ -2073,10 +2073,10 @@ background: url("images/search.jpg") no-repeat !important;
 width: 220px;
 height: 40px;
 margin: 0px;
-margin-left: 4px;
+margin-left: -14px;
 float: left;
 display: inline-block;
-padding: 5px 0px 0px 5px;
+padding: 5px 0px 0px 0px;
 }
 
 #block-atrium-search .block-content.clear-block {
@@ -2145,3 +2145,9 @@ padding-left: 0px;
   border-bottom: 1px solid #CCC !important;
   margin-bottom: 8px;
 }
+
+#block-atrium-search .block-title {
+  display: none;
+}
+
+
