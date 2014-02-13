@@ -12,6 +12,7 @@
   <?php print $skipnav ?>
   <div class='limiter clear-block'>
     <div id='left'>
+        <div id="logo-wrapper"></div>
         <?php if ($left) print $left ?></div>
     <div id='center'>
       <div id='global'>
@@ -26,7 +27,6 @@
       <?php if ($primary_links): // replaced primary with secondary links?>
       <div id='navigation'><div class='limiter clear-block'>
         <?php if (isset($primary_links)) print theme('links', $secondary_links, array('id' => 'features-menu', 'class' => 'links primary-links')) ?>
-        
         <?php if ($space_tools): ?>
           <div id='space-tools'><div class='dropdown-blocks toggle-blocks clear-block'><?php print $space_tools ?></div></div>
         <?php endif; ?>
