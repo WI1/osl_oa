@@ -1897,7 +1897,7 @@ text-transform: none;
 
 /* footer */
 #footer {
-  background-color: #134776;
+  background-color: #01325D;
 }
 
 #footer .limiter {
@@ -1926,15 +1926,15 @@ text-transform: none;
 
 #footer .menu a:active, #footer .menu a:hover {
   font-weight: bold;
-  background-color: #134776;
+  background-color: #01325D;
 }
 
 #footer-blocks .block-content {
-    background-color: #134776;
+    background-color: #01325D;
 }
 
 #footer-blocks .block {
-    background-color: #134776;
+    background-color: #01325D;
     padding-left: 0;
 }
 
@@ -2151,7 +2151,7 @@ padding-left: 0px;
     border: none;	
 }
 
-#right .page-region .block .block-title {
+.page-region .block .block-title {
   border-bottom: 1px solid #CCC !important;
   margin-bottom: 8px;
 }
@@ -2180,7 +2180,6 @@ padding: 0;
   text-align: right;
   z-index: 100;
   margin-left: 50px;
-  float: right;
   padding: 10px 10px 10px;
 }
 
