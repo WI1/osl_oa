@@ -2170,9 +2170,18 @@ padding: 0;
 
 
 #banner #welcome-box .block-title {
-  color: white;
-  background-color: #01325D;
-  margin-top: -10px;
+  color: #01325D;
+  background-color: #D0E3F1;
+  margin-top: -160px;
+  position: absolute;
+  height: 120px;
+  width: 250px;
+  font-size: 120%;
+  text-align: right;
+  z-index: 100;
+  margin-left: 50px;
+  float: right;
+  padding: 10px 10px 10px;
 }
 
 /* atrium personalisierungs login zeug*/
