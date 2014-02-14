@@ -1833,6 +1833,7 @@ ul.searchlight-facet-active .searchlight-facet {
 
 #header {
   float: right;
+  marign-right: -5px;
 }
 
 #header .block-toggle .block-content {
@@ -2205,4 +2206,9 @@ body #header .block .block-title {
 #banner #welcome-box .bold {
 font-size: 160%;
 } 
+
+#global .breadcrumb {
+/* switch house-breadcrumb-icon slightly to the left; 5px padding left beforehand*/
+  padding-left: 0px;
+}
 
