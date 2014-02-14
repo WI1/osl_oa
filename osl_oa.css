@@ -1478,7 +1478,7 @@ table.views-view-grid div.picture {
  * LITECAL ============================================================
 */
 #block-atrium_calendar-mini .litecal .litecal-title h3.litecal-title {
-  font-size:18px;
+  font-size:110%;
   padding:0px;
 }
 
@@ -2173,5 +2173,9 @@ body #header .block .block-title {
   background-color: #0071b6;
 }
 
-
+#page .page-region #welcome-box .block-title {
+color: white;
+background-color: #01325D;
+margin-top: -10px;
+}
 

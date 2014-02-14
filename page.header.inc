@@ -25,7 +25,7 @@
           <?php endif; ?>
         </div>
       </div>
-
+      <?php if ($banner): ?><div id='banner'><?php print $banner ?></div><?php endif; ?>
       <?php if ($primary_links): // replaced primary with secondary links?>
       <div id='navigation'><div class='limiter clear-block'>
         <?php if (isset($primary_links)) print theme('links', $secondary_links, array('id' => 'features-menu', 'class' => 'links primary-links')) ?>
