@@ -1677,7 +1677,7 @@ ul.searchlight-facet-active .searchlight-facet {
 #messages div { max-width: 1280px; margin: 0 auto;}
 
 #logo-wrapper {
-  width: 195px;
+  width: 192px;
 }
 
 #logo-wrapper a.logo {
@@ -1685,7 +1685,7 @@ ul.searchlight-facet-active .searchlight-facet {
   background-size: 100% auto;
   background-repeat: no-repeat;
   position: relative;
-  width: 100%;
+  width: 192px;
   height: 236px;
   display: block;
   margin: 0 0 10px;
@@ -2156,3 +2156,8 @@ padding-left: 0px;
 }
 
 
+body {
+  font-style: 'Droid Sans', arial, serif;
+  color: #333;
+  line-height: 1.5em;
+}
