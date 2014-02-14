@@ -2187,13 +2187,12 @@ padding: 0;
   background-color: #D0E3F1;
   margin-top: -160px;
   position: absolute;
-  height: 120px;
+  height: 100px;
   width: 250px;
-  font-size: 120%;
-  text-align: right;
+  font-size: 110%;
   z-index: 100;
   margin-left: 50px;
-  padding: 10px 10px 10px;
+  padding: 20px 10px 0px 25px;
 }
 
 /* atrium personalisierungs login zeug*/
@@ -2201,5 +2200,8 @@ body #header .block .block-title {
   background-color: #0071b6;
 }
 
+#banner #welcome-box .bold {
+  font-size: 130%;
+}
 
 
