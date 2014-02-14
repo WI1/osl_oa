@@ -2162,3 +2162,11 @@ padding-left: 0px;
   background-color: #EAF3F9;
   padding: 10px 10px 0;
 }
+
+/* atrium personalisierungs login zeug*/
+body #header .block .block-title {
+  background-color: #0071b6;
+}
+
+
+
