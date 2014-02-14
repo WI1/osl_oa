@@ -2218,3 +2218,7 @@ font-size: 160%;
   padding-left: 0px;
 }
 
+#header {
+ /* put header section aligned to rest of the page.*/
+  margin-right: -5px;
+}
