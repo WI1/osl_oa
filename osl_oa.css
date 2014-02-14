@@ -2186,7 +2186,7 @@ padding: 0;
 
 #banner #welcome-box .block-title {
   color: #01325D;
-  background-color: #D0E3F1;
+  background-color: rgba(208, 227, 241, 0.75);
   margin-top: -160px;
   position: absolute;
   height: 100px;
