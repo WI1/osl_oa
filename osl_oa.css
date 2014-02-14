@@ -930,7 +930,7 @@ div.comment {
 
 div.node .field {
   background:transparent;
-  margin: 0 0px 5px 0;
+  margin: 0 0px 2px 0;
 }
 
 div.node .field .field-label,
@@ -1677,7 +1677,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 #page-tools .limiter { 
   max-width:1280px; 
-  padding: 20px 0;
+  padding: 10px 0;
 }
 #secondary-tabs .limiter { max-width: 1280px; }
 
@@ -1694,7 +1694,7 @@ ul.searchlight-facet-active .searchlight-facet {
   background-repeat: no-repeat;
   position: relative;
   width: 192px;
-  height: 236px;
+  height: 230px;
   display: block;
   margin: 0 0 10px;
   float: none;
@@ -1749,6 +1749,19 @@ ul.searchlight-facet-active .searchlight-facet {
   background-color: transparent;
 }
 
+#left .block .block-title {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  margin-bottom: 8px;
+  color: #133F84;
+  text-shadow: none;
+  font-size: 14px;
+  padding: 4px 9px;
+  border: 0px;
+  border-bottom: 1px solid #CCC !important;
+  background: transparent;
+  text-transform: uppercase;
+}
 
 
 #page .limiter { max-width: 1280px; }
@@ -1897,7 +1910,7 @@ text-transform: none;
 
 /* footer */
 #footer {
-  background-color: #134776;
+  background-color: #01325D;
 }
 
 #footer .limiter {
@@ -1926,15 +1939,15 @@ text-transform: none;
 
 #footer .menu a:active, #footer .menu a:hover {
   font-weight: bold;
-  background-color: #134776;
+  background-color: #01325D;
 }
 
 #footer-blocks .block-content {
-    background-color: #134776;
+    background-color: #01325D;
 }
 
 #footer-blocks .block {
-    background-color: #134776;
+    background-color: #01325D;
     padding-left: 0;
 }
 
@@ -2151,7 +2164,7 @@ padding-left: 0px;
     border: none;	
 }
 
-#right .page-region .block .block-title {
+.page-region .block .block-title {
   border-bottom: 1px solid #CCC !important;
   margin-bottom: 8px;
 }
@@ -2163,20 +2176,28 @@ padding-left: 0px;
 
 /*Welcome Box*/
 
-#welcome-box {
-  background-color: #EAF3F9;
-  padding: 10px 10px 0;
+#banner .block, #banner .block-content {
+margin: 0;
+padding: 0;
+}
+
+
+#banner #welcome-box .block-title {
+  color: #01325D;
+  background-color: #D0E3F1;
+  margin-top: -160px;
+  position: absolute;
+  height: 100px;
+  width: 250px;
+  font-size: 110%;
+  z-index: 100;
+  margin-left: 50px;
+  padding: 20px 10px 0px 25px;
 }
 
 /* atrium personalisierungs login zeug*/
 body #header .block .block-title {
   background-color: #0071b6;
-}
-
-#page .page-region #welcome-box .block-title {
-color: white;
-background-color: #01325D;
-margin-top: -10px;
 }
 
 #banner #welcome-box .bold {
