@@ -6,7 +6,7 @@
     <?php print $scripts ?>
     <?php print $ie ?>
     <title><?php print $head_title ?></title>
-    @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
   </head>
   <body <?php print drupal_attributes($attr) ?>>
 
