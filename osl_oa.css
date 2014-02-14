@@ -1749,6 +1749,19 @@ ul.searchlight-facet-active .searchlight-facet {
   background-color: transparent;
 }
 
+#left .block .block-title {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  margin-bottom: 8px;
+  color: #133F84;
+  text-shadow: none;
+  font-size: 14px;
+  padding: 4px 9px;
+  border: 0px;
+  border-bottom: 1px solid #CCC !important;
+  background: transparent;
+  text-transform: uppercase;
+}
 
 
 #page .limiter { max-width: 1280px; }
