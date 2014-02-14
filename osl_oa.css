@@ -597,9 +597,12 @@ div.pager {
   width:30%;
 }
 
-.page-region { padding:35px 10px 20px; /*vorher 20px 10px*/}
+.page-region { padding:5px 10px 20px; /*vorher 20px 10px*/}
 #content .page-region { padding-left:20px; }
-#right .page-region { padding-right: 0px; }
+#right .page-region { 
+  padding-right: 0px; 
+  padding-left: 25px;
+}
 
 /**
  * Lists ==============================================================
@@ -2152,3 +2155,9 @@ padding-left: 0px;
 }
 
 
+/*Welcome Box*/
+
+#welcome-box {
+  background-color: #EAF3F9;
+  padding: 10px 10px 0;
+}
