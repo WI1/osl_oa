@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php print $language->language ?>" lang="<?php print $language->language ?>" dir="<?php print $language->dir ?>">
   <head>
     <?php print $head ?>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
     <?php print $styles ?>
     <?php print $scripts ?>
     <?php print $ie ?>
     <title><?php print $head_title ?></title>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
-  </head>
+</head>
   <body <?php print drupal_attributes($attr) ?>>
 
   <?php print $skipnav ?>
