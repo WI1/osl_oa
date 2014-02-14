@@ -417,6 +417,8 @@ div.pager {
   border-width:1px;
   border-style:solid;
   border-color:#ccc #ddd #eee;
+  
+  display: none; /* hari */
 }
 
 .pager a,
