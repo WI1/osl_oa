@@ -577,6 +577,7 @@ div.pager {
 #left {
   float: left;
   width: 17%;
+  position: fixed;
 }    
 #content {
   float:left;
