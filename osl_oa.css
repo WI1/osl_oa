@@ -2200,7 +2200,7 @@ padding: 0;
 
 /* atrium personalisierungs login zeug*/
 body #header .block .block-title {
-  background-color: #0071b6;
+  background-color: #0071b6 !important;
 }
 
 #banner #welcome-box .bold {
