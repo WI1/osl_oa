@@ -1664,6 +1664,11 @@ ul.searchlight-facet-active .searchlight-facet {
 #global .limiter { 
   max-width:1280px; 
 }
+
+#navigation {
+  background-color: ##0071b6;
+}
+
 #navigation .limiter { 
   max-width:1280px; 
   line-height: 20px; 
