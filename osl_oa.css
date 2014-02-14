@@ -1676,9 +1676,13 @@ ul.searchlight-facet-active .searchlight-facet {
 #messages { background-color: #ECF8F4; }
 #messages div { max-width: 1280px; margin: 0 auto;}
 
+#logo-wrapper {
+  width: 195px;
+}
+
 #logo-wrapper a.logo {
   background-image: url("images/logo.png") !important;
-  background-size: 100% Auto;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   position: relative;
   width: 100%;
