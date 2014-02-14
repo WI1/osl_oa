@@ -2203,6 +2203,12 @@ body #header .block .block-title {
   background-color: #0071b6 !important;
 }
 
+.dropdown-blocks .block .block-title {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+
+
 #banner #welcome-box .bold {
 font-size: 160%;
 } 
