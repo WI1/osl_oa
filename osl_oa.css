@@ -2158,12 +2158,12 @@ padding-left: 0px;
 
 /*Welcome Box*/
 
-#welcome-box {
-  background-color: #EAF3F9;
-  padding: 10px 10px 0;
+#banner .block, #banner .block-content {
+margin: 0;
+padding: 0;
 }
 
-#page .page-region #welcome-box .block-title {
+#banner #welcome-box .block-title {
 color: white;
 background-color: #01325D;
 margin-top: -10px;
