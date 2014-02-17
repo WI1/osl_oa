@@ -1782,6 +1782,7 @@ ul.searchlight-facet-active .searchlight-facet {
 #block-atrium_calendar-mini div.litecal .litecal-slot {
   background: transparent;
   border-left: 0px;
+  padding-top: 1px;
 }
 
 #block-atrium_calendar-mini div.litecal .litecal-timespan {
@@ -1797,7 +1798,7 @@ ul.searchlight-facet-active .searchlight-facet {
   /*border: #00ff00 3px solid;
   border-radius: 25px;*/
   background-image: url('images/circle_grn.png');
-  background-position: 2.2px -3.5px;
+  background-position: -2px -3.5px;
   background-repeat: no-repeat;
   background-size: 80%;
   z-index: 1;
@@ -1807,6 +1808,10 @@ ul.searchlight-facet-active .searchlight-facet {
   background: white;
   border-left: 2px solid #ddd;
   border-right: 2px solid #ddd;
+}
+
+#block-atrium_calendar-mini div.litecal .litecal-header {
+  margin-right: 3px;
 }
 
 #block-atrium_calendar-mini .litecal-full .litecal-header .litecal-label {
@@ -2011,7 +2016,7 @@ div.litecal .litecal-slot .label span.num {
 }
 
 #block-atrium_calendar-mini .litecal-header .litecal-label {
-  color: black;
+  color: #D0E3F1;
 }
 
 
