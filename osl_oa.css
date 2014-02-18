@@ -2203,7 +2203,7 @@ padding: 0;
   height: 100px;
   width: 250px;
   font-size: 110%;
-  z-index: 100;
+  z-index: 2;
   margin-left: 50px;
   padding: 20px 10px 0px 25px;
 }
