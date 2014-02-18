@@ -2166,6 +2166,11 @@ padding-left: 0px;
   border-bottom: 10px solid #fff;
   display: inline;
   float: left;
+  background: transparent;
+}
+
+.view-events-upcoming .view-content table tr td a:hover {
+  text-decoration: underline;
 }
 
 .block .block-content {
@@ -2270,4 +2275,9 @@ font-size: 160%;
 #page-tools ul.primary-tabs li a:hover {
   color: #fff;
   text-shadow: none 0px 0px 0px;
+}
+
+/*Latest News headline*/
+#content #block-views-frontpage-block_1 .block-title {
+  font-size: 19px;
 }
