@@ -2251,11 +2251,11 @@ font-size: 160%;
 /*Primary Tabs*/
 #page-tools .tabs li.active a, #page-tools .tabs li a.active {
   color: #fff;
-  text-shadow: #fff 0px 0px 0px;
+  text-shadow: none 0px 0px 0px;
 }
 
 #page-tools .tabs .primary-tabs li.active a:hover {
-  border: 0px solid #fff;
+  border: 1px solid #01325D;
 }
 
 #page-tools .tabs .primary-tabs li:hover {
@@ -2265,4 +2265,9 @@ font-size: 160%;
 #page-tools .tabs .primary-tabs li a:hover {
   border: 1px solid #01325D;
   text-shadow: #fff 0px 0px 0px;
+}
+
+#page-tools ul.primary-tabs li a:hover {
+  color: #fff;
+  text-shadow: none 0px 0px 0px;
 }
