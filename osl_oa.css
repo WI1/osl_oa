@@ -2135,7 +2135,7 @@ padding-left: 0px;
 
 #page-tools ul.primary-tabs li.active, #page-tools .tabs ul.primary-links li.active {
   border-bottom: 1px solid #fff !important;
-  background: #fff !important;
+  background: #01325D !important;
 }
 
 #page-tools ul.primary-tabs li, #page-tools .tabs #block-menu-features.block ul.menu li {
@@ -2246,4 +2246,23 @@ font-size: 160%;
 .view-calendar-mainpage div.litecal .litecal-slot .label:hover span {
   background-color: transparent;
   color: #000;
+}
+
+/*Primary Tabs*/
+#page-tools .tabs li.active a, #page-tools .tabs li a.active {
+  color: #fff;
+  text-shadow: #fff 0px 0px 0px;
+}
+
+#page-tools .tabs .primary-tabs li.active a:hover {
+  border: 0px solid #fff;
+}
+
+#page-tools .tabs .primary-tabs li:hover {
+  background: #01325D;
+}
+
+#page-tools .tabs .primary-tabs li a:hover {
+  border: 1px solid #01325D;
+  text-shadow: #fff 0px 0px 0px;
 }
