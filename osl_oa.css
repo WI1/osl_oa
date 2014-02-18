@@ -2227,3 +2227,18 @@ font-size: 160%;
  /* put header section aligned to rest of the page.*/
   margin-right: -5px;
 }
+
+
+/*Main-Calendar*/
+.view-calendar-mainpage div.litecal .litecal-data {
+  margin-top: 2px !important;
+} 
+
+.view-calendar-mainpage div.litecal-full .crayon-4 {
+  background-color: #01325D;
+}
+
+.view-calendar-mainpage div.litecal .litecal-slot .label:hover span {
+  background-color: transparent;
+  color: #000;
+}
