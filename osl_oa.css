@@ -1832,6 +1832,11 @@ ul.searchlight-facet-active .searchlight-facet {
   font-weight: 800;
 }
 
+#block-atrium_calendar-mini div.litecal .litecal-slot .label:hover span {
+  background: transparent;
+  text-decoration: underline;
+}
+
 .marker, .form-required {
   color: green;
 }
