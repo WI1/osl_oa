@@ -2275,12 +2275,12 @@ font-size: 160%;
 
 #page-tools .tabs .primary-tabs li a:hover {
   border: 1px solid #01325D;
-  text-shadow: #fff 0px 0px 0px;
+  text-shadow: none !important;
 }
 
 #page-tools ul.primary-tabs li a:hover {
   color: #fff;
-  text-shadow: none 0px 0px 0px;
+  text-shadow: none !important;
 }
 
 /*Latest News headline*/
