@@ -2195,6 +2195,11 @@ padding-left: 0px;
 
 /*Welcome Box*/
 
+#banner {
+  /* Abstand */
+  margin-bottom: 10px;
+}
+
 #banner .block, #banner .block-content {
 margin: 0;
 padding: 0;
