@@ -2200,6 +2200,8 @@ padding-left: 0px;
 #banner {
   /* Abstand zur Navigation*/
   margin-bottom: 10px;
+  margin-top: 40px
+    
 }
 
 #banner .block, #banner .block-content {
