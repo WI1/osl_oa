@@ -1920,6 +1920,8 @@ text-transform: none;
 /* header*/
 #global {
   background-color: white !important;
+  position: fixed;
+  width: 1063px;
 }
 
 /* footer */
