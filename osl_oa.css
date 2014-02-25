@@ -1920,8 +1920,7 @@ text-transform: none;
 /* header*/
 #global {
   background-color: white !important;
-  position: fixed;
-  width: 1063px;
+  
 }
 
 /* footer */
@@ -2200,8 +2199,6 @@ padding-left: 0px;
 #banner {
   /* Abstand zur Navigation*/
   margin-bottom: 10px;
-  margin-top: 40px
-    
 }
 
 #banner .block, #banner .block-content {
