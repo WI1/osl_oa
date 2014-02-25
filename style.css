@@ -659,7 +659,6 @@ body.page-access-denied .access-denied { background-image:url(images/403.png); }
   font-size:13px;
   /*-moz-border-radius:5px;*/
   /*-webkit-border-radius:5px;*/
-  text-shadow:#fff 0px 1px 0px;
   padding:5px 10px;
   /*margin-right:1px;*/
   background:transparent;
