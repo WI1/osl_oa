@@ -417,6 +417,8 @@ div.pager {
   border-width:1px;
   border-style:solid;
   border-color:#ccc #ddd #eee;
+  
+  display: none; /* hari */
 }
 
 .pager a,
@@ -577,8 +579,9 @@ div.pager {
 
 #left {
   float: left;
-  
-  width: 15%;
+  width: 191px;
+  position: fixed;
+  /*width: 15%; % makes no sense with wrapper of 1280px*/
   padding: 40px 10px 20px;
 }
 
@@ -1666,7 +1669,7 @@ ul.searchlight-facet-active .searchlight-facet {
 }
 
 #navigation {
-  background-color: ##0071b6;
+  background-color: #0071b6;
 }
 
 #navigation .limiter { 
@@ -1780,6 +1783,7 @@ ul.searchlight-facet-active .searchlight-facet {
 #block-atrium_calendar-mini div.litecal .litecal-slot {
   background: transparent;
   border-left: 0px;
+  padding-top: 1px;
 }
 
 #block-atrium_calendar-mini div.litecal .litecal-timespan {
@@ -1795,7 +1799,7 @@ ul.searchlight-facet-active .searchlight-facet {
   /*border: #00ff00 3px solid;
   border-radius: 25px;*/
   background-image: url('images/circle_grn.png');
-  background-position: 2.2px -3.5px;
+  background-position: -2px -3.5px;
   background-repeat: no-repeat;
   background-size: 80%;
   z-index: 1;
@@ -1805,6 +1809,10 @@ ul.searchlight-facet-active .searchlight-facet {
   background: white;
   border-left: 2px solid #ddd;
   border-right: 2px solid #ddd;
+}
+
+#block-atrium_calendar-mini div.litecal .litecal-header {
+  margin-right: 3px;
 }
 
 #block-atrium_calendar-mini .litecal-full .litecal-header .litecal-label {
@@ -1825,12 +1833,18 @@ ul.searchlight-facet-active .searchlight-facet {
   font-weight: 800;
 }
 
+#block-atrium_calendar-mini div.litecal .litecal-slot .label:hover span {
+  background: transparent;
+  text-decoration: underline;
+}
+
 .marker, .form-required {
   color: green;
 }
 
 #header {
   float: right;
+  marign-right: -5px;
 }
 
 #header .block-toggle .block-content {
@@ -2008,7 +2022,7 @@ div.litecal .litecal-slot .label span.num {
 }
 
 #block-atrium_calendar-mini .litecal-header .litecal-label {
-  color: black;
+  color: #D0E3F1;
 }
 
 
@@ -2083,7 +2097,7 @@ border: 0 !important;
 
 #block-atrium-search #edit-search-wrapper #edit-search {
 width: 170px;
-margin-left: 33px;
+margin-left: 40px;
 margin-top: 5px;
 padding: 0px;
 height: 20px !important;
@@ -2122,7 +2136,7 @@ padding-left: 0px;
 
 #page-tools ul.primary-tabs li.active, #page-tools .tabs ul.primary-links li.active {
   border-bottom: 1px solid #fff !important;
-  background: #fff !important;
+  background: #01325D !important;
 }
 
 #page-tools ul.primary-tabs li, #page-tools .tabs #block-menu-features.block ul.menu li {
@@ -2153,6 +2167,11 @@ padding-left: 0px;
   border-bottom: 10px solid #fff;
   display: inline;
   float: left;
+  background: transparent;
+}
+
+.view-events-upcoming .view-content table tr td a:hover {
+  text-decoration: underline;
 }
 
 .block .block-content {
@@ -2176,6 +2195,11 @@ padding-left: 0px;
 
 /*Welcome Box*/
 
+#banner {
+  /* Abstand zur Navigation*/
+  margin-bottom: 10px;
+}
+
 #banner .block, #banner .block-content {
 margin: 0;
 padding: 0;
@@ -2184,24 +2208,82 @@ padding: 0;
 
 #banner #welcome-box .block-title {
   color: #01325D;
-  background-color: #D0E3F1;
+  background-color: rgba(208, 227, 241, 0.75);
   margin-top: -160px;
   position: absolute;
   height: 100px;
   width: 250px;
   font-size: 110%;
-  z-index: 100;
+  z-index: 2;
   margin-left: 30px;
   padding: 20px 10px 0px 25px;
 }
 
 /* atrium personalisierungs login zeug*/
 body #header .block .block-title {
-  background-color: #0071b6;
+  background-color: #0071b6 !important;
 }
+
+#header .block-toggle .block-title, .dropdown-blocks .block .block-title {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+}
+
 
 #banner #welcome-box .bold {
-  font-size: 130%;
+font-size: 160%;
+} 
+
+#global .breadcrumb {
+/* switch house-breadcrumb-icon slightly to the left; 5px padding left beforehand*/
+  padding-left: 0px;
+}
+
+#header {
+ /* put header section aligned to rest of the page.*/
+  margin-right: -5px;
 }
 
 
+/*Main-Calendar*/
+.view-calendar-mainpage div.litecal .litecal-data {
+  margin-top: 2px !important;
+} 
+
+.view-calendar-mainpage div.litecal-full .crayon-4 {
+  background-color: #01325D;
+}
+
+.view-calendar-mainpage div.litecal .litecal-slot .label:hover span {
+  background-color: transparent;
+  color: #000;
+}
+
+/*Primary Tabs*/
+#page-tools .tabs li.active a, #page-tools .tabs li a.active {
+  color: #fff;
+  text-shadow: none 0px 0px 0px;
+}
+
+#page-tools .tabs .primary-tabs li.active a:hover {
+  border: 1px solid #01325D;
+}
+
+#page-tools .tabs .primary-tabs li:hover {
+  background: #01325D;
+}
+
+#page-tools .tabs .primary-tabs li a:hover {
+  border: 1px solid #01325D;
+  text-shadow: none !important;
+}
+
+#page-tools ul.primary-tabs li a:hover {
+  color: #fff;
+  text-shadow: none !important;
+}
+
+/*Latest News headline*/
+#content #block-views-frontpage-block_1 .block-title {
+  font-size: 19px;
+}
