@@ -423,7 +423,7 @@ div.pager {
 
 .pager a,
 .pager li.pager-current {
-  color:#888;
+  color:#48a;
   font-weight:normal;
   font-size:13px;
   -moz-border-radius:0px;
@@ -440,7 +440,7 @@ div.pager {
 }
 
 .page-region .block .boxes-box-controls a:hover,
-.pager a:hover { background:#eee; }
+.pager a:hover { background:#000; background-color: transparent; }
 
 .pager ul.pager-list li:first-child a,
 .pager ul.pager-list li.pager-current:first-child {
