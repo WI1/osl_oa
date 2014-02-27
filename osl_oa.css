@@ -1925,7 +1925,9 @@ text-transform: none;
 
 /* footer */
 #footer {
-  background-color: #01325D;
+  /*background-color: #01325D;*/
+  background-color: #fff;
+  border-top: 0px solid #ccc;
 }
 
 #footer .limiter {
@@ -1938,6 +1940,7 @@ text-transform: none;
 
 #block-menu-primary-links {
   width: 100%;
+  margin-top: 15px;
 }
 
 #block-menu-primary-links ul.menu li {
@@ -2287,4 +2290,28 @@ font-size: 160%;
 /*Latest News headline*/
 #content #block-views-frontpage-block_1 .block-title {
   font-size: 19px;
+}
+
+
+/*Footer changes because of partner logos*/
+#footer #block-block-7 {
+width: 100%;
+margin: 0px;
+background-color: #f0f0f0;
+}
+
+#footer-blocks #block-block-7 .block-content {
+background-color: #f0f0f0;
+padding: 0px;
+}
+
+
+#footer ul.links a {
+color: #48A;
+}
+
+#footer #block-menu-primary-links .block-content {
+background-color: #01325D;
+padding-bottom: 32px;
+padding-top: 20px;
 }
