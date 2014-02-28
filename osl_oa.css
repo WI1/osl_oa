@@ -1697,7 +1697,7 @@ ul.searchlight-facet-active .searchlight-facet {
   background-repeat: no-repeat;
   position: relative;
   width: 192px;
-  height: 230px;
+  height: 219px;
   display: block;
   margin: 0 0 10px;
   float: none;
@@ -2192,10 +2192,10 @@ padding-left: 0px;
   margin-bottom: 8px;
 }
 
-#block-atrium-search .block-title {
+/*#block-atrium-search .block-title {
   display: none;
 }
-
+*/
 
 /*Welcome Box*/
 
