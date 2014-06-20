@@ -1441,7 +1441,7 @@ table .type { white-space:nowrap; }
 .view-members-listing td.groups { width:160px; }
 
 /* OG faces, Member directory */
-table.views-view-grid .username { font-size:16px; }
+table.views-view-grid .username { font-size:14px; }
 table.views-view-grid div.picture {
   float:left;
   margin-right:10px;
@@ -2314,4 +2314,8 @@ color: #48A;
 background-color: #01325D;
 padding-bottom: 32px;
 padding-top: 20px;
+}
+
+.view-members-listing-osl {
+  margin-top: 10px;
 }
