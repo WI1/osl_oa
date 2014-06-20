@@ -2164,6 +2164,7 @@ padding-left: 0px;
   display: block;
   width: 99%;
   color: #fff;
+  border: 0px !important;
 }
 
 .block-content .view-events-upcoming td.views-field.title {
