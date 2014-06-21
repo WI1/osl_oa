@@ -2056,6 +2056,7 @@ div.pane-views-calendar-mainpage-block-2 {
 
 #block-views-frontpage-block_1 .view-content .field.field-type-filefield.field-field-event-teaser {
 padding-right: 10px !important;
+float: left !important;
 }
 
 
