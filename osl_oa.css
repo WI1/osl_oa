@@ -2322,3 +2322,8 @@ padding-top: 20px;
 .view-members-listing-osl {
   margin-top: 10px;
 }
+
+/* Bündiges abschließen v. Eventlist mit maincontent */
+#block-views-events_upcoming-block_2 {
+  margin-top: 7px;
+}
